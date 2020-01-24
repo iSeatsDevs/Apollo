@@ -1,7 +1,7 @@
 {
   "name": "@iseats/apollo",
   "version": "1.0.0",
-  "description": "",
+  "description": "apollo is a react component library used by iseats",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "build-storybook": "build-storybook",
     "commit": "git-cz"
   },
-  "author": "",
+  "author": "iseats",
   "license": "ISC",
   "peerDependencies": {
     "react": "^16.12.0",
