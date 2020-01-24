@@ -10,7 +10,7 @@ $nice-dates-font-size-small: $font-size-small;
 $nice-dates-font-size-base: $font-size;
 $nice-dates-font-size-big: $font-size + 2;
 
-@import 'react-nice-dates/src/style.scss';
+@import '../../../node_modules/react-nice-dates/src/style.scss';
 
 .nice-dates {
   &-popover {
