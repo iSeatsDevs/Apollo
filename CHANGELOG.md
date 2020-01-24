@@ -1,3 +1,15 @@
+# [1.1.0](https://bitbucket.org/iseats/apollo/compare/v1.0.0...v1.1.0) (2020-01-24)
+
+
+### Bug Fixes
+
+* **package.json:** removed @dinhoabreu/semantic-release-bitbucket-config ([bf3de24](https://bitbucket.org/iseats/apollo/commits/bf3de245c0fe5349ee439e49cfeb0e2da88d1ebb))
+
+
+### Features
+
+* **package.json:** added @dinhoabreu/semantic-release-bitbucket-config ([81da065](https://bitbucket.org/iseats/apollo/commits/81da065fc2d09c648470cec2bfa14aa9fcf8c60b))
+
 # 1.0.0 (2020-01-24)
 
 
