@@ -79,6 +79,7 @@
     }
   },
   "release": {
+    "branch": "release",
     "repositoryUrl": "git@bitbucket.org:iseats/apollo.git",
     "plugins": [
       "@semantic-release/commit-analyzer",
