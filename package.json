@@ -63,7 +63,6 @@
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.10.35",
-    "@dinhoabreu/semantic-release-bitbucket-config": "^1.0.2",
     "classnames": "^2.2.6",
     "date-fns": "^2.9.0",
     "prop-types": "^15.7.2",
@@ -88,7 +87,6 @@
       "@semantic-release/npm",
       "@semantic-release/changelog",
       "@semantic-release/git"
-    ],
-    "extends": "@dinhoabreu/semantic-release-bitbucket-config"
+    ]
   }
 }
