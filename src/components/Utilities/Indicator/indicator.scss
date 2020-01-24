@@ -1,0 +1,23 @@
+@import '../../../global';
+@import '../../../mixins/typography.scss';
+
+.indicator {
+  cursor: pointer;
+  outline: none;
+
+  user-select: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_icon {
+    color: color('gray', -2);
+
+    display: inline-flex;
+
+    &__open {
+      transform: rotateX(180deg);
+    }
+  }
+}

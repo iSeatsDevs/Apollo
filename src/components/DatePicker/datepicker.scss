@@ -1,0 +1,78 @@
+@import '../../global';
+@import '../../mixins/actionable';
+@import '../../mixins/typography';
+
+$nice-dates-color-gray-dark: color('black');
+$nice-dates-color-gray: color('gray', -1);
+$nice-dates-color-gray-light: color('gray');
+$nice-dates-color-accent: $nice-dates-color-gray-dark;
+$nice-dates-font-size-small: $font-size-small;
+$nice-dates-font-size-base: $font-size;
+$nice-dates-font-size-big: $font-size + 2;
+
+@import 'react-nice-dates/src/style.scss';
+
+.nice-dates {
+  &-popover {
+    @include actionable;
+
+    height: auto;
+    width: 450px;
+  
+    border-radius: $border-radius;
+    
+  
+    box-shadow: none;
+  }
+  
+  &-navigation {
+    height: 25px;
+
+    padding: $padding 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_current {
+      @include body;
+      font-weight: bold;
+    }
+  }
+
+  &-week-header_day {
+    @include body;
+  }
+
+  &-day {
+    @include body;
+
+    outline: none;
+
+    &:focus {
+      &:before {
+        @include focus;
+      }
+    }
+
+    &:before, &:after {
+      border-radius: $border-radius;
+      border-color: color('primary');
+
+      background-color: transparent;
+
+      transition: none;
+    }
+
+    &.-selected {
+      background-color: color('primary');
+
+      border-radius: $border-radius;
+      border: $border-default color('primary');
+
+      span {
+        color: color('white') !important;
+      }
+    }
+  }
+}

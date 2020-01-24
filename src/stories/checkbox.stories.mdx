@@ -1,0 +1,30 @@
+import { action } from '@storybook/addon-actions';
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { Checkbox } from '../index';
+
+<Meta title="Forms|Checkbox" component={Checkbox} />
+
+# Checkbox
+
+<Props of={Checkbox} />
+
+## Default
+
+<Story name="Default">
+  <Checkbox onChange={action('Checkbox changed')} />
+</Story>
+
+## With label
+
+<Story name="Label">
+  <Checkbox label="This is a label" onChange={action('Checkbox changed')} />
+</Story>
+
+## Success
+
+<Story name="Validation">
+  <>
+    <Checkbox success label="All good!"  onChange={action('Checkbox changed')} />
+    <Checkbox danger label="Something is wrong" onChange={action('Checkbox changed')} />
+  </>
+</Story>

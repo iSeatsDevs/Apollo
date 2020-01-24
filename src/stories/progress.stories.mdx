@@ -1,0 +1,38 @@
+import { action } from '@storybook/addon-actions';
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { Progress } from '../index';
+
+<Meta title="Components|Progress" component={Progress} />
+
+# Progress
+
+The Progress component allows for visual feedback on uploads or form steps.
+
+<Props of={Progress} />
+---
+<Preview>
+  <Story name="Basic">
+    <Progress value={50} />
+  </Story>
+</Preview>
+
+## With indicator
+
+<Preview>
+  <Story name="Indicator">
+    <Progress indicator value={25} />
+  </Story>
+</Preview>
+
+## Themes
+
+<Preview>
+  <Story name="Theming">
+    <div>
+      <div style={{ marginBottom: '10px' }}>
+        <Progress theme="success" value={75} />
+      </div>
+      <Progress theme="danger" value={75} />
+    </div>
+  </Story>
+</Preview>

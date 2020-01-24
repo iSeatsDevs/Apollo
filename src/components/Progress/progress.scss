@@ -1,0 +1,43 @@
+@import '../../global';
+@import '../../mixins/typography';
+
+.progress {
+  @include action_small;
+
+  font-size: $font-size-small - 4px;
+  color: color('white');
+
+  width: 100%;
+  height: 12px;
+
+  border-radius: $border-radius * 2;
+
+  background-color: transparentize(color('gray'), .5);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &_bar {
+    height: 100%;
+
+    background-color: color('primary');
+
+    border-radius: $border-radius * 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__success {
+      background-color: color('success');
+    }
+  
+    &__danger {
+      background-color: color('danger');
+    }
+  }
+}

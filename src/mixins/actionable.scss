@@ -1,0 +1,40 @@
+@import '../global';
+@import '../mixins/typography.scss';
+
+@mixin actionable {
+  @include body;
+  outline: none;
+
+  position: relative;
+
+  box-sizing: border-box;
+
+  border: $border-default;
+  border-color: color('gray');
+  border-radius: $border-radius;
+
+  height: 52px;
+  width: 100%;
+
+  padding: 0px 16px;
+
+  background-color: color('white');
+  transition: all 100ms;
+
+  &__danger {
+    border-color: color('danger');
+    color: color('danger');
+  }
+
+  &__success {
+    border-color: color('success');
+    color: color('success');
+  }
+
+  &:disabled,
+  &__disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: $opacity-md;
+  }
+}

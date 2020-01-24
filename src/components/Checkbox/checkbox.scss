@@ -1,0 +1,35 @@
+@import '../../global';
+@import '../../mixins/actionable';
+
+.checkbox {
+  &_wrapper {
+    display: flex;
+  }
+
+  &_input {
+    @include actionable;
+
+    &:focus {
+      @include focus;
+    }
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px;
+    margin-right: $push;
+
+    width: 18px;
+    height: 18px;
+
+    color: color('white') !important;
+
+    &__checked {
+      border-color: color('primary');
+      background-color: color('primary');
+    }
+  }
+}

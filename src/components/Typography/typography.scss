@@ -1,0 +1,138 @@
+@import '../../global';
+@import '../../mixins/queries';
+@import '../../mixins/typography';
+
+.typography {
+  @include body;
+
+  outline: none;
+
+  margin: 0px;
+
+  font-weight: 400;
+
+  &:focus {
+    color: color('primary');
+  }
+
+  &__light {
+    font-weight: 300;
+  }
+
+  &__bold {
+    font-weight: 600;
+  }
+
+  &__underline {
+    text-decoration: underline;
+  }
+
+  &__mark {
+    background-color: color('warning');
+  }
+
+  &__inverse {
+    color: color('white') !important;
+  }
+
+  &_title {
+    @include action;
+
+    margin-bottom: $push_lg;
+
+    &__dont_push {
+      margin-bottom: 0px !important;
+    }
+
+    &__level_1 {
+      font-size: $heading-size-1;
+      line-height: $heading-size-1 + 4px;
+
+      margin-bottom: $push_lg;
+    }
+
+    &__level_2 {
+      font-size: $heading-size-2;
+      line-height: $heading-size-2 + 4px;
+
+      margin-bottom: $push;
+    }
+
+    &__level_3 {
+      font-size: $heading-size-3;
+      line-height: $heading-size-3 + 6px;
+      margin-bottom: $push-sm;
+    }
+
+    &__level_4 {
+      font-size: $heading-size-4;
+      line-height: $heading-size-4 + 4px;
+      margin-bottom: $push-sm;
+    }
+
+    &__level_5 {
+      font-size: $heading-size-5;
+      line-height: $heading-size-5 + 4px;
+      margin-bottom: $push-sm;
+    }
+
+    @include sm {
+      &__level_1 {
+        font-size: $heading-size-1 - 2px;
+
+        margin-bottom: $push_lg;
+      }
+
+      &__level_2 {
+        font-size: $heading-size-2 - 2px;
+        line-height: ($heading-size-2);
+
+        margin-bottom: $push;
+      }
+    }
+  }
+
+  &_paragraph {
+    display: block;
+
+    margin-bottom: $push;
+
+    &__ellipses {
+      margin-left: $push-sm;
+    }
+  }
+
+  &_text {
+    display: inline-block;
+
+    &__small {
+      @include small;
+    }
+
+    &__danger {
+      color: color('danger');
+    }
+
+    &__warning {
+      color: color('warning');
+    }
+
+    &__success {
+      color: color('success');
+    }
+
+    &__clickable {
+      cursor: pointer;
+    }
+
+    &__link {
+      color: color('primary');
+      cursor: pointer;
+    }
+
+    &__push {
+      display: block;
+      margin-bottom: $push_sm;
+    }
+  }
+}

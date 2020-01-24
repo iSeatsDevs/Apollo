@@ -1,0 +1,99 @@
+@import '../../global';
+@import '../../mixins/actionable.scss';
+
+.button {
+  @include actionable;
+  width: auto;
+  height: 50px;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  border-color: color('primary');
+  color: color('primary');
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:active {
+    background-color: transparentize(color('primary'), 0.85);
+  }
+
+  &__secondary {
+    color: color('black');
+    border-color: color('black');
+
+    &:active,
+    &:focus {
+      background-color: transparentize(color('black'), 0.9);
+    }
+  }
+
+  &__success {
+    &:active,
+    &:focus {
+      background-color: transparentize(color('success'), 0.9);
+    }
+  }
+
+  &__danger {
+    &:active,
+    &:focus {
+      background-color: transparentize(color('danger'), 0.9);
+    }
+  }
+
+  &__inverse {
+    color: color('white');
+    border-color: color('white');
+    background-color: transparent;
+
+    &:active,
+    &:focus {
+      background-color: transparentize(color('white'), 0.9);
+    }
+  }
+
+  &__small {
+    font-size: $font-size-small;
+    line-height: $font-line-height-small;
+
+    height: 42px;
+
+    padding: 10px 12px;
+  }
+
+  &__block {
+    width: 100%;
+  }
+
+  &__clear {
+    border: none;
+    border-radius: none;
+    color: color('black');
+    background-color: transparent !important;
+
+    &:active {
+      color: transparentize(color('black'), 0.5);
+    }
+  }
+
+  &__reverse {
+    flex-direction: row-reverse;
+
+    .button_icon {
+      margin-right: 0px;
+      margin-left: $push-sm;
+    }
+  }
+
+  &_icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: $push-sm;
+  }
+}

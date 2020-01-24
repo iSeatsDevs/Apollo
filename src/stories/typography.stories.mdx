@@ -1,0 +1,192 @@
+import { action } from '@storybook/addon-actions';
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Typography } from '../index';
+
+<Meta title="System|Typography" component={Typography} />
+
+# Typography
+
+Typography is divided into 3 seperate components:
+
+1.  **Title**
+2.  **Paragraph**
+3.  **Text**
+
+---
+
+All typography components have the following props:
+
+| Prop | Default |
+| ----------- | ----------- |
+| light | false |
+| bold | false |
+| underline | false |
+| mark | false |
+| inverse | false |
+
+---
+---
+---
+
+## Title
+
+<Props of={Typography.Title} />
+
+<Preview>
+  <Story name="Title | Default">
+    <Typography.Title>
+      We ignite opportunity by setting the world in motion.
+    </Typography.Title>
+  </Story>
+</Preview>
+
+### Inverse
+
+<Preview>
+  <Story name="Title | Inverse">
+    <div style={{ background: '#000' }}>
+      <Typography.Title inverse>
+        We ignite opportunity by setting the world in motion.
+      </Typography.Title>
+    </div>
+  </Story>
+</Preview>
+
+### Dont push
+
+If you don't want the title component to push content down you 
+can use the `dontPush` prop.
+
+<Preview>
+  <Story name="Title | Dont Push">
+    <Typography.Title dontPush>
+      We ignite opportunity by setting the world in motion.
+    </Typography.Title>
+  </Story>
+</Preview>
+
+### Levels
+
+<Preview>
+  <Story name="Title | Levels">
+    <>
+      <Typography.Title level={1}>
+        We ignite opportunity by setting the world in motion.
+      </Typography.Title>
+      <Typography.Title level={2}>
+        We ignite opportunity by setting the world in motion.
+      </Typography.Title>
+      <Typography.Title level={3}>
+        We ignite opportunity by setting the world in motion.
+      </Typography.Title>
+      <Typography.Title level={4}>
+        We ignite opportunity by setting the world in motion.
+      </Typography.Title>
+      <Typography.Title level={5}>
+        We ignite opportunity by setting the world in motion.
+      </Typography.Title>
+    </>
+  </Story>
+</Preview>
+
+---
+---
+---
+
+## Text
+
+Text components are designed for small, functionable texts such as links or inline buttons.
+
+<Props of={Typography.Text} />
+
+<Preview>
+  <Story name="Text | Default">
+    <Typography.Text>Good things happen when people can move.</Typography.Text>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Text | Light">
+    <Typography.Text light push>
+      Good things happen when people can move.
+    </Typography.Text>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Text | Bold">
+    <Typography.Text bold push>
+      Good things happen when people can move.
+    </Typography.Text>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Text | Underline">
+    <Typography.Text underline push>
+      Good things happen when people can move.
+    </Typography.Text>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Text | Mark">
+    <Typography.Text mark push>
+      Good things happen when people can move.
+    </Typography.Text>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Text | Inverse">
+    <div style={{ background: "#000" }}>
+      <Typography.Text inverse push>
+        Good things happen when people can move.
+      </Typography.Text>
+    </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Text | Link">
+    <Typography.Text link>
+      Good things happen when people can move.
+    </Typography.Text>
+  </Story>
+</Preview>
+
+---
+---
+---
+
+## Paragraph
+
+<Props of={Typography.Paragraph} />
+
+<Preview>
+  <Story name="Paragraph | Default">
+    <Typography.Paragraph>
+      Good things happen when people can move, whether across town or towards
+      their dreams. Opportunities appear, open up, become reality. What started as
+      a way to tap a button to get a ride has led to billions of moments of human
+      connection as people around the world go all kinds of places in all kinds of
+      ways with the help of our technology.
+    </Typography.Paragraph>
+  </Story>
+</Preview>
+
+### Ellipses
+
+Using the ellipses prop, we can hide overflowing lines by either using a integer set as a maximum letter, or a simple boolean.
+
+<Preview>
+  <Story name="Paragraph | Ellipses">
+    <Typography.Paragraph ellipses>
+      Good things happen when people can move, whether across town or towards
+      their dreams. Opportunities appear, open up, become reality. What started as
+      a way to tap a button to get a ride has led to billions of moments of human
+      connection as people around the world go all kinds of places in all kinds of
+      ways with the help of our technology.
+    </Typography.Paragraph>
+  </Story>
+</Preview>

@@ -1,0 +1,155 @@
+import { action } from '@storybook/addon-actions';
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Select } from '../components/Select';
+
+<Meta title="Forms|Select" component={Select} />
+
+# Select
+
+<Props of={Select} />
+
+<Preview>
+  <Story name="Default">
+    <Select
+        onChange={action('Select value')}
+        options={[
+          {
+            value: '1',
+            label: 'Option 1',
+          },
+          {
+            value: '2',
+            label: 'Option 2',
+          },
+          {
+            value: '3',
+            label: 'Option 3',
+          },
+          {
+            value: '4',
+            label: 'Option 4',
+          },
+        ]}
+      />
+  </Story>
+</Preview>
+
+## Validation states
+
+<Preview>
+  <Story name="Validation">
+    <>
+      <Select
+        onChange={action('Select value')}
+        success
+        message="Looks good!"
+        options={[
+          {
+            value: '1',
+            label: 'Option 1',
+          },
+          {
+            value: '2',
+            label: 'Option 2',
+          },
+          {
+            value: '3',
+            label: 'Option 3',
+          },
+          {
+            value: '4',
+            label: 'Option 4',
+          },
+        ]}
+      />
+      <Select
+        onChange={action('Select value')}
+        danger
+        message="Looks good!"
+        options={[
+          {
+            value: '1',
+            label: 'Option 1',
+          },
+          {
+            value: '2',
+            label: 'Option 2',
+          },
+          {
+            value: '3',
+            label: 'Option 3',
+          },
+          {
+            value: '4',
+            label: 'Option 4',
+          },
+        ]}
+      />
+    </>
+  </Story>
+</Preview>
+
+## Multiple
+
+<Preview>
+  <Story name="Multiple">
+    <Select
+        onChange={action('Select value')}
+        multiple
+        options={[
+          {
+            value: '1',
+            label: 'Option 1',
+          },
+          {
+            value: '2',
+            label: 'Option 2',
+          },
+          {
+            value: '3',
+            label: 'Option 3',
+          },
+          {
+            value: '4',
+            label: 'Option 4',
+          },
+        ]}
+      />
+  </Story>
+</Preview>
+
+## Default value
+
+If you need to set a default value for the component you can use the 
+`defaultValue` prop. For single pick select components you can simply 
+set the prop to whatever value one of your `options` has. If you have
+set the `multiple` prop, you can send and array of values like:
+`['1', '2', '3']`.
+
+<Preview>
+  <Story name="Default Value">
+    <Select
+        onChange={action('Select value')}
+        multiple
+        defaultValue={['1', '2', '3']}
+        options={[
+          {
+            value: '1',
+            label: 'Option 1',
+          },
+          {
+            value: '2',
+            label: 'Option 2',
+          },
+          {
+            value: '3',
+            label: 'Option 3',
+          },
+          {
+            value: '4',
+            label: 'Option 4',
+          },
+        ]}
+      />
+  </Story>
+</Preview>

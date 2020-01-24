@@ -1,0 +1,93 @@
+@import '../../global';
+@import '../../mixins/typography.scss';
+@import '../../mixins/actionable';
+
+.select {
+  @include actionable;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  &__open {
+    @include focus;
+  }
+
+  &__empty {
+    color: color('gray', -1);
+  }
+
+  &_input {
+    width: 200px;
+
+    user-select: none;
+
+    &__multiple {
+      min-width: 200px;
+      width: auto;
+
+      display: flex;
+    }
+
+    &_value {
+      @include small;
+
+      margin: 0 $push-sm;
+      padding: $padding-sm;
+
+      background-color: color('primary');
+      color: color('white');
+
+      border-radius: $border-radius;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &_label {
+        margin-right: $push-sm;
+      }
+    }
+  }
+
+  &_options {
+    border: $border-default color('gray');
+    border-radius: $border-radius;
+
+    position: absolute;
+
+    margin-top: $push;
+
+    min-width: 200px;
+
+    z-index: 1;
+
+    background-color: color('white');
+
+    &_empty {
+      @include body;
+      text-align: center;
+
+      margin: $push-sm 0;
+
+      display: block;
+    }
+  }
+
+  &_option {
+    outline: none;
+
+    padding: $padding;
+
+    &:focus {
+      background-color: transparentize(color('black'), 0.95);
+    }
+
+    &:hover {
+      background-color: transparentize(color('black'), 0.9);
+
+      cursor: pointer;
+    }
+  }
+}

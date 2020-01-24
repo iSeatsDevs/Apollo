@@ -1,0 +1,49 @@
+@import '../../global';
+@import '../../mixins/typography.scss';
+
+.message {
+  @include small;
+
+  display: block !important;
+
+  height: auto !important;
+  max-height: none;
+
+  text-align: center;
+
+  padding: $padding;
+  margin-bottom: $push;
+
+  background-color: color('primary');
+  color: color('white');
+  border-radius: $border-radius;
+ 
+
+  &__secondary {
+    background-color: color('white');
+    color: color('black');
+    border: $border-default color('black');
+  }
+
+  &__success {
+    background-color: color('success');
+    color: color('white');
+  }
+
+  &__warning {
+    background-color: color('warning');
+    color: color('white');
+  }
+
+  &__danger {
+    background-color: color('danger');
+    color: color('white');
+  }
+
+  &_closeable {
+    margin-bottom: $push-sm;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+}

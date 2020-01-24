@@ -1,0 +1,10 @@
+@import '../global';
+
+@mixin selectable {
+  cursor: pointer;
+  background-color: color('white');
+
+  &:hover {
+    background-color: color('gray', 0.75);
+  }
+}

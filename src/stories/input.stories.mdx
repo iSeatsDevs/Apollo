@@ -1,0 +1,112 @@
+import { action } from '@storybook/addon-actions';
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Input } from '../index';
+import { Coffee } from 'react-feather';
+
+<Meta title="Forms|Input" component={Input} />
+
+# Input
+
+Inputs are used for any component that requires a value from the user. Inputs base styles and components are reused
+in other component type components such as `<DatePicker/>` and `<NumberInput/>`. 
+
+<Props of={Input} />
+
+<Preview>
+  <Story name="Default">
+    <Input placeholder="Placeholder" />
+  </Story>
+</Preview>
+
+## Validation
+
+Validation can be easily set by using the `danger` or `success` prop. This will change the border color and
+text color of a message if applied. We can also use the `message` prop to give additional feedback to the user.
+
+<Preview>
+  <Story name="Validation">
+    <>
+      <div>
+        <Input
+          defaultValue="Apollo"
+          success
+          message="Oops! Something went wrong"
+        />
+      </div>
+      <div>
+        <Input
+          defaultValue="Apollo"
+          danger
+          message="Oops! Something went wrong"
+        />
+      </div>
+    </>
+  </Story>
+</Preview>
+
+## Clearable
+
+You can use the `clearable` prop to allow the user to easily clear the input field.
+
+<Preview>
+  <Story name="Clearable">
+    <Input placeholder="Placeholder" defaultValue="style@iseats.nl" clearable />
+  </Story>
+</Preview>
+
+## Visibility
+
+You can disable the visibility of a field using the `hidden` prop. If you want the user
+to be able to toggle between a visible and hidden state you can also enable `visibilityControls` prop.
+
+<Preview>
+  <Story name="Visibility">
+    <>
+      <div>
+        <Input placeholder="Password" defaultValue="password" clearable hidden/>
+      </div>
+      <div>
+        <Input placeholder="Password" defaultValue="password" clearable hidden visibilityControls/>
+      </div>
+    </>
+  </Story>
+</Preview>
+
+## Label
+
+<Preview>
+  <Story name="Label">
+    <Input label="Email address" defaultValue="style@iseats.nl" />
+  </Story>
+</Preview>
+
+## Icon
+
+<Preview>
+  <Story name="Icon">
+    <Input
+      icon={<Coffee />}
+      label="Email address"
+      defaultValue="style@iseats.nl"
+      block
+    />
+  </Story>
+</Preview>
+
+## Disabled
+
+<Preview>
+  <Story name="Disabled">
+    <Input defaultValue="style@iseats.nl" disabled />
+  </Story>
+</Preview>
+
+## Block
+
+Using the `block` prop, you can make the input field take up the entire width of the parent container.
+
+<Preview>
+  <Story name="Block">
+    <Input defaultValue="style@iseats.nl" block />
+  </Story>
+</Preview>

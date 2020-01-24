@@ -1,0 +1,14 @@
+@import '../../global';
+
+.divider {
+  width: 100%;
+  margin-bottom: 25px;
+
+  border-bottom: 1px color('gray');
+  border-spacing: 5px 10px;
+  border-bottom-style: solid;
+
+  &__dashed {
+    border-bottom-style: dashed;
+  }
+}

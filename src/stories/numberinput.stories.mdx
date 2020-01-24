@@ -1,0 +1,39 @@
+import { action } from '@storybook/addon-actions';
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { NumberInput } from '../index';
+import { Coffee } from 'react-feather';
+
+<Meta title="Forms|NumberInput" component={NumberInput} />
+
+# NumberInput
+
+<Props of={NumberInput} />
+
+## Default
+
+<Preview>
+  <Story name="Default">
+    <NumberInput onChange={action('Input changed')} />
+  </Story>
+</Preview>
+
+## Min and Max
+
+<Preview>
+  <Story name="Min and Max">
+    <NumberInput min={5} max={10} defaultValue={5} onChange={action('Input changed')} />
+  </Story>
+</Preview>
+
+## Currency
+
+If you want to display the input as a currency. You can pass an object to the `currency` prop
+with a `locale` and `format` property. The locale is any usable locale format such as `nl-NL`
+where the `format` is the currency formatting that will be used such as `EUR`. E.g:
+`{ locale: 'nl-NL', currency: 'EUR' }`
+
+<Preview>
+  <Story name="Currency">
+    <NumberInput currency={{locale: 'nl-NL', format: 'USD'}} onChange={action('Input changed')} />
+  </Story>
+</Preview>

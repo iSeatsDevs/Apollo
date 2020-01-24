@@ -1,0 +1,32 @@
+@import '../global';
+
+@mixin body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $font-line-height;
+
+  color: $font-color;
+}
+
+@mixin small {
+  font-family: $font-family;
+  font-size: $font-size-small;
+
+  line-height: $font-line-height-small;
+}
+
+@mixin action {
+  @include body;
+
+  font-family: $action-family;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+@mixin action_small {
+  @include small;
+
+  font-family: $action-family;
+  font-weight: 600;
+  letter-spacing: normal;
+}

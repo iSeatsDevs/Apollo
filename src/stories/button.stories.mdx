@@ -1,0 +1,89 @@
+import { action } from '@storybook/addon-actions';
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Button, ButtonRow } from '../index';
+import { CheckCircle } from 'react-feather';
+
+<Meta title="Components|Button" component={Button} />
+
+# Button
+
+We use buttons for any business logic that requires user input. Actions include but are not limited to navigation, confirmation, modals.
+
+<Props of={Button} />
+
+## Basic button
+
+<Preview>
+  <Story name="Default">
+    <Button onClick={action('Clicked')}>Button</Button>
+  </Story>
+</Preview>
+
+## Theming
+
+<Preview>
+  <Story name="Themes">
+    <>
+      <Button theme="secondary" onClick={action('Clicked')}>Secondary</Button>
+      <Button theme="success" onClick={action('Clicked')}>Success</Button>
+      <Button theme="danger" onClick={action('Clicked')}>Danger</Button>
+      <Button theme="clear" onClick={action('Clicked')}>Clear</Button>
+    </>
+  </Story>
+</Preview>
+
+## Small
+
+<Preview>
+  <Story name="Small">
+    <Button small onClick={action('Clicked')}>Small</Button>
+  </Story>
+</Preview>
+
+## Icon
+
+You can pass any node to the `icon` prop to add a inline icon or element to the button. You can push the icon to the
+right side by using `iconRight`.
+
+<Preview>
+  <Story name="Icon">
+    <>
+    <Button icon={<CheckCircle/>} onClick={action('Clicked')}>With Icon</Button>
+    <Button icon={<CheckCircle/>} iconRight onClick={action('Clicked')}>With Icon</Button>
+    </>
+  </Story>
+</Preview>
+
+## Inverse
+
+<Preview>
+  <Story name="Inverse">
+    <div style={{ background: '#000', display: 'inline-block', padding: '10px' }}>
+      <Button inverse onClick={action('Clicked')}>Inverse</Button>
+    </div>
+  </Story>
+</Preview>
+
+## Block
+
+<Preview>
+  <Story name="Block">
+    <Button block onClick={action('Clicked')}>Block</Button>
+  </Story>
+</Preview>
+
+## Disabled
+
+<Preview>
+  <Story name="Disabled">
+    <Button disabled onClick={action('Clicked')}>Disabled Button</Button>
+  </Story>
+</Preview>
+
+## Loading
+
+<Preview>
+  <Story name="Loading">
+    <Button loading onClick={action('Clicked')}>Loading</Button>
+  </Story>
+</Preview>
