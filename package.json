@@ -20,6 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
+    "@dinhoabreu/semantic-release-bitbucket-config": "^1.0.2",
     "@semantic-release/changelog": "^3.0.6",
     "@semantic-release/commit-analyzer": "^7.0.0",
     "@semantic-release/git": "^8.0.0",
@@ -87,6 +88,7 @@
       "@semantic-release/npm",
       "@semantic-release/changelog",
       "@semantic-release/git"
-    ]
+    ],
+    "extends": "@dinhoabreu/semantic-release-bitbucket-config"
   }
 }
