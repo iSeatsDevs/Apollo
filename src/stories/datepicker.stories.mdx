@@ -1,6 +1,7 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import { DatePicker } from '../index';
+import { Calendar } from 'react-feather';
 
 <Meta title="Forms|DatePicker" component={DatePicker} />
 
@@ -11,6 +12,43 @@ However, using the inline attribute use cases become a lot more varied.
 
 ## Default
 
-<Story name="Default">
-  <DatePicker onChange={action('DatePicker changed')} />
-</Story>
+<Preview>
+  <Story name="Default">
+    <DatePicker onChange={action('DatePicker changed')} />
+  </Story>
+</Preview>
+
+## Format
+
+<Preview>
+  <Story name="Format">
+    <DatePicker format="MMM dd, yyyy" onChange={action('DatePicker changed')} />
+  </Story>
+</Preview>
+
+## Label
+
+<Preview>
+  <Story name="Label">
+    <DatePicker label="Birthday" onChange={action('DatePicker changed')} />
+  </Story>
+</Preview>
+
+## Validation
+
+<Preview>
+  <Story name="Validation">
+    <>
+      <DatePicker success message="Success!" onChange={action('DatePicker changed')} />
+      <DatePicker danger message="Something went wrong" onChange={action('DatePicker changed')} />
+    </>
+  </Story>
+</Preview>
+
+## Icon
+
+<Preview>
+  <Story name="Icon">
+    <DatePicker icon={<Calendar/>} onChange={action('DatePicker changed')} />
+  </Story>
+</Preview>
