@@ -1,0 +1,82 @@
+@import '../../global';
+@import '../../mixins/actionable';
+@import '../../mixins/typography';
+
+.calendar {
+  border: $border-default color('gray');
+  border-radius: $border-radius;
+
+  padding: $padding-sm;
+
+  width: 400px;
+
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: $push;
+
+    &_year {
+      margin: 0px;
+      padding: 0px;
+      
+      border: $border-default color('gray');
+      border-radius: $border-radius;
+      outline: none;
+
+      text-align: center;
+
+      @include body;
+      font-weight: 600;
+
+      width: 50px;
+    }
+  }
+
+  &_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_days {
+    display: grid;
+    grid-template-columns: repeat(7, 50px); 
+    grid-template-rows: repeat(5, 50px); 
+    grid-column-gap: $push-sm;
+    grid-row-gap: $push-sm; 
+
+    padding: $padding;
+
+    &_day {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: $border-default color('gray');
+      border-width: 1px;
+      padding: $padding-sm;
+
+      outline: none;
+
+      &:hover,
+      &:focus {
+        @include focus;
+        cursor: pointer;
+      }
+
+      &__selected {
+        border-color: color('primary');
+        background-color: transparentize(color('primary'), 0.85);
+      }
+    
+
+      &__disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: $opacity-md;
+      }
+    }
+  }
+}
