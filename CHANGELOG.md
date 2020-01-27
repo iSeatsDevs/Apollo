@@ -1,3 +1,24 @@
+# [1.2.0](https://bitbucket.org/iseats/apollo/compare/v1.1.0...v1.2.0) (2020-01-27)
+
+
+### Bug Fixes
+
+* **calendar:** fixed storybook props ([ac5f381](https://bitbucket.org/iseats/apollo/commits/ac5f3815f509a8c3a16a796e73f495883bbe4fd3))
+* **datepicker:** fixed datepicker props in story ([7b8314b](https://bitbucket.org/iseats/apollo/commits/7b8314b83b9c7166a2c8ff5e5a8fc11cfdffc36a))
+* **package:** semantic release branch fixes ([2c071d6](https://bitbucket.org/iseats/apollo/commits/2c071d632725ff6f280913b100fcecdaf00de64e))
+* **package.json:** bumped version inline to release ([2d85976](https://bitbucket.org/iseats/apollo/commits/2d85976fadcafd15fd05803a787d3a2430f56913))
+* **package.json:** removed @dinhoabreu/semantic-release-bitbucket-config ([bfbcb49](https://bitbucket.org/iseats/apollo/commits/bfbcb4976839d8d872c5a951408ef0c74c7ba377))
+
+
+### Features
+
+* **calendar:** added calendar component ([da2fda1](https://bitbucket.org/iseats/apollo/commits/da2fda176d44e0b64688136bad5b61a2adac02e9))
+
+
+### Reverts
+
+* **package.json:** revert to #bfbcb49 ([7615086](https://bitbucket.org/iseats/apollo/commits/7615086e8cea603f334dcc84d849d5bf25157f6f)), closes [#bfbcb49](https://bitbucket.org/iseats/apollo/issue/bfbcb49)
+
 # [1.1.0](https://bitbucket.org/iseats/apollo/compare/v1.0.0...v1.1.0) (2020-01-24)
 
 
