@@ -1,6 +1,6 @@
 {
   "name": "@iseats/apollo",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "apollo is a react component library used by iseats",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -79,7 +79,7 @@
     }
   },
   "release": {
-    "branch": "release",
+    "branch": "master",
     "repositoryUrl": "git@bitbucket.org:iseats/apollo.git",
     "plugins": [
       "@semantic-release/commit-analyzer",
