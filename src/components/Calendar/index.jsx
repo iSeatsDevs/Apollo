@@ -142,4 +142,6 @@ Calendar.propTypes = {
   only: PropTypes.arrayOf(Date),
 };
 
+export { Calendar };
+
 export default Calendar;
