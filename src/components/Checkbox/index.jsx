@@ -42,7 +42,11 @@ const Checkbox = ({
       </span>
 
       {label && (
-        <Text small bold theme={(danger && 'danger') || (success && 'success')}>
+        <Text
+          small
+          bold
+          theme={(danger && 'danger') || (success && 'success') || null}
+        >
           {label}
         </Text>
       )}
