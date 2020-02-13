@@ -1,3 +1,10 @@
+## [1.2.1](https://bitbucket.org/iseats/apollo/compare/v1.2.0...v1.2.1) (2020-02-13)
+
+
+### Bug Fixes
+
+* **checkbox:** fixed Failed prop type: Invalid prop `theme` of value `false` supplied to `Text` ([26d9e30](https://bitbucket.org/iseats/apollo/commits/26d9e308328e5bf8e9f0d89360820d2795bc435c))
+
 # [1.2.0](https://bitbucket.org/iseats/apollo/compare/v1.1.0...v1.2.0) (2020-01-27)
 
 
