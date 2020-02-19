@@ -1,3 +1,11 @@
+# [1.3.0](https://bitbucket.org/iseats/apollo/compare/v1.2.1...v1.3.0) (2020-02-19)
+
+
+### Features
+
+* **modal component:** added modal component ([4cc5dbd](https://bitbucket.org/iseats/apollo/commits/4cc5dbd2bdee4e85193e519f5b7a8f94474183cc))
+* added light-gray and dark-gray colors ([13b05d2](https://bitbucket.org/iseats/apollo/commits/13b05d2d187f76bc081a0edf75d406715d8e9be3))
+
 ## [1.2.1](https://bitbucket.org/iseats/apollo/compare/v1.2.0...v1.2.1) (2020-02-13)
 
 
