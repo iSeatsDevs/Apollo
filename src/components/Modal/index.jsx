@@ -7,61 +7,64 @@ import Button from '../Button';
 
 const Modal = ({
   children,
-  open,
   confirmText,
   denyText,
   onConfirm,
   onDeny,
+  onExit,
+  danger,
+  success,
   denyButton,
 }) => {
   const cx = classnames.bind(styles);
 
-  const [visibility, setVisibility] = useState(open);
-
   return (
-    visibility && (
-      <div className={cx('modal')}>
-        <div className={cx('modal-body')}>
-          <div className={cx('modal-body-header')}>
+    <div className={cx('modal')}>
+      <div className={cx('modal-body')}>
+        <div className={cx('modal-body-header')}>
+          <Button theme="clear" icon={<X size={14} />} small onClick={onExit} />
+        </div>
+        <div className={cx('modal-body-content')}>{children}</div>
+        <div className={cx('modal-body-footer')}>
+          {denyButton && (
             <Button
-              theme="clear"
-              icon={<X size={14} />}
+              danger={danger}
+              success={success}
+              onClick={onDeny}
               small
-              onClick={() => setVisibility(false)}
-            />
-          </div>
-          <div className={cx('modal-body-content')}>{children}</div>
-          <div className={cx('modal-body-footer')}>
-            {denyButton && (
-              <Button onClick={() => onDeny} small theme="secondary">
-                {denyText}
-              </Button>
-            )}
-            <Button onClick={() => onConfirm} small>
-              {confirmText}
+              theme="secondary"
+            >
+              {denyText}
             </Button>
-          </div>
+          )}
+          <Button onClick={onConfirm} small>
+            {confirmText}
+          </Button>
         </div>
       </div>
-    )
+    </div>
   );
 };
 
 Modal.defaultProps = {
-  open: false,
   confirmText: 'Ja',
   denyText: 'Nee',
   onDeny: () => {},
+  onExit: () => {},
+  danger: false,
+  success: false,
   denyButton: false,
 };
 
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
-  open: PropTypes.bool,
   confirmText: PropTypes.string,
   denyText: PropTypes.string,
   onConfirm: PropTypes.func.isRequired,
   onDeny: PropTypes.func,
+  onExit: PropTypes.func,
+  danger: PropTypes.bool,
+  success: PropTypes.bool,
   denyButton: PropTypes.bool,
 };
 

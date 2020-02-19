@@ -11,7 +11,7 @@ import { Modal, Button } from '../index';
 Modals can be used with the `<Modal></Modal>` component. You can activate a modal using
 any `onClick` function by setting the state of the modals visibility to true like so:
 ```
-<Modal open={openState}>
+<Modal onExit={() => setOpenState(false)}>
   <Text>Are you sure you want to do this?</Text>
 </Modal>
 ```
