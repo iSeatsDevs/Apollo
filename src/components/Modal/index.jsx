@@ -27,17 +27,11 @@ const Modal = ({
         <div className={cx('modal-body-content')}>{children}</div>
         <div className={cx('modal-body-footer')}>
           {denyButton && (
-            <Button
-              danger={danger}
-              success={success}
-              onClick={onDeny}
-              small
-              theme="secondary"
-            >
+            <Button onClick={onDeny} small theme="secondary">
               {denyText}
             </Button>
           )}
-          <Button onClick={onConfirm} small>
+          <Button danger={danger} success={success} onClick={onConfirm} small>
             {confirmText}
           </Button>
         </div>
