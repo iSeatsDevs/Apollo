@@ -1,7 +1,6 @@
 import React, { useState, useReducer, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import onClickOutside from 'react-onclickoutside';
 import Typography from '../Typography';
 import Input from '../Input';
 import styles from './select.scss';
@@ -164,8 +163,6 @@ const Select = ({
     optionOnClick: PropTypes.func.isRequired,
   };
 
-  Select.handleClickOutside = () => setOpen(false);
-
   useEffect(() => {
     if (!multiple) {
       setOpen(false);
@@ -252,10 +249,4 @@ Select.propTypes = {
   emptyText: PropTypes.string,
 };
 
-const clickOutsideConfig = {
-  handleClickOutside: () => Select.handleClickOutside,
-};
-
-export { Select };
-
-export default onClickOutside(Select, clickOutsideConfig);
+export default Select;

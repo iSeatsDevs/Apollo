@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 import { format as useFormat } from 'date-fns';
-import onClickOutside from 'react-onclickoutside';
 import Input from '../Input';
 import Calendar from '../Calendar';
 import styles from './datepicker.scss';
@@ -29,8 +28,6 @@ const DatePicker = ({
   };
 
   useEffect(() => setOpen(false), [date]);
-
-  DatePicker.handleClickOutside = () => setOpen(false);
 
   return (
     <div className={cx('datepicker')}>
@@ -83,10 +80,4 @@ DatePicker.propTypes = {
   icon: PropTypes.node,
 };
 
-const clickOutsideConfig = {
-  handleClickOutside: () => DatePicker.handleClickOutside,
-};
-
-export { DatePicker };
-
-export default onClickOutside(DatePicker, clickOutsideConfig);
+export default DatePicker;

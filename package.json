@@ -69,9 +69,7 @@
     "prop-types": "^15.7.2",
     "react-feather": "^2.0.3",
     "react-grid-system": "^6.0.7",
-    "react-lazyload": "^2.6.5",
-    "react-modal": "^3.11.1",
-    "react-onclickoutside": "^6.9.0"
+    "react-lazyload": "^2.6.5"
   },
   "config": {
     "commitizen": {
