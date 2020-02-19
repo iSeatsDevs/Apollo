@@ -1,0 +1,17 @@
+import { action } from '@storybook/addon-actions';
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { Modal, Button } from '../index';
+
+<Meta title="Forms|Modal" component={Modal} />
+
+# Modal
+
+<Props of={Modal} />
+
+Modals can be used with the `<Modal></Modal>` component. You can activate a modal using
+any `onClick` function by setting the state of the modals visibility to true like so:
+```
+<Modal open={openState}>
+  <Text>Are you sure you want to do this?</Text>
+</Modal>
+```
