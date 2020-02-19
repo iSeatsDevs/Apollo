@@ -1,3 +1,10 @@
+# [1.4.0](https://bitbucket.org/iseats/apollo/compare/v1.3.0...v1.4.0) (2020-02-19)
+
+
+### Features
+
+* removed react-onclickoutside ([41f43f2](https://bitbucket.org/iseats/apollo/commits/41f43f2dfc6c10a54ff9c30c2441b516e6dba556))
+
 # [1.3.0](https://bitbucket.org/iseats/apollo/compare/v1.2.1...v1.3.0) (2020-02-19)
 
 
