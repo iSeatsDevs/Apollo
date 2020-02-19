@@ -1,3 +1,10 @@
+## [1.4.1](https://bitbucket.org/iseats/apollo/compare/v1.4.0...v1.4.1) (2020-02-19)
+
+
+### Bug Fixes
+
+* **modal:** fixed button `danger` and `success` prop ([e246be3](https://bitbucket.org/iseats/apollo/commits/e246be310a12c42a0d7d82e4e89b3572fcf9864d))
+
 # [1.4.0](https://bitbucket.org/iseats/apollo/compare/v1.3.0...v1.4.0) (2020-02-19)
 
 
