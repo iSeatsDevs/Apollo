@@ -1,3 +1,10 @@
+## [1.4.2](https://bitbucket.org/iseats/apollo/compare/v1.4.1...v1.4.2) (2020-02-19)
+
+
+### Bug Fixes
+
+* **modal:** actually fixed button theme ([6e38dfd](https://bitbucket.org/iseats/apollo/commits/6e38dfd9bf37655bad15f45503cce41780c124e2))
+
 ## [1.4.1](https://bitbucket.org/iseats/apollo/compare/v1.4.0...v1.4.1) (2020-02-19)
 
 
