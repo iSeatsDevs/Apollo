@@ -31,7 +31,11 @@ const Modal = ({
               {denyText}
             </Button>
           )}
-          <Button danger={danger} success={success} onClick={onConfirm} small>
+          <Button
+            theme={(danger && 'danger') || (success && 'success')}
+            onClick={onConfirm}
+            small
+          >
             {confirmText}
           </Button>
         </div>
