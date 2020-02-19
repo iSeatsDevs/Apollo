@@ -55,6 +55,7 @@ Button.defaultProps = {
   inverse: false,
   icon: undefined,
   iconRight: false,
+  children: null,
 };
 
 Button.propTypes = {
@@ -63,7 +64,7 @@ Button.propTypes = {
   loading: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   small: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   theme: PropTypes.oneOf(['secondary', 'success', 'danger', 'clear']),
   inverse: PropTypes.bool,
   icon: PropTypes.node,
