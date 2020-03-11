@@ -9,7 +9,8 @@
     "build": "rollup -c",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "chromatic": "CHROMATIC_APP_CODE=oxozo09t83s chromatic"
   },
   "author": "iseats",
   "license": "ISC",
@@ -58,7 +59,7 @@
     "rollup-plugin-postcss": "^2.0.4",
     "sass-loader": "^8.0.2",
     "semantic-release": "^16.0.3",
-    "storybook-chromatic": "^3.4.1",
+    "storybook-chromatic": "^3.5.2",
     "style-loader": "^1.1.3",
     "webpack": "^4.41.5"
   },
