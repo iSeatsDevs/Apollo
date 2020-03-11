@@ -1,3 +1,10 @@
+## [1.4.3](https://bitbucket.org/iseats/apollo/compare/v1.4.2...v1.4.3) (2020-03-11)
+
+
+### Bug Fixes
+
+* removed slider component ([460a4c9](https://bitbucket.org/iseats/apollo/commits/460a4c922f8b93588ab2cebd690ab85a0d35ae5c))
+
 ## [1.4.2](https://bitbucket.org/iseats/apollo/compare/v1.4.1...v1.4.2) (2020-02-19)
 
 
