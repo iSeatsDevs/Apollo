@@ -10,7 +10,6 @@ export { default as Checkbox } from './components/Checkbox';
 export { default as Select } from './components/Select';
 export { default as DatePicker } from './components/DatePicker';
 export { default as Progress } from './components/Progress';
-export { default as Slider } from './components/Slider';
 export { default as NumberInput } from './components/NumberInput';
 export { default as Calendar } from './components/Calendar';
 export { default as Modal } from './components/Modal';
