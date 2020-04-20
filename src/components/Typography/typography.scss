@@ -40,6 +40,8 @@
 
     margin-bottom: $push_lg;
 
+    font-weight: bold;
+
     &__dont_push {
       margin-bottom: 0px !important;
     }
@@ -62,18 +64,24 @@
       font-size: $heading-size-3;
       line-height: $heading-size-3 + 6px;
       margin-bottom: $push-sm;
+
+      font-weight: 600;
     }
 
     &__level_4 {
       font-size: $heading-size-4;
       line-height: $heading-size-4 + 4px;
       margin-bottom: $push-sm;
+
+      font-weight: 600;
     }
 
     &__level_5 {
       font-size: $heading-size-5;
       line-height: $heading-size-5 + 4px;
       margin-bottom: $push-sm;
+
+      font-weight: 600;
     }
 
     @include sm {
@@ -97,7 +105,13 @@
 
     margin-bottom: $push;
 
-    &__ellipses {
+    &_arrow {
+      display: inline-block;
+
+      transform: translateY(2.5px);
+    }
+
+    &_ellipses {
       margin-left: $push-sm;
     }
   }

@@ -217,7 +217,7 @@ const Select = ({
 };
 
 Select.defaultProps = {
-  placeholder: 'Select...',
+  placeholder: 'Selecteer',
   options: undefined,
   defaultOpen: false,
   defaultValue: null,

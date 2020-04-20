@@ -24,6 +24,8 @@ const Input = ({
   renderInput,
   readOnly,
   forceValue,
+  small,
+  noBorder,
 }) => {
   const cx = classnames.bind(styles);
 
@@ -70,13 +72,17 @@ const Input = ({
           className={cx('inputwrapper_input', {
             ...getValidationState({ success, danger }),
             inputwrapper_input__disabled: disabled,
+            inputwrapper_input__small: small,
+            inputwrapper_input__no_border: noBorder,
           })}
         >
           {icon && <span className={cx('inputwrapper_icon')}>{icon}</span>}
 
           <input
             disabled={disabled}
-            className={cx('input')}
+            className={cx('input', {
+              input__small: small,
+            })}
             onChange={val => handleChange(val.target.value)}
             placeholder={placeholder}
             value={forceValue || value}
@@ -123,6 +129,8 @@ Input.defaultProps = {
   renderInput: undefined,
   readOnly: false,
   forceValue: null,
+  small: false,
+  noBorder: false,
 };
 
 Input.propTypes = {
@@ -143,6 +151,8 @@ Input.propTypes = {
   renderInput: PropTypes.node,
   readOnly: PropTypes.bool,
   forceValue: PropTypes.string,
+  small: PropTypes.bool,
+  noBorder: PropTypes.bool,
 };
 
 export default Input;

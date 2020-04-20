@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { ArrowLeft, ArrowUp } from 'react-feather';
+import { ArrowUp } from 'react-feather';
 import styles from './typography.scss';
 import Text from './text';
 import {
@@ -65,9 +65,15 @@ const Paragraph = ({
           : truncateString(children, ellipses)
         : children}
       {ellipses && (
-        <span className={cx('typography_paragraph__ellipses')}>
+        <span className={cx('typography_paragraph_ellipses')}>
           <Text onClick={() => setVisible(!visible)}>
-            {visible ? <ArrowUp size={14} /> : '...'}
+            {visible ? (
+              <span className={cx('typography_paragraph_arrow')}>
+                <ArrowUp size={16} />
+              </span>
+            ) : (
+              '...'
+            )}
           </Text>
         </span>
       )}

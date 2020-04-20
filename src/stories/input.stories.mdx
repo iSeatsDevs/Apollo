@@ -18,6 +18,27 @@ in other component type components such as `<DatePicker/>` and `<NumberInput/>`.
   </Story>
 </Preview>
 
+## Small
+
+<Preview>
+  <Story name="Small">
+    <Input small placeholder="Placeholder..." />
+  </Story>
+</Preview>
+
+## No Border
+
+To disable the border on the input you can pass the `noBorder` prop 
+to the component. This is mainly used when placed on a colored background.
+
+<Preview>
+  <Story name="No Border">
+    <div style={{ background: '#0174E3', padding: '25px' }}>
+      <Input noBorder placeholder="This input does not have a border" />
+    </div>
+  </Story>
+</Preview>
+
 ## Validation
 
 Validation can be easily set by using the `danger` or `success` prop. This will change the border color and
@@ -50,7 +71,7 @@ You can use the `clearable` prop to allow the user to easily clear the input fie
 
 <Preview>
   <Story name="Clearable">
-    <Input placeholder="Placeholder" defaultValue="style@iseats.nl" clearable />
+    <Input placeholder="Placeholder" defaultValue="johndoe@gmail.com" clearable />
   </Story>
 </Preview>
 
@@ -76,7 +97,7 @@ to be able to toggle between a visible and hidden state you can also enable `vis
 
 <Preview>
   <Story name="Label">
-    <Input label="Email address" defaultValue="style@iseats.nl" />
+    <Input label="Email address" defaultValue="johndoe@gmail.com" />
   </Story>
 </Preview>
 
@@ -87,8 +108,7 @@ to be able to toggle between a visible and hidden state you can also enable `vis
     <Input
       icon={<Coffee />}
       label="Email address"
-      defaultValue="style@iseats.nl"
-      block
+      defaultValue="johndoe@gmail.com"
     />
   </Story>
 </Preview>
@@ -97,7 +117,7 @@ to be able to toggle between a visible and hidden state you can also enable `vis
 
 <Preview>
   <Story name="Disabled">
-    <Input defaultValue="style@iseats.nl" disabled />
+    <Input defaultValue="johndoe@gmail.com" disabled />
   </Story>
 </Preview>
 
@@ -107,6 +127,6 @@ Using the `block` prop, you can make the input field take up the entire width of
 
 <Preview>
   <Story name="Block">
-    <Input defaultValue="style@iseats.nl" block />
+    <Input defaultValue="johndoe@gmail.com" block />
   </Story>
 </Preview>

@@ -2,10 +2,9 @@
 
 .divider {
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: $push;
 
-  border-bottom: 1px color('gray');
-  border-spacing: 5px 10px;
+  border-bottom: $border-default color('gray');
   border-bottom-style: solid;
 
   &__dashed {

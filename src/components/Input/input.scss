@@ -3,6 +3,8 @@
 @import '../../mixins/typography';
 
 .inputwrapper {
+  box-sizing: border-box;
+
   width: auto;
   display: inline-block;
 
@@ -18,9 +20,15 @@
   &_input {
       @include actionable;
 
+      padding: 0px $padding;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      &__no_border {
+        border-color: color('white') !important;
+      }
 
       &:active,
       &:focus-within {
@@ -57,13 +65,17 @@
   margin: 0px;
   border: none;
 
-  @include body;
+  @include action;
 
-  width: 200px;
+  width: 350px;
 
   outline: none;
 
   &::placeholder {
     color: color('gray', -1);
+  }
+
+  &__small {
+    @include action_small;
   }
 }

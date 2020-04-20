@@ -16,4 +16,31 @@
   &:focus {
     @include focus;
   }
+
+  &_value {
+    margin: 0 $push_sm;
+    
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &_control {
+    height: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    padding: $padding_sm;
+
+    outline: none;
+
+    &:focus {
+      background-color: color('gray');
+    }
+  }
 }

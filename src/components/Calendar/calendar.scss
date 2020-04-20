@@ -22,14 +22,15 @@
     &_year {
       margin: 0px;
       padding: 0px;
-      
+
       border: $border-default color('gray');
       border-radius: $border-radius;
       outline: none;
 
       text-align: center;
 
-      @include body;
+      @include action;
+
       font-weight: 600;
 
       width: 50px;
@@ -44,10 +45,10 @@
 
   &_days {
     display: grid;
-    grid-template-columns: repeat(7, 50px); 
-    grid-template-rows: repeat(5, 50px); 
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(5, 50px);
     grid-column-gap: $push-sm;
-    grid-row-gap: $push-sm; 
+    grid-row-gap: $push-sm;
 
     padding: $padding;
 
@@ -57,7 +58,7 @@
       align-items: center;
 
       border: $border-default color('gray');
-      border-width: 1px;
+      border-radius: $border-radius;
       padding: $padding-sm;
 
       outline: none;
@@ -70,14 +71,17 @@
 
       &__selected {
         border-color: color('primary');
-        background-color: transparentize(color('primary'), 0.85);
+        background-color: color('primary');
+
+        span {
+          color: color('white') !important;
+        }
       }
-    
 
       &__disabled {
         cursor: not-allowed;
         pointer-events: none;
-        opacity: $opacity-md;
+        opacity: $opacity-low;
       }
     }
   }

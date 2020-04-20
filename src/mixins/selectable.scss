@@ -5,6 +5,6 @@
   background-color: color('white');
 
   &:hover {
-    background-color: color('gray', 0.75);
+    background-color: transparentize(color('gray'), .25)
   }
 }
