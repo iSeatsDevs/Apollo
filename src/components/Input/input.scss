@@ -3,6 +3,8 @@
 @import '../../mixins/typography';
 
 .inputwrapper {
+  box-sizing: border-box;
+
   width: auto;
   display: inline-block;
 
@@ -21,6 +23,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
+      &__small {
+        height: 42px;
+      }
+
+      &__no_border {
+        border: none !important;
+      }
 
       &:active,
       &:focus-within {
@@ -59,11 +69,15 @@
 
   @include body;
 
-  width: 200px;
+  width: 350px;
 
   outline: none;
 
   &::placeholder {
     color: color('gray', -1);
+  }
+
+  &__small {
+    @include small;
   }
 }
