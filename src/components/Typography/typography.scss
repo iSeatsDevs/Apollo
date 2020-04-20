@@ -105,7 +105,13 @@
 
     margin-bottom: $push;
 
-    &__ellipses {
+    &_arrow {
+      display: inline-block;
+
+      transform: translateY(2.5px);
+    }
+
+    &_ellipses {
       margin-left: $push-sm;
     }
   }
