@@ -8,6 +8,8 @@
   &_calendar {
     position: absolute;
 
+    transform: translateY($push_sm);
+
     top: 100%;
 
     z-index: 2;
