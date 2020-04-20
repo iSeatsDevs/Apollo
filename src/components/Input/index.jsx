@@ -73,7 +73,7 @@ const Input = ({
             ...getValidationState({ success, danger }),
             inputwrapper_input__disabled: disabled,
             inputwrapper_input__small: small,
-            inputwrapper_input__noBorder: noBorder,
+            inputwrapper_input__no_border: noBorder,
           })}
         >
           {icon && <span className={cx('inputwrapper_icon')}>{icon}</span>}
