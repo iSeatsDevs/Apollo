@@ -73,8 +73,8 @@ const Calendar = ({
   return (
     <div className={cx('calendar')}>
       <div className={cx('calendar_top')}>
-        <Button theme="clear" onClick={() => changeMonth('subtract')}>
-          <ChevronLeft />
+        <Button small theme="light" onClick={() => changeMonth('subtract')}>
+          <ChevronLeft size={18} />
         </Button>
 
         {showYear && (
@@ -89,12 +89,13 @@ const Calendar = ({
         <Text bold>{format(showDate, 'MMMM')}</Text>
 
         <Button
-          theme="clear"
+          small
+          theme="light"
           onClick={() => {
             return changeMonth('add');
           }}
         >
-          <ChevronRight />
+          <ChevronRight size={18} />
         </Button>
       </div>
 
