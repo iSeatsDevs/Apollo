@@ -1,3 +1,10 @@
+# [2.1.0](https://bitbucket.org/iseats/apollo/compare/v2.0.0...v2.1.0) (2020-04-20)
+
+
+### Features
+
+* **button:** added `transparent` theme ([957765d](https://bitbucket.org/iseats/apollo/commits/957765dc05c05a9e8b14b18410b93f71e4fbe2e2))
+
 # [2.0.0](https://bitbucket.org/iseats/apollo/compare/v1.4.3...v2.0.0) (2020-04-20)
 
 
