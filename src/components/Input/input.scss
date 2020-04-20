@@ -20,6 +20,8 @@
   &_input {
       @include actionable;
 
+      padding: 0px $padding;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -63,7 +65,7 @@
   margin: 0px;
   border: none;
 
-  @include body;
+  @include action;
 
   width: 350px;
 
@@ -74,6 +76,6 @@
   }
 
   &__small {
-    @include small;
+    @include action_small;
   }
 }

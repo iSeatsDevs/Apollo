@@ -2,7 +2,7 @@
 @import '../mixins/typography.scss';
 
 @mixin actionable {
-  @include body;
+  @include action;
   outline: none;
 
   position: relative;
@@ -16,7 +16,7 @@
   height: 52px;
   width: 100%;
 
-  padding: 0px 16px;
+  padding: 0px $padding_lg;
 
   background-color: color('white');
   transition: all 100ms;
