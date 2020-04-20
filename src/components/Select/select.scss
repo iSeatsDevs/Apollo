@@ -31,7 +31,7 @@
     }
 
     &_value {
-      @include small;
+      @include action_small;
 
       margin: 0 $push-sm;
       padding: $padding-sm;
@@ -57,7 +57,7 @@
 
     position: absolute;
 
-    margin-top: $push;
+    margin-top: $push_sm;
 
     min-width: 200px;
 
@@ -66,7 +66,8 @@
     background-color: color('white');
 
     &_empty {
-      @include body;
+      @include action;
+
       text-align: center;
 
       margin: $push-sm 0;
@@ -81,11 +82,11 @@
     padding: $padding;
 
     &:focus {
-      background-color: transparentize(color('black'), 0.95);
+      background-color: transparentize(color('gray'), 0.25);
     }
 
     &:hover {
-      background-color: transparentize(color('black'), 0.9);
+      background-color: transparentize(color('gray'), 0.25);
 
       cursor: pointer;
     }
