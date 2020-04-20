@@ -1,8 +1,8 @@
 @import url("https://use.typekit.net/fuj5cpq.css");
 
 $colors: (
-  'primary': #0174E3,
-  'secondary': #5968e2,
+  'primary': #2F7AFD,
+  'secondary': #FF4A49,
   'success': #00AC1E,
   'warning': #ffb400,
   'danger': #E91A13,
@@ -46,7 +46,7 @@ $heading-size-4: ceil($font-size * 1.42);
 $heading-size-5: 16px;
 
 $border-radius: 6px;
-$border-default: 1px solid;
+$border-default: 1.5px solid;
 
 $padding: 12.5px;
 $padding-lg: $padding * 2;
