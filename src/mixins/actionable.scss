@@ -37,4 +37,10 @@
     pointer-events: none;
     opacity: $opacity-md;
   }
+
+  &__small {
+    @include action_small;
+
+    height: 42px;
+  }
 }

@@ -23,10 +23,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
-      &__small {
-        height: 42px;
-      }
 
       &__no_border {
         border-color: color('white') !important;
