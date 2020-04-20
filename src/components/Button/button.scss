@@ -65,6 +65,15 @@
     }
   }
 
+  &__transparent {
+    background-color: transparentize(color('gray'), 0.75);
+
+    &:active,
+    &:focus {
+      background-color: transparentize(color('gray'), 0.9);
+    }
+  }
+
   &__block {
     width: 100%;
   }

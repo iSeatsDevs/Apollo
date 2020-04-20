@@ -23,6 +23,7 @@ const Button = ({
     danger: 'button__danger',
     warning: 'button__warning',
     light: 'button__light',
+    transparent: 'button__transparent',
   };
 
   return (
@@ -62,7 +63,13 @@ Button.propTypes = {
   onClick: PropTypes.func.isRequired,
   small: PropTypes.bool,
   children: PropTypes.node,
-  theme: PropTypes.oneOf(['secondary', 'success', 'danger', 'light']),
+  theme: PropTypes.oneOf([
+    'secondary',
+    'success',
+    'danger',
+    'light',
+    'transparent',
+  ]),
   icon: PropTypes.node,
   iconRight: PropTypes.bool,
 };
