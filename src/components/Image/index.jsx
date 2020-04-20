@@ -9,7 +9,7 @@ const cx = classnames.bind(styles);
 
 const Placeholder = () => (
   <div className={cx('image_placeholder')}>
-    <Load />
+    <Load theme="light" />
   </div>
 );
 
