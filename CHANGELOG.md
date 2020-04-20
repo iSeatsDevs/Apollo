@@ -1,3 +1,27 @@
+# [2.0.0](https://bitbucket.org/iseats/apollo/compare/v1.4.3...v2.0.0) (2020-04-20)
+
+
+### Bug Fixes
+
+* **inputs:** fixed no_border class in camelcase ([3259539](https://bitbucket.org/iseats/apollo/commits/32595399ac53f29358d24d86f1cf6a6e986bb115))
+
+
+### Features
+
+* saturated primary color and changed secondary ([3fcf52a](https://bitbucket.org/iseats/apollo/commits/3fcf52a1cb6c77972b2c5c327210d28fa3e3838c))
+
+
+### improvement
+
+* **buttons:** various improvements and changed to buttons ([d259977](https://bitbucket.org/iseats/apollo/commits/d25997758c751c454ef9f4cafc12610defe9e50e))
+
+
+### BREAKING CHANGES
+
+* **buttons:** removal of clear and inverse props. we believe that using the new light theme and
+the new filling to the button background contrast will be greatly improved and the props are no
+longer needed
+
 ## [1.4.3](https://bitbucket.org/iseats/apollo/compare/v1.4.2...v1.4.3) (2020-03-11)
 
 
