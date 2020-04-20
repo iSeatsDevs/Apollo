@@ -1,5 +1,6 @@
 @import '../../global';
 @import '../../mixins/actionable.scss';
+@import '../../mixins/typography.scss';
 
 .button {
   @include actionable;
@@ -10,65 +11,62 @@
 
   cursor: pointer;
 
-  border-color: color('primary');
-  color: color('primary');
+  border: none;
+  color: color('white');
 
   display: flex;
   justify-content: center;
   align-items: center;
 
+  background-color: color('primary');
+
   &:active {
-    background-color: transparentize(color('primary'), 0.85);
+    background-color: transparentize(color('primary'), 0.25);
   }
 
   &__secondary {
-    color: color('black');
-    border-color: color('black');
+    color: color('white');
+    border-color: color('secondary');
+    background-color: color('secondary');
 
     &:active,
     &:focus {
-      background-color: transparentize(color('black'), 0.9);
+      background-color: transparentize(color('secondary'), 0.25);
     }
   }
 
   &__success {
+    color: color('white');
+    background-color: color('success');
+
     &:active,
     &:focus {
-      background-color: transparentize(color('success'), 0.9);
+      background-color: transparentize(color('success'), 0.25);
     }
   }
 
   &__danger {
+    color: color('white');
+    background-color: color('danger');
+
     &:active,
     &:focus {
-      background-color: transparentize(color('danger'), 0.9);
+      background-color: transparentize(color('danger'), 0.25);
     }
   }
 
-  &__inverse {
-    color: color('white');
-    border-color: color('white');
-    background-color: transparent;
+  &__light {
+    color: color('typography');
+    background-color: color('gray');
 
     &:active,
     &:focus {
-      background-color: transparentize(color('white'), 0.9);
+      background-color: transparentize(color('gray'), 0.25);
     }
   }
 
   &__block {
     width: 100%;
-  }
-
-  &__clear {
-    border: none;
-    border-radius: none;
-    color: color('black');
-    background-color: transparent !important;
-
-    &:active {
-      color: transparentize(color('black'), 0.5);
-    }
   }
 
   &__reverse {

@@ -12,7 +12,6 @@ const Button = ({
   small,
   loading,
   block,
-  inverse,
   icon,
   iconRight,
 }) => {
@@ -23,7 +22,7 @@ const Button = ({
     success: 'button__success',
     danger: 'button__danger',
     warning: 'button__warning',
-    clear: 'button__clear',
+    light: 'button__light',
   };
 
   return (
@@ -36,12 +35,11 @@ const Button = ({
         button__small: small,
         button__loading: loading,
         button__block: block,
-        button__inverse: inverse,
         button__reverse: iconRight,
       })}
     >
       {icon && <span className={cx('button_icon')}>{icon}</span>}
-      {loading ? <Load theme="primary" /> : children}
+      {loading ? <Load theme="light" /> : children}
     </button>
   );
 };
@@ -52,7 +50,6 @@ Button.defaultProps = {
   disabled: false,
   loading: false,
   small: false,
-  inverse: false,
   icon: undefined,
   iconRight: false,
   children: null,
@@ -65,8 +62,7 @@ Button.propTypes = {
   onClick: PropTypes.func.isRequired,
   small: PropTypes.bool,
   children: PropTypes.node,
-  theme: PropTypes.oneOf(['secondary', 'success', 'danger', 'clear']),
-  inverse: PropTypes.bool,
+  theme: PropTypes.oneOf(['secondary', 'success', 'danger', 'light']),
   icon: PropTypes.node,
   iconRight: PropTypes.bool,
 };
