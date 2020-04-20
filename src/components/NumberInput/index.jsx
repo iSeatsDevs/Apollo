@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 import Input from '../Input';
-import Button from '../Button';
 import styles from './numberinput.scss';
 
 const NumberInput = ({
@@ -47,10 +46,17 @@ const NumberInput = ({
         numberinput__danger: danger,
       })}
     >
-      <Button theme="clear" onClick={() => handleChange('decrement')}>
-        <ChevronLeft />
-      </Button>
-      <span>
+      <div
+        className={cx('numberinput_control')}
+        role="button"
+        tabIndex={0}
+        onClick={() => handleChange('decrement')}
+        onKeyPress={() => handleChange('decrement')}
+      >
+        <ChevronLeft size={16} />
+      </div>
+
+      <span className={cx('numberinput_value')}>
         {currency
           ? new Intl.NumberFormat(currency.locale, {
               style: 'currency',
@@ -58,9 +64,16 @@ const NumberInput = ({
             }).format(value)
           : Number.parseFloat(value).toFixed(precision)}
       </span>
-      <Button theme="clear" onClick={() => handleChange('increment')}>
-        <ChevronRight />
-      </Button>
+
+      <div
+        className={cx('numberinput_control')}
+        role="button"
+        tabIndex={0}
+        onClick={() => handleChange('increment')}
+        onKeyPress={() => handleChange('increment')}
+      >
+        <ChevronRight size={16} />
+      </div>
     </div>
   );
 
