@@ -1,3 +1,10 @@
+## [2.1.1](https://bitbucket.org/iseats/apollo/compare/v2.1.0...v2.1.1) (2020-05-25)
+
+
+### Bug Fixes
+
+* **global:** added comments for new typeface rules ([03fe71a](https://bitbucket.org/iseats/apollo/commits/03fe71aaf1ac1f0ec0ab24f707f837db5bdaf0e8))
+
 # [2.1.0](https://bitbucket.org/iseats/apollo/compare/v2.0.0...v2.1.0) (2020-04-20)
 
 
