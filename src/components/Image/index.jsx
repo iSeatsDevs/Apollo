@@ -1,48 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import LazyLoad from 'react-lazyload';
+import { default as ImageShimmer, Shimmer } from 'react-shimmer';
 import styles from './image.scss';
-import Load from '../Load';
 
 const cx = classnames.bind(styles);
 
-const Placeholder = () => (
-  <div className={cx('image_placeholder')}>
-    <Load theme="light" />
-  </div>
-);
-
 const Image = ({ height, width, src, alt, bordered }) => (
   <div
-    style={{
-      height,
-      width,
-    }}
+    className={cx('image', {
+      image__bordered: bordered,
+    })}
   >
-    <LazyLoad height={height} width={width} once placeholder={<Placeholder />}>
-      <img
-        className={cx('image', {
-          image__bordered: bordered,
-        })}
-        alt={alt}
-        src={src}
-      />
-    </LazyLoad>
+    <ImageShimmer
+      src={src}
+      alt={alt}
+      fallback={<Shimmer width={width} height={height} />}
+    />
   </div>
 );
 
 Image.defaultProps = {
-  height: '100%',
-  width: '100%',
+  height: undefined,
+  width: undefined,
   bordered: false,
 };
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  height: PropTypes.string,
-  width: PropTypes.string,
+  height: PropTypes.number,
+  width: PropTypes.number,
   bordered: PropTypes.bool,
 };
 

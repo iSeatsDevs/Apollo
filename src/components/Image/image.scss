@@ -1,6 +1,9 @@
 @import '../../global';
 
 .image {
+  display: block;
+  overflow: hidden;
+
   width: 100%;
   height: 100%;
 
@@ -8,14 +11,5 @@
   
   &__bordered {
     border-radius: $border-radius * 2;
-  }
-
-  &_placeholder {
-    height: 100%;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
