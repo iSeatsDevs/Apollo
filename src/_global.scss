@@ -24,6 +24,9 @@ $screen-lg-max: 992px;
 // Large tablets and desktops
 $screen-xl-max: 1200px;
 
+
+// You have to set a font yourself. You can do this by simply adding a new
+// @typeface and importing it anywhere inside your app.
 $title-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 $action-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 $font-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
