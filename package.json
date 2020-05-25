@@ -70,7 +70,7 @@
     "prop-types": "^15.7.2",
     "react-feather": "^2.0.3",
     "react-grid-system": "^6.0.7",
-    "react-shimmer": "^3.0.2"
+    "react-lazyload": "^2.6.7"
   },
   "config": {
     "commitizen": {
