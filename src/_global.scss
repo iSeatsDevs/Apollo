@@ -1,5 +1,3 @@
-@import url("https://use.typekit.net/fuj5cpq.css");
-
 $colors: (
   'primary': #2F7AFD,
   'secondary': #FF4A49,
@@ -26,9 +24,9 @@ $screen-lg-max: 992px;
 // Large tablets and desktops
 $screen-xl-max: 1200px;
 
-$title-family: 'proxima-nova', -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-$action-family: 'proxima-nova', -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-$font-family: 'proxima-nova', -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+$title-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+$action-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+$font-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 
 $font-color: color('typography');
 $font-color-inverted: color('white');
