@@ -1,15 +1,15 @@
 $colors: (
-  'primary': #2F7AFD,
-  'secondary': #FF4A49,
-  'success': #00AC1E,
+  'primary': #2f7afd,
+  'secondary': #ff4a49,
+  'success': #00ac1e,
   'warning': #ffb400,
-  'danger': #E91A13,
-  'typography': #484848,
-  'black': #131314,
-  'gray': #E3E4E6,
+  'danger': #e91a13,
+  'typography': #222222,
+  'black': #000000,
+  'gray': #e3e4e6,
   'light-gray': #f9fafc,
-  'dark-gray': #88898A,
-  'white': #FFFFFF,
+  'dark-gray': #88898a,
+  'white': #ffffff,
 );
 
 // Small tablets and large smartphones (landscape view)
@@ -24,12 +24,14 @@ $screen-lg-max: 992px;
 // Large tablets and desktops
 $screen-xl-max: 1200px;
 
-
 // You have to set a font yourself. You can do this by simply adding a new
 // @typeface and importing it anywhere inside your app.
-$title-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-$action-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-$font-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+$title-family: 'Apollo', -apple-system, BlinkMacSystemFont, Roboto,
+  'Helvetica Neue', sans-serif;
+$action-family: 'Apollo', -apple-system, BlinkMacSystemFont, Roboto,
+  'Helvetica Neue', sans-serif;
+$font-family: 'Apollo', -apple-system, BlinkMacSystemFont, Roboto,
+  'Helvetica Neue', sans-serif;
 
 $font-color: color('typography');
 $font-color-inverted: color('white');
