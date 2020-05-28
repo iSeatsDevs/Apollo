@@ -74,18 +74,13 @@ $shadow_lg: rgba(26, 26, 29, 0.298039) 0px 15px 46px -10px;
 @function color($key: 'primary', $change: 0) {
   $color: map-get($colors, $key);
 
-  @if $change>2 or $change < -2 {
+  @if $change > 4 or $change < -4 {
     @error "Tint value set too high or too low: #{$change} >2<";
   }
 
-  @if $change>0 {
-    $value: 25% * $change;
-    $color: lighten($color, $value);
-  }
-
-  @if $change < 0 {
-    $value: -25% * $change;
-    $color: darken($color, $value);
+  @if $change > 0 or $change < 0 {
+    $value: $change * 25%;
+    $color: scale-color($color, $lightness: $value);
   }
 
   @return $color;
