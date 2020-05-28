@@ -1,3 +1,15 @@
+## [2.2.1](https://bitbucket.org/iseats/apollo/compare/v2.2.0...v2.2.1) (2020-05-28)
+
+
+### Bug Fixes
+
+* **selectable mixin:** added missing semi-colon ([f66a4e5](https://bitbucket.org/iseats/apollo/commits/f66a4e56abf0eaad09a6305f0afb21f04d6d5b6f))
+
+
+### Reverts
+
+* **image:** revert to react-lazyload ([daefedf](https://bitbucket.org/iseats/apollo/commits/daefedfd9af758cc5942ff6d01fe5b4937f3495d))
+
 # [2.2.0](https://bitbucket.org/iseats/apollo/compare/v2.1.1...v2.2.0) (2020-05-25)
 
 
