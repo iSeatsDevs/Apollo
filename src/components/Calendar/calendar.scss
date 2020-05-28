@@ -3,7 +3,7 @@
 @import '../../mixins/typography';
 
 .calendar {
-  border: $border-default color('gray');
+  border: $border-default color('light-gray');
   border-radius: $border-radius;
 
   padding: $padding-sm;
@@ -57,8 +57,8 @@
       justify-content: center;
       align-items: center;
 
-      border: $border-default color('gray');
-      border-radius: $border-radius;
+      border: $border-default transparent;
+      border-radius: 100%;
       padding: $padding-sm;
 
       outline: none;

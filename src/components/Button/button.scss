@@ -57,20 +57,20 @@
 
   &__light {
     color: color('typography');
-    background-color: color('gray');
+    background-color: color('light-gray');
 
     &:active,
     &:focus {
-      background-color: transparentize(color('gray'), 0.25);
+      background-color: transparentize(color('light-gray'), 0.25);
     }
   }
 
   &__transparent {
-    background-color: transparentize(color('gray'), 0.75);
+    background-color: transparentize(color('light-gray'), 0.75);
 
     &:active,
     &:focus {
-      background-color: transparentize(color('gray'), 0.9);
+      background-color: transparentize(color('light-gray'), 0.9);
     }
   }
 

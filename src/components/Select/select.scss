@@ -5,6 +5,8 @@
 .select {
   @include actionable;
 
+  padding: 0px $padding;
+
   position: relative;
 
   display: flex;
@@ -15,7 +17,7 @@
   }
 
   &__empty {
-    color: color('gray', -1);
+    color: color('gray');
   }
 
   &_input {
@@ -82,11 +84,11 @@
     padding: $padding;
 
     &:focus {
-      background-color: transparentize(color('gray'), 0.25);
+      background-color: color('light-gray');
     }
 
     &:hover {
-      background-color: transparentize(color('gray'), 0.25);
+      background-color: color('light-gray');
 
       cursor: pointer;
     }
