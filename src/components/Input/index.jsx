@@ -25,7 +25,7 @@ const Input = ({
   readOnly,
   forceValue,
   small,
-  noBorder,
+  noBorder
 }) => {
   const cx = classnames.bind(styles);
 
@@ -34,18 +34,20 @@ const Input = ({
   const [value, setValue] = useState(defaultValue);
   const [isHidden, setIsHidden] = useState(hidden);
 
-  const handleChange = newValue => {
+  const handleChange = (newValue) => {
     setValue(newValue);
     onChange(newValue);
   };
 
-  const useTheme = options => {
-    const enabledTheme = Object.keys(options).filter(option => options[option]);
+  const useTheme = (options) => {
+    const enabledTheme = Object.keys(options).filter(
+      (option) => options[option]
+    );
 
     return enabledTheme[0];
   };
 
-  const getValidationState = options => {
+  const getValidationState = (options) => {
     const obj = {};
 
     const theme = useTheme(options);
@@ -62,7 +64,7 @@ const Input = ({
   return (
     <div
       className={cx('inputwrapper', {
-        inputwrapper__block: block,
+        inputwrapper__block: block
       })}
     >
       {label && <Text>{label}</Text>}
@@ -73,7 +75,7 @@ const Input = ({
             ...getValidationState({ success, danger }),
             inputwrapper_input__disabled: disabled,
             inputwrapper_input__small: small,
-            inputwrapper_input__no_border: noBorder,
+            inputwrapper_input__no_border: noBorder
           })}
         >
           {icon && <span className={cx('inputwrapper_icon')}>{icon}</span>}
@@ -81,9 +83,9 @@ const Input = ({
           <input
             disabled={disabled}
             className={cx('input', {
-              input__small: small,
+              input__small: small
             })}
-            onChange={val => handleChange(val.target.value)}
+            onChange={(val) => handleChange(val.target.value)}
             placeholder={placeholder}
             value={forceValue || value}
             onFocus={onFocus}
@@ -130,7 +132,7 @@ Input.defaultProps = {
   readOnly: false,
   forceValue: null,
   small: false,
-  noBorder: false,
+  noBorder: false
 };
 
 Input.propTypes = {
@@ -152,7 +154,7 @@ Input.propTypes = {
   readOnly: PropTypes.bool,
   forceValue: PropTypes.string,
   small: PropTypes.bool,
-  noBorder: PropTypes.bool,
+  noBorder: PropTypes.bool
 };
 
 export default Input;

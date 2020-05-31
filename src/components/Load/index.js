@@ -9,7 +9,7 @@ const Load = ({ theme }) => {
   const themes = {
     primary: 'loader__primary',
     light: 'loader__light',
-    dark: 'loader__dark',
+    dark: 'loader__dark'
   };
 
   return (
@@ -22,11 +22,11 @@ const Load = ({ theme }) => {
 };
 
 Load.defaultProps = {
-  theme: 'primary',
+  theme: 'primary'
 };
 
 Load.propTypes = {
-  theme: PropTypes.oneOf(['primary', 'light', 'dark']),
+  theme: PropTypes.oneOf(['primary', 'light', 'dark'])
 };
 
 export default Load;

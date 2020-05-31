@@ -11,7 +11,7 @@ import {
   isSameDay,
   setYear,
   isBefore,
-  isAfter,
+  isAfter
 } from 'date-fns';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 import Typography from '../Typography';
@@ -25,7 +25,7 @@ const Calendar = ({
   showYear,
   min,
   max,
-  only,
+  only
 }) => {
   const cx = classnames.bind(styles);
 
@@ -34,7 +34,7 @@ const Calendar = ({
   const [date, setDate] = useState(defaultValue);
   const [showDate, setShowDate] = useState(defaultOpenDate);
 
-  const changeMonth = type => {
+  const changeMonth = (type) => {
     if (type === 'subtract') {
       return setShowDate(sub(showDate, { months: 1 }));
     }
@@ -44,15 +44,15 @@ const Calendar = ({
 
   const days = eachDayOfInterval({
     start: startOfMonth(showDate),
-    end: endOfMonth(showDate),
+    end: endOfMonth(showDate)
   });
 
-  const handleChange = day => {
+  const handleChange = (day) => {
     setDate(day);
     onChange(day);
   };
 
-  const handleYearChange = year => {
+  const handleYearChange = (year) => {
     if (!Number(year)) {
       return;
     }
@@ -62,7 +62,7 @@ const Calendar = ({
     }
   };
 
-  const isIncludedInOnly = value => {
+  const isIncludedInOnly = (value) => {
     for (let i = 0; i < only.length; i += 1) {
       if (isSameDay(only[i], value)) {
         return true;
@@ -80,7 +80,7 @@ const Calendar = ({
         {showYear && (
           <input
             className={cx('calendar_top_year')}
-            onChange={event => handleYearChange(event.target.value)}
+            onChange={(event) => handleYearChange(event.target.value)}
             size={4}
             maxLength={4}
             defaultValue={format(showDate, 'yyyy')}
@@ -101,7 +101,7 @@ const Calendar = ({
 
       <div className={cx('calendar_wrapper')}>
         <div className={cx('calendar_days')}>
-          {days.map(day => (
+          {days.map((day) => (
             <div
               role="button"
               tabIndex={0}
@@ -112,7 +112,7 @@ const Calendar = ({
                 calendar_days_day__disabled:
                   (min && isBefore(day, min)) ||
                   (max && isAfter(day, max)) ||
-                  (only && !isIncludedInOnly(day)),
+                  (only && !isIncludedInOnly(day))
               })}
             >
               <Text>{format(day, 'd')}</Text>
@@ -130,7 +130,7 @@ Calendar.defaultProps = {
   showYear: false,
   min: undefined,
   max: undefined,
-  only: undefined,
+  only: undefined
 };
 
 Calendar.propTypes = {
@@ -140,9 +140,7 @@ Calendar.propTypes = {
   showYear: PropTypes.bool,
   min: PropTypes.instanceOf(Date),
   max: PropTypes.instanceOf(Date),
-  only: PropTypes.arrayOf(Date),
+  only: PropTypes.arrayOf(Date)
 };
-
-export { Calendar };
 
 export default Calendar;

@@ -5,7 +5,7 @@ import styles from './typography.scss';
 import {
   getEnabledEffects,
   getEffectsPropTypes,
-  getEffectsDefaults,
+  getEffectsDefaults
 } from './typography_helpers';
 
 const Title = ({
@@ -16,7 +16,7 @@ const Title = ({
   bold,
   underline,
   mark,
-  inverse,
+  inverse
 }) => {
   const cx = classnames.bind(styles);
 
@@ -34,9 +34,9 @@ const Title = ({
             bold,
             underline,
             mark,
-            inverse,
+            inverse
           }),
-          typography_title__dont_push: dontPush,
+          typography_title__dont_push: dontPush
         }
       )}
     >
@@ -48,14 +48,14 @@ const Title = ({
 Title.defaultProps = {
   ...getEffectsDefaults(),
   level: 1,
-  dontPush: false,
+  dontPush: false
 };
 
 Title.propTypes = {
   ...getEffectsPropTypes(),
   dontPush: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  level: PropTypes.oneOf([1, 2, 3, 4, 5]),
+  level: PropTypes.oneOf([1, 2, 3, 4, 5])
 };
 
 export default Title;

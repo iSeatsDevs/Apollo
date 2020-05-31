@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 import { X } from 'react-feather';
@@ -14,7 +14,7 @@ const Modal = ({
   onExit,
   danger,
   success,
-  denyButton,
+  denyButton
 }) => {
   const cx = classnames.bind(styles);
 
@@ -51,7 +51,7 @@ Modal.defaultProps = {
   onExit: () => {},
   danger: false,
   success: false,
-  denyButton: false,
+  denyButton: false
 };
 
 Modal.propTypes = {
@@ -63,7 +63,7 @@ Modal.propTypes = {
   onExit: PropTypes.func,
   danger: PropTypes.bool,
   success: PropTypes.bool,
-  denyButton: PropTypes.bool,
+  denyButton: PropTypes.bool
 };
 
 export default Modal;

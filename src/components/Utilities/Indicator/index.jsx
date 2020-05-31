@@ -22,7 +22,7 @@ const Indicator = ({ open, onClick }) => (
 
 Indicator.propTypes = {
   onClick: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
+  open: PropTypes.bool.isRequired
 };
 
 export default Indicator;

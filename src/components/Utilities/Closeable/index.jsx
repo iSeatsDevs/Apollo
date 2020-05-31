@@ -19,11 +19,11 @@ const Closeable = ({ onClick }) => (
 );
 
 Closeable.defaultProps = {
-  onClick: undefined,
+  onClick: undefined
 };
 
 Closeable.propTypes = {
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 };
 
 export default Closeable;

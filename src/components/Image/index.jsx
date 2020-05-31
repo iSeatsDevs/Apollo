@@ -17,13 +17,13 @@ const Image = ({ height, width, src, alt, bordered }) => (
   <div
     style={{
       height,
-      width,
+      width
     }}
   >
     <LazyLoad height={height} width={width} once placeholder={<Placeholder />}>
       <img
         className={cx('image', {
-          image__bordered: bordered,
+          image__bordered: bordered
         })}
         alt={alt}
         src={src}
@@ -35,7 +35,7 @@ const Image = ({ height, width, src, alt, bordered }) => (
 Image.defaultProps = {
   height: '100%',
   width: '100%',
-  bordered: false,
+  bordered: false
 };
 
 Image.propTypes = {
@@ -43,7 +43,7 @@ Image.propTypes = {
   alt: PropTypes.string.isRequired,
   height: PropTypes.string,
   width: PropTypes.string,
-  bordered: PropTypes.bool,
+  bordered: PropTypes.bool
 };
 
 export default Image;

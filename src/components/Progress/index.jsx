@@ -9,7 +9,7 @@ const Progress = ({ value, theme, indicator }) => {
   const themes = {
     secondary: 'progress_bar__secondary',
     success: 'progress_bar__success',
-    danger: 'progress_bar__danger',
+    danger: 'progress_bar__danger'
   };
 
   return (
@@ -29,13 +29,13 @@ const Progress = ({ value, theme, indicator }) => {
 Progress.defaultProps = {
   theme: null,
   indicator: false,
-  value: 0,
+  value: 0
 };
 
 Progress.propTypes = {
   indicator: PropTypes.bool,
   theme: PropTypes.oneOf(['success', 'danger']),
-  value: PropTypes.number,
+  value: PropTypes.number
 };
 
 export default Progress;

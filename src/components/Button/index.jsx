@@ -13,7 +13,7 @@ const Button = ({
   loading,
   block,
   icon,
-  iconRight,
+  iconRight
 }) => {
   const cx = classnames.bind(styles);
 
@@ -23,7 +23,7 @@ const Button = ({
     danger: 'button__danger',
     warning: 'button__warning',
     light: 'button__light',
-    transparent: 'button__transparent',
+    transparent: 'button__transparent'
   };
 
   return (
@@ -36,7 +36,7 @@ const Button = ({
         button__small: small,
         button__loading: loading,
         button__block: block,
-        button__reverse: iconRight,
+        button__reverse: iconRight
       })}
     >
       {icon && <span className={cx('button_icon')}>{icon}</span>}
@@ -53,7 +53,7 @@ Button.defaultProps = {
   small: false,
   icon: undefined,
   iconRight: false,
-  children: null,
+  children: null
 };
 
 Button.propTypes = {
@@ -68,10 +68,10 @@ Button.propTypes = {
     'success',
     'danger',
     'light',
-    'transparent',
+    'transparent'
   ]),
   icon: PropTypes.node,
-  iconRight: PropTypes.bool,
+  iconRight: PropTypes.bool
 };
 
 export default Button;

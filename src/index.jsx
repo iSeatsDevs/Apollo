@@ -1,4 +1,3 @@
-export { Visible, Hidden, Container, Row, Col } from 'react-grid-system';
 export { default as Typography } from './components/Typography';
 export { default as Button } from './components/Button';
 export { default as Image } from './components/Image';

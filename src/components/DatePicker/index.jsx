@@ -15,14 +15,14 @@ const DatePicker = ({
   success,
   danger,
   message,
-  icon,
+  icon
 }) => {
   const cx = classnames.bind(styles);
 
   const [date, setDate] = useState(defaultValue);
   const [open, setOpen] = useState(false);
 
-  const handleChange = value => {
+  const handleChange = (value) => {
     setDate(value);
     onChange(value);
   };
@@ -47,7 +47,7 @@ const DatePicker = ({
       {open && (
         <div className={cx('datepicker_calendar')}>
           <Calendar
-            onChange={newDate => handleChange(newDate)}
+            onChange={(newDate) => handleChange(newDate)}
             defaultOpenDate={date || undefined}
             defaultValue={date}
           />
@@ -65,7 +65,7 @@ DatePicker.defaultProps = {
   danger: false,
   message: null,
   label: null,
-  icon: undefined,
+  icon: undefined
 };
 
 DatePicker.propTypes = {
@@ -77,7 +77,7 @@ DatePicker.propTypes = {
   danger: PropTypes.bool,
   message: PropTypes.string,
   label: PropTypes.string,
-  icon: PropTypes.node,
+  icon: PropTypes.node
 };
 
 export default DatePicker;

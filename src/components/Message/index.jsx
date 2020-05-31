@@ -12,7 +12,7 @@ const Message = ({ theme, children, closeable }) => {
     success: 'message__success',
     warning: 'message__warning',
     danger: 'message__danger',
-    secondary: 'message__secondary',
+    secondary: 'message__secondary'
   };
 
   const render = !hidden && (
@@ -34,13 +34,13 @@ const Message = ({ theme, children, closeable }) => {
 
 Message.defaultProps = {
   closeable: false,
-  theme: null,
+  theme: null
 };
 
 Message.propTypes = {
   children: PropTypes.node.isRequired,
   closeable: PropTypes.bool,
-  theme: PropTypes.oneOf(['secondary', 'success', 'warning', 'danger']),
+  theme: PropTypes.oneOf(['secondary', 'success', 'warning', 'danger'])
 };
 
 export default Message;
