@@ -1,3 +1,10 @@
+# [2.3.0](https://bitbucket.org/iseats/apollo/compare/v2.2.2...v2.3.0) (2020-05-31)
+
+
+### Features
+
+* **images:** removed react-lazyload for react-shimmerm ([d42e32c](https://bitbucket.org/iseats/apollo/commits/d42e32c03922816c080e60621a73f2f84661fea6))
+
 ## [2.2.2](https://bitbucket.org/iseats/apollo/compare/v2.2.1...v2.2.2) (2020-05-31)
 
 
