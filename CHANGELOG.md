@@ -1,3 +1,10 @@
+## [2.3.1](https://bitbucket.org/iseats/apollo/compare/v2.3.0...v2.3.1) (2020-05-31)
+
+
+### Bug Fixes
+
+* **image:** revert of previous commit ([a81dccd](https://bitbucket.org/iseats/apollo/commits/a81dccd16bdaef9ba43654f86ce6891f4ea91ee9))
+
 # [2.3.0](https://bitbucket.org/iseats/apollo/compare/v2.2.2...v2.3.0) (2020-05-31)
 
 
