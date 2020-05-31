@@ -1,21 +1,26 @@
 @import '../../global';
 
 .image {
+  position: relative;
+
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  overflow: hidden;
   
-  &__bordered {
+  &__border {
     border-radius: $border-radius * 2;
   }
 
-  &_placeholder {
-    height: 100%;
-    width: 100%;
+  &_shimmer {
+    width: inherit;
+    height: inherit;
+  }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  img {
+    width: inherit;
+    height: inherit;
+
+    object-fit: cover;
   }
 }
