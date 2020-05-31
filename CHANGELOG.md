@@ -1,3 +1,10 @@
+## [2.2.2](https://bitbucket.org/iseats/apollo/compare/v2.2.1...v2.2.2) (2020-05-31)
+
+
+### Bug Fixes
+
+* **eslint:** fixed eslint config ([c7820fb](https://bitbucket.org/iseats/apollo/commits/c7820fb277c956057b541778c4d394a0434e2ac8))
+
 ## [2.2.1](https://bitbucket.org/iseats/apollo/compare/v2.2.0...v2.2.1) (2020-05-28)
 
 
