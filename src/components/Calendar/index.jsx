@@ -13,7 +13,7 @@ import {
   isBefore,
   isAfter
 } from 'date-fns';
-import { ChevronLeft, ChevronRight } from 'react-feather';
+import { ChevronLeft, ChevronRight } from '../Utilities/Icons';
 import Typography from '../Typography';
 import Button from '../Button';
 import styles from './calendar.scss';
@@ -74,7 +74,7 @@ const Calendar = ({
     <div className={cx('calendar')}>
       <div className={cx('calendar_top')}>
         <Button small theme="light" onClick={() => changeMonth('subtract')}>
-          <ChevronLeft size={18} />
+          <ChevronLeft />
         </Button>
 
         {showYear && (

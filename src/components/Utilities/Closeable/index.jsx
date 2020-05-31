@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { X } from 'react-feather';
+import { X } from '../Icons';
 import styles from './closeable.scss';
 
 const cx = classnames.bind(styles);

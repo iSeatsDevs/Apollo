@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { ChevronDown } from 'react-feather';
+import { ChevronDown } from '../Icons';
 import styles from './indicator.scss';
 
 const cx = classnames.bind(styles);

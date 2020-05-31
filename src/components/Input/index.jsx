@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { Eye, EyeOff } from 'react-feather';
+import { Eye, EyeAlt } from '../Utilities/Icons';
 import Typography from '../Typography';
 import styles from './input.scss';
 import Closeable from '../Utilities/Closeable';
@@ -101,7 +101,7 @@ const Input = ({
               onClick={() => setIsHidden(!isHidden)}
               onKeyPress={() => setIsHidden(!isHidden)}
             >
-              {isHidden ? <EyeOff size={16} /> : <Eye size={16} />}
+              {isHidden ? <Eye /> : <EyeAlt />}
             </span>
           )}
           {clearable && <Closeable onClick={() => handleChange('')} />}

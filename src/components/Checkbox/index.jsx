@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { Check } from 'react-feather';
+import { Check } from '../Utilities/Icons';
 import styles from './checkbox.scss';
 import Typography from '../Typography';
 
