@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { default as ImageContainer, Shimmer } from 'react-shimmer';
+import LazyLoad from 'react-lazyload';
 import styles from './image.scss';
 import Load from '../Load';
 
 const cx = classnames.bind(styles);
+
+const Placeholder = () => (
+  <div className={cx('image_placeholder')}>
+    <Load theme="light" />
+  </div>
+);
 
 const Image = ({ height, width, src, alt, bordered }) => (
   <div
@@ -13,15 +19,16 @@ const Image = ({ height, width, src, alt, bordered }) => (
       height,
       width
     }}
-    className={cx('image', {
-      image__border: bordered
-    })}
   >
-    <ImageContainer
-      src={src}
-      NativeImgProps={{ alt }}
-      fallback={<Shimmer className={cx('image_shimmer')} />}
-    />
+    <LazyLoad height={height} width={width} once placeholder={<Placeholder />}>
+      <img
+        className={cx('image', {
+          image__bordered: bordered
+        })}
+        alt={alt}
+        src={src}
+      />
+    </LazyLoad>
   </div>
 );
 
