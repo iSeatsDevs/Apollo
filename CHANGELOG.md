@@ -1,3 +1,10 @@
+## [2.3.2](https://bitbucket.org/iseats/apollo/compare/v2.3.1...v2.3.2) (2020-06-03)
+
+
+### Bug Fixes
+
+* **modal:** fixed modal styling ([931d26a](https://bitbucket.org/iseats/apollo/commits/931d26a97e7e6491b7f14589b0a50757156f892f))
+
 ## [2.3.1](https://bitbucket.org/iseats/apollo/compare/v2.3.0...v2.3.1) (2020-05-31)
 
 
