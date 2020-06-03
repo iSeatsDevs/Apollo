@@ -1,9 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { X } from '../Utilities/Icons';
 import styles from './modal.scss';
-import Button from '../Button';
 import Closeable from '../Utilities/Closeable';
 
 const Modal = ({ children, onClose }) => {
@@ -25,7 +23,9 @@ const Modal = ({ children, onClose }) => {
     <div className={cx('modal')}>
       <div className={cx('modal_body')}>
         <div className={cx('modal_body_header')}>
-          <Closeable onClick={onClose} />
+          <span className={cx('modal_close')}>
+            <Closeable onClick={onClose} />
+          </span>
         </div>
 
         {children}

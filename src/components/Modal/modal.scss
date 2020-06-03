@@ -35,4 +35,8 @@
       display: flex;
     }
   }
+
+  &_close {
+    transform: scale(.75) translate(-5px, -5px);
+  }
 }
