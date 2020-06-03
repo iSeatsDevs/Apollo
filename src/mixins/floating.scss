@@ -1,0 +1,10 @@
+@import '../global';
+
+@mixin floating {
+    box-sizing: border-box;
+    box-shadow: $shadow;
+
+    border-radius: $border-radius;
+
+    overflow: hidden;
+  }

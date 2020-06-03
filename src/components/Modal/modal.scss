@@ -1,9 +1,10 @@
 @import '../../global';
 @import '../../mixins/queries.scss';
+@import '../../mixins/floating.scss';
 
 .modal {
-  background-color: rgba(#000000, 0.25);
-  
+  background-color: transparentize(color('black'), 0.75);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,28 +17,25 @@
   width: 100vw;
   height: 100vh;
 
-  &-body {
+  &_body {
+    @include floating;
+
     background-color: color('white');
 
     width: 50vw;
     height: auto;
 
     margin-bottom: 25vh;
-    
-    border: $border-default color('gray');
-    border-radius: $border-radius;
 
     padding: $padding;
 
-    &-header {
+    &_header {
       margin-bottom: $push;
+
+      display: flex;
     }
 
-    &-content {
-      padding: $padding $padding-lg;
-    }
-
-    &-footer {
+    &_footer {
       display: flex;
       justify-content: flex-end;
 

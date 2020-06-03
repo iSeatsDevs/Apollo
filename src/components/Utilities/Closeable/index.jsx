@@ -14,7 +14,9 @@ const Closeable = ({ onClick }) => (
     onClick={onClick}
     onKeyPress={onClick}
   >
-    <X size={16} />
+    <span style={{ transform: 'scale(.75) translate(-5px, -5px)' }}>
+      <X />
+    </span>
   </div>
 );
 
