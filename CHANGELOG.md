@@ -1,3 +1,11 @@
+## [2.3.4](https://bitbucket.org/iseats/apollo/compare/v2.3.3...v2.3.4) (2020-06-03)
+
+
+### Bug Fixes
+
+* **closeable:** fixed closeable sizing ([c391c03](https://bitbucket.org/iseats/apollo/commits/c391c030609d9352c2d6012867bcb221ad065c3b))
+* **modal:** increased modal padding ([80af85e](https://bitbucket.org/iseats/apollo/commits/80af85e1590842a245fa1d5af0a20657e9f30ccb))
+
 ## [2.3.3](https://bitbucket.org/iseats/apollo/compare/v2.3.2...v2.3.3) (2020-06-03)
 
 
