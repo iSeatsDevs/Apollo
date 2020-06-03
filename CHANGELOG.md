@@ -1,3 +1,10 @@
+## [2.3.3](https://bitbucket.org/iseats/apollo/compare/v2.3.2...v2.3.3) (2020-06-03)
+
+
+### Bug Fixes
+
+* **modal:** removed footer to allow more customization ([b7a0338](https://bitbucket.org/iseats/apollo/commits/b7a0338af53b6365bfbcff24d31d66d883e9ffbb))
+
 ## [2.3.2](https://bitbucket.org/iseats/apollo/compare/v2.3.1...v2.3.2) (2020-06-03)
 
 
