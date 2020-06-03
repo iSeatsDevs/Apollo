@@ -1,6 +1,7 @@
 @import '../../global';
 @import '../../mixins/typography.scss';
 @import '../../mixins/actionable';
+@import '../../mixins/floating';
 
 .select {
   @include actionable;
@@ -54,8 +55,7 @@
   }
 
   &_options {
-    border: $border-default color('gray');
-    border-radius: $border-radius;
+    @include floating;
 
     position: absolute;
 

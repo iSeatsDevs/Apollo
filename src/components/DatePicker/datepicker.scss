@@ -1,11 +1,14 @@
 @import '../../global';
 @import '../../mixins/actionable';
 @import '../../mixins/typography';
+@import '../../mixins/floating';
 
 .datepicker {
   position: relative;
 
   &_calendar {
+    @include floating;
+
     position: absolute;
 
     transform: translateY($push_sm);
