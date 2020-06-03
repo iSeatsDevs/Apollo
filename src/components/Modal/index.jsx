@@ -28,7 +28,7 @@ const Modal = ({ children, onClose }) => {
           </span>
         </div>
 
-        {children}
+        <div className={cx('modal_body_content')}>{children}</div>
       </div>
     </div>
   );

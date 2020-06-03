@@ -27,16 +27,19 @@
 
     margin-bottom: 25vh;
 
-    padding: $padding;
-
     &_header {
-      margin-bottom: $push;
-
       display: flex;
+
+      padding: $padding;
+      padding-bottom: 0;
+    }
+
+    &_content {
+      padding: $padding_lg;
     }
   }
 
   &_close {
-    transform: scale(.75) translate(-5px, -5px);
+    transform: scale(0.75);
   }
 }
