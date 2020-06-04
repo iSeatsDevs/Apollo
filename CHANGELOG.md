@@ -1,3 +1,15 @@
+# [2.4.0](https://bitbucket.org/iseats/apollo/compare/v2.3.4...v2.4.0) (2020-06-04)
+
+
+### Bug Fixes
+
+* **modal:** removed modal stories ([a781ef1](https://bitbucket.org/iseats/apollo/commits/a781ef1d334f727e285402624ae0fe3b87319576))
+
+
+### Features
+
+* **modal:** removed modals ([3bb5785](https://bitbucket.org/iseats/apollo/commits/3bb5785bf719cf701198cff349b29f5a28e29dc1))
+
 ## [2.3.4](https://bitbucket.org/iseats/apollo/compare/v2.3.3...v2.3.4) (2020-06-03)
 
 
