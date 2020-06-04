@@ -11,4 +11,3 @@ export { default as DatePicker } from './components/DatePicker';
 export { default as Progress } from './components/Progress';
 export { default as NumberInput } from './components/NumberInput';
 export { default as Calendar } from './components/Calendar';
-export { default as Modal } from './components/Modal';
