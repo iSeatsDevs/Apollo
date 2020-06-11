@@ -36,6 +36,11 @@
     }
   }
 
+  &_weekdays {
+    display: flex;
+    justify-content: space-around;
+  }
+
   &_wrapper {
     display: flex;
     justify-content: center;

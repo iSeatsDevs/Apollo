@@ -99,6 +99,30 @@ const Calendar = ({
         </Button>
       </div>
 
+      <div className={cx('calendar_weekdays')}>
+        <Text small light>
+          Ma
+        </Text>
+        <Text small light>
+          Di
+        </Text>
+        <Text small light>
+          Wo
+        </Text>
+        <Text small light>
+          Do
+        </Text>
+        <Text small light>
+          Vr
+        </Text>
+        <Text small light>
+          Za
+        </Text>
+        <Text small light>
+          Zo
+        </Text>
+      </div>
+
       <div className={cx('calendar_wrapper')}>
         <div className={cx('calendar_days')}>
           {days.map((day) => (
