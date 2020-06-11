@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 import {
@@ -11,8 +11,10 @@ import {
   isSameDay,
   setYear,
   isBefore,
-  isAfter
+  isAfter,
+  addDays
 } from 'date-fns';
+import nl from 'date-fns/locale/nl';
 import { ChevronLeft, ChevronRight } from '../Utilities/Icons';
 import Typography from '../Typography';
 import Button from '../Button';
@@ -33,6 +35,7 @@ const Calendar = ({
 
   const [date, setDate] = useState(defaultValue);
   const [showDate, setShowDate] = useState(defaultOpenDate);
+  const [weekdays, setWeekdays] = useState([]);
 
   const changeMonth = (type) => {
     if (type === 'subtract') {
@@ -70,6 +73,18 @@ const Calendar = ({
     }
   };
 
+  useEffect(() => {
+    const newWeekdays = [];
+
+    for (let i = 0; i < 6; i++) {
+      const newDate = addDays(startOfMonth(showDate), i);
+
+      newWeekdays[i] = format(newDate, 'EEEEEE', nl);
+    }
+
+    setWeekdays(newWeekdays);
+  }, [showDate]);
+
   return (
     <div className={cx('calendar')}>
       <div className={cx('calendar_top')}>
@@ -100,27 +115,11 @@ const Calendar = ({
       </div>
 
       <div className={cx('calendar_weekdays')}>
-        <Text small light>
-          Ma
-        </Text>
-        <Text small light>
-          Di
-        </Text>
-        <Text small light>
-          Wo
-        </Text>
-        <Text small light>
-          Do
-        </Text>
-        <Text small light>
-          Vr
-        </Text>
-        <Text small light>
-          Za
-        </Text>
-        <Text small light>
-          Zo
-        </Text>
+        {weekdays.map((day) => (
+          <Text small light>
+            {day}
+          </Text>
+        ))}
       </div>
 
       <div className={cx('calendar_wrapper')}>
