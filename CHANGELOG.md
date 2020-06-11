@@ -1,3 +1,10 @@
+# [2.5.0](https://bitbucket.org/iseats/apollo/compare/v2.4.0...v2.5.0) (2020-06-11)
+
+
+### Features
+
+* **calendar:** added weekdays ([93674f8](https://bitbucket.org/iseats/apollo/commits/93674f8861edf57bd21aef73adb84b4a7ec05e94))
+
 # [2.4.0](https://bitbucket.org/iseats/apollo/compare/v2.3.4...v2.4.0) (2020-06-04)
 
 
