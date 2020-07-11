@@ -1,3 +1,20 @@
+# [2.6.0](https://bitbucket.org/iseats/apollo/compare/v2.5.1...v2.6.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* fixed missing key values for mapping functions ([1d3ad29](https://bitbucket.org/iseats/apollo/commits/1d3ad29f2b412a0d38dfdf97eb73606de02b973c))
+* **select:** fixed duplicate map key ([b364d71](https://bitbucket.org/iseats/apollo/commits/b364d71922517403d5f0a766805d8e7df95b26d5))
+
+
+### Features
+
+* updated dependencies ([668a7cb](https://bitbucket.org/iseats/apollo/commits/668a7cbf2a8664f72623d2224186350df56bc1c2))
+* **input:** reduced label size ([80d47a8](https://bitbucket.org/iseats/apollo/commits/80d47a8324895345c4d4fc9d84b300867e1145de))
+* **message:** reduced close button size ([5954d13](https://bitbucket.org/iseats/apollo/commits/5954d13f6df9ddfb6edd45ad6055356abc1c0580))
+* **message:** updated secondary theme and added a new light theme ([9df1ea1](https://bitbucket.org/iseats/apollo/commits/9df1ea10422fa7d094e71cbcfb54fe2e4907d941))
+* **select:** added noBorder and small props ([978ab5c](https://bitbucket.org/iseats/apollo/commits/978ab5c9d3e7e6d1eece50fb3e1dd38d4c1d87c4))
+
 ## [2.5.1](https://bitbucket.org/iseats/apollo/compare/v2.5.0...v2.5.1) (2020-06-11)
 
 
