@@ -21,6 +21,14 @@
     color: color('gray');
   }
 
+  &__no_border {
+    border-color: color('white') !important;
+  }
+
+  &__small {
+    @include action_small;
+  }
+
   &_input {
     width: 200px;
 
@@ -50,6 +58,10 @@
 
       &_label {
         margin-right: $push-sm;
+      }
+
+      &_close {
+        transform: scale(.75);
       }
     }
   }

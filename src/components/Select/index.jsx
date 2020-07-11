@@ -65,7 +65,9 @@ const Select = ({
   message,
   success,
   danger,
-  emptyText
+  emptyText,
+  noBorder,
+  small
 }) => {
   const [open, setOpen] = useState(defaultOpen);
 
@@ -89,13 +91,15 @@ const Select = ({
    * This is what will be used as the actual input. Using the <Input/>
    * components `renderInput` prop, we can inject this component.
    */
-  const CustomInput = () => (
+  const CustomInput = ({ small, noBorder }) => (
     <div
       className={cx('select', {
         select__empty: filteredValues.length === 0,
         select__open: open,
         select__success: success,
-        select__danger: danger
+        select__danger: danger,
+        select__small: small,
+        select__no_border: noBorder
       })}
     >
       <div
@@ -118,11 +122,13 @@ const Select = ({
               <span className={cx('select_input_value_label')}>
                 {value.label}
               </span>
-              <Closeable
-                onClick={() =>
-                  dispatchValues({ type: 'deselect', payload: value.value })
-                }
-              />
+              <span className={cx('select_input_value_close')}>
+                <Closeable
+                  onClick={() =>
+                    dispatchValues({ type: 'deselect', payload: value.value })
+                  }
+                />
+              </span>
             </div>
           ))) ||
           (filteredValues.length === 1 && filteredValues[0].label) ||
@@ -179,13 +185,17 @@ const Select = ({
         message={message}
         success={success}
         danger={danger}
-        renderInput={<CustomInput />}
+        renderInput={<CustomInput noBorder={noBorder} small={small} />}
       />
 
       {open && (
         <div className={cx('select_options')}>
           {values.filter((value) => !value.selected).length === 0 ? (
-            <span className={cx('select_options_empty')}>{emptyText}</span>
+            <div className={cx('select_options_empty')}>
+              <Text small light>
+                {emptyText}
+              </Text>
+            </div>
           ) : (
             values
               .filter((value) => {
@@ -227,7 +237,9 @@ Select.defaultProps = {
   message: null,
   success: false,
   danger: false,
-  emptyText: 'No options available'
+  emptyText: 'No options available',
+  noBorder: false,
+  small: false
 };
 
 Select.propTypes = {
@@ -246,7 +258,9 @@ Select.propTypes = {
   message: PropTypes.string,
   success: PropTypes.bool,
   danger: PropTypes.bool,
-  emptyText: PropTypes.string
+  emptyText: PropTypes.string,
+  noBorder: PropTypes.bool,
+  small: PropTypes.bool
 };
 
 export default Select;
