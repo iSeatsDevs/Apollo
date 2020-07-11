@@ -118,7 +118,7 @@ const Select = ({
         {(multiple &&
           filteredValues.length >= 1 &&
           filteredValues.map((value) => (
-            <div className={cx('select_input_value')}>
+            <div key={value} className={cx('select_input_value')}>
               <span className={cx('select_input_value_label')}>
                 {value.label}
               </span>

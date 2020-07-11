@@ -116,7 +116,7 @@ const Calendar = ({
 
       <div className={cx('calendar_weekdays')}>
         {weekdays.map((day) => (
-          <Text small light>
+          <Text key={day} small light>
             {day}
           </Text>
         ))}
@@ -126,6 +126,7 @@ const Calendar = ({
         <div className={cx('calendar_days')}>
           {days.map((day) => (
             <div
+              key={day}
               role="button"
               tabIndex={0}
               onClick={() => handleChange(day)}
