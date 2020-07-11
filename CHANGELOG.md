@@ -1,3 +1,10 @@
+## [2.5.1](https://bitbucket.org/iseats/apollo/compare/v2.5.0...v2.5.1) (2020-06-11)
+
+
+### Bug Fixes
+
+* **calendar:** correct order of days of the week ([73a5809](https://bitbucket.org/iseats/apollo/commits/73a58094363335399579a39b5562830245393f68))
+
 # [2.5.0](https://bitbucket.org/iseats/apollo/compare/v2.4.0...v2.5.0) (2020-06-11)
 
 
