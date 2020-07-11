@@ -49,5 +49,9 @@
 
     display: flex;
     justify-content: flex-end;
+
+    div {
+      transform: scale(.75) translateY(-5px);
+    }
   }
 }
