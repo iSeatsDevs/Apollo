@@ -91,7 +91,7 @@ const Select = ({
    * This is what will be used as the actual input. Using the <Input/>
    * components `renderInput` prop, we can inject this component.
    */
-  const CustomInput = ({ small, noBorder }) => (
+  const CustomInput = () => (
     <div
       className={cx('select', {
         select__empty: filteredValues.length === 0,
@@ -117,8 +117,8 @@ const Select = ({
          */}
         {(multiple &&
           filteredValues.length >= 1 &&
-          filteredValues.map((value) => (
-            <div key={value} className={cx('select_input_value')}>
+          filteredValues.map((value, i) => (
+            <div key={`${value}-${i}`} className={cx('select_input_value')}>
               <span className={cx('select_input_value_label')}>
                 {value.label}
               </span>
@@ -251,7 +251,11 @@ Select.propTypes = {
     })
   ),
   defaultOpen: PropTypes.bool,
-  defaultValue: PropTypes.number,
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.string)
+  ]),
   onChange: PropTypes.func,
   multiple: PropTypes.bool,
   label: PropTypes.string,
