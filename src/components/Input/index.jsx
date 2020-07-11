@@ -67,7 +67,11 @@ const Input = ({
         inputwrapper__block: block
       })}
     >
-      {label && <Text>{label}</Text>}
+      {label && (
+        <Text push small>
+          {label}
+        </Text>
+      )}
 
       {renderInput || (
         <div
