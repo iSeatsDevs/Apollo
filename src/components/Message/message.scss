@@ -20,9 +20,13 @@
  
 
   &__secondary {
-    background-color: color('white');
-    color: color('black');
-    border: $border-default color('black');
+    background-color: color('secondary');
+    color: color('white');
+  }
+
+  &__light {
+    color: color('typography');
+    background-color: color('light-gray');
   }
 
   &__success {
