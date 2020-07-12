@@ -1,3 +1,10 @@
+## [2.6.1](https://bitbucket.org/iseats/apollo/compare/v2.6.0...v2.6.1) (2020-07-12)
+
+
+### Bug Fixes
+
+* **select:** variable width ([819b34d](https://bitbucket.org/iseats/apollo/commits/819b34d7733fa56239147baa7f6dfd60b172f5a4))
+
 # [2.6.0](https://bitbucket.org/iseats/apollo/compare/v2.5.1...v2.6.0) (2020-07-11)
 
 
