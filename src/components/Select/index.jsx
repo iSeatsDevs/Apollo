@@ -135,7 +135,9 @@ const Select = ({
           placeholder}
       </div>
 
-      <Indicator onClick={() => setOpen(!open)} open={open} />
+      <div className={cx('select_input_indicator')}>
+        <Indicator onClick={() => setOpen(!open)} open={open} />
+      </div>
     </div>
   );
 

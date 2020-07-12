@@ -30,7 +30,10 @@
   }
 
   &_input {
-    width: 200px;
+    display: inline-block;
+    width: auto;
+
+    max-width: 200px;
 
     user-select: none;
 
@@ -63,6 +66,10 @@
       &_close {
         transform: scale(.75);
       }
+    }
+
+    &_indicator {
+      margin-left: $push;
     }
   }
 
