@@ -25,7 +25,8 @@ const Input = ({
   readOnly,
   forceValue,
   small,
-  noBorder
+  noBorder,
+  inverse
 }) => {
   const cx = classnames.bind(styles);
 
@@ -68,7 +69,7 @@ const Input = ({
       })}
     >
       {label && (
-        <Text push small>
+        <Text push small inverse={inverse}>
           {label}
         </Text>
       )}
@@ -79,7 +80,8 @@ const Input = ({
             ...getValidationState({ success, danger }),
             inputwrapper_input__disabled: disabled,
             inputwrapper_input__small: small,
-            inputwrapper_input__no_border: noBorder
+            inputwrapper_input__no_border: noBorder,
+            inputwrapper_input__inverse: inverse
           })}
         >
           {icon && <span className={cx('inputwrapper_icon')}>{icon}</span>}
@@ -87,7 +89,8 @@ const Input = ({
           <input
             disabled={disabled}
             className={cx('input', {
-              input__small: small
+              input__small: small,
+              input__inverse: inverse
             })}
             onChange={(val) => handleChange(val.target.value)}
             placeholder={placeholder}
@@ -136,7 +139,8 @@ Input.defaultProps = {
   readOnly: false,
   forceValue: null,
   small: false,
-  noBorder: false
+  noBorder: false,
+  inverse: false
 };
 
 Input.propTypes = {
@@ -158,7 +162,8 @@ Input.propTypes = {
   readOnly: PropTypes.bool,
   forceValue: PropTypes.string,
   small: PropTypes.bool,
-  noBorder: PropTypes.bool
+  noBorder: PropTypes.bool,
+  inverse: PropTypes.bool
 };
 
 export default Input;

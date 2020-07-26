@@ -43,4 +43,14 @@
 
     height: 42px;
   }
+
+  &__inverse {
+    background-color: transparentize(color('light-gray'), 0.75);
+
+    &:active,
+    &:focus,
+    &:focus-within {
+      background-color: transparentize(color('light-gray'), 0.9);
+    }
+  }
 }

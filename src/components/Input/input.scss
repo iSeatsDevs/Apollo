@@ -30,6 +30,14 @@
         border-color: color('white') !important;
       }
 
+      &__inverse {
+        color: color('white') !important;
+    
+        &::placeholder {
+          color: color('white', -1) !important;
+        }
+      }
+
       &:active,
       &:focus-within {
         border-color: color('primary');
@@ -71,11 +79,21 @@
 
   outline: none;
 
+  background-color: transparent;
+
   &::placeholder {
     color: color('gray', -1);
   }
 
   &__small {
     @include action_small;
+  }
+
+  &__inverse {
+    color: color('white');
+
+    &::placeholder {
+      color: color('white', -1);
+    }
   }
 }
