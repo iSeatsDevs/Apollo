@@ -1,8 +1,8 @@
 @import '../../global';
 
 .image {
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
 
   object-fit: cover;
 
@@ -10,9 +10,14 @@
     border-radius: $border-radius * 2;
   }
 
+  &-wrapper {
+    height: inherit;
+    width: inherit;
+  }
+
   &_placeholder {
-    height: 100%;
-    width: 100%;
+    height: inherit;
+    width: inherit;
 
     display: flex;
     justify-content: center;
