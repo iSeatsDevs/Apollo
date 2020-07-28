@@ -1,3 +1,10 @@
+## [2.7.2](https://bitbucket.org/iseats/apollo/compare/v2.7.1...v2.7.2) (2020-07-28)
+
+
+### Bug Fixes
+
+* **image:** additional dimension fixes ([d541b4b](https://bitbucket.org/iseats/apollo/commits/d541b4b6395e13f84b76813111c37dcefd09f0e1))
+
 ## [2.7.1](https://bitbucket.org/iseats/apollo/compare/v2.7.0...v2.7.1) (2020-07-28)
 
 
