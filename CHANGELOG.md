@@ -1,3 +1,10 @@
+## [2.7.1](https://bitbucket.org/iseats/apollo/compare/v2.7.0...v2.7.1) (2020-07-28)
+
+
+### Bug Fixes
+
+* **image:** height and width is now set by inheritance ([5ae6e67](https://bitbucket.org/iseats/apollo/commits/5ae6e679308e926edbdfa9583d81603dfb420a6e))
+
 # [2.7.0](https://bitbucket.org/iseats/apollo/compare/v2.6.1...v2.7.0) (2020-07-26)
 
 
