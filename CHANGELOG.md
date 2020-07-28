@@ -1,3 +1,10 @@
+# [2.7.0](https://bitbucket.org/iseats/apollo/compare/v2.6.1...v2.7.0) (2020-07-26)
+
+
+### Features
+
+* **inputs:** added inverse prop for inputs for better dark visbility ([9b894fd](https://bitbucket.org/iseats/apollo/commits/9b894fd9741ca4540f12f32ab97037c04f66737c))
+
 ## [2.6.1](https://bitbucket.org/iseats/apollo/compare/v2.6.0...v2.6.1) (2020-07-12)
 
 
