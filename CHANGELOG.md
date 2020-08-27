@@ -1,3 +1,10 @@
+## [2.7.3](https://bitbucket.org/iseats/apollo/compare/v2.7.2...v2.7.3) (2020-08-27)
+
+
+### Bug Fixes
+
+* **image:** fixed lazyload classname ([3dae9b8](https://bitbucket.org/iseats/apollo/commits/3dae9b8c42ace5e26b6d5448ef15203172424f69))
+
 ## [2.7.2](https://bitbucket.org/iseats/apollo/compare/v2.7.1...v2.7.2) (2020-07-28)
 
 
