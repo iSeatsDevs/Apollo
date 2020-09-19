@@ -1,6 +1,6 @@
 {
   "name": "@iseats/apollo",
-  "version": "2.7.3",
+  "version": "2.7.4",
   "description": "Apollo is a react component library that is developed and used by iSeats",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

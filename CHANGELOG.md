@@ -1,3 +1,15 @@
+## [2.7.4](https://bitbucket.org/iseats/apollo/compare/v2.7.3...v2.7.4) (2020-09-19)
+
+
+### Bug Fixes
+
+* **calendar:** fixed bug where only 6 days of the week are displayed ([addd2ec](https://bitbucket.org/iseats/apollo/commits/addd2ec9377885b485cb32d58469876ac48add5b))
+
+
+### Reverts
+
+* **image:** revert on classname prefix of the lazyload-wrapper ([d14aef6](https://bitbucket.org/iseats/apollo/commits/d14aef6876d8e2f7a88eb76fd8db6bdb02600bd8))
+
 ## [2.7.3](https://bitbucket.org/iseats/apollo/compare/v2.7.2...v2.7.3) (2020-08-27)
 
 
