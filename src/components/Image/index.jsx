@@ -20,13 +20,7 @@ const Image = ({ height, width, src, alt, bordered }) => (
       width
     }}
   >
-    <LazyLoad
-      classNamePrefix={cx('image')}
-      height="100%"
-      width="100%"
-      once
-      placeholder={<Placeholder />}
-    >
+    <LazyLoad height="100%" width="100%" once placeholder={<Placeholder />}>
       <img
         className={cx('image', {
           image__bordered: bordered
