@@ -1,3 +1,10 @@
+# [2.8.0](https://bitbucket.org/iseats/apollo/compare/v2.7.4...v2.8.0) (2020-09-19)
+
+
+### Features
+
+* **progress:** reduced height of the progress bar to 2px ([0bba719](https://bitbucket.org/iseats/apollo/commits/0bba719c215ee0315f158ca166d6c42b2bda5b99))
+
 ## [2.7.4](https://bitbucket.org/iseats/apollo/compare/v2.7.3...v2.7.4) (2020-09-19)
 
 
