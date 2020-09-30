@@ -13,7 +13,7 @@ const Placeholder = () => (
   </div>
 );
 
-const Image = ({ height, width, src, srcset, alt, bordered }) => (
+const Image = ({ height, width, src, srcset, sizes, alt, bordered }) => (
   <div
     style={{
       height,
@@ -27,6 +27,7 @@ const Image = ({ height, width, src, srcset, alt, bordered }) => (
         })}
         alt={alt}
         srcSet={srcset}
+        sizes={sizes}
         src={src}
       />
     </LazyLoad>
@@ -36,12 +37,15 @@ const Image = ({ height, width, src, srcset, alt, bordered }) => (
 Image.defaultProps = {
   height: 'inherit',
   width: 'inherit',
-  bordered: false
+  bordered: false,
+  srcset: false,
+  sizes: false
 };
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
-  srcset: PropTypes.string.isRequired,
+  srcset: PropTypes.string,
+  sizes: PropTypes.string,
   alt: PropTypes.string.isRequired,
   height: PropTypes.string,
   width: PropTypes.string,
