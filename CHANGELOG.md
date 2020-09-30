@@ -1,3 +1,11 @@
+## [2.8.1](https://bitbucket.org/iseats/apollo/compare/v2.8.0...v2.8.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* **image:** fixed missing sizes attribute ([1353be8](https://bitbucket.org/iseats/apollo/commits/1353be898b363947eecfd1b26e9ea5e052791937))
+* **image:** fixed missing srcset attribute ([e7434d3](https://bitbucket.org/iseats/apollo/commits/e7434d3ea39f08f7b9f68dadc6ccc3548f4ae725))
+
 # [2.8.0](https://bitbucket.org/iseats/apollo/compare/v2.7.4...v2.8.0) (2020-09-19)
 
 
