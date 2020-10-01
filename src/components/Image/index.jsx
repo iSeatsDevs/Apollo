@@ -38,8 +38,8 @@ Image.defaultProps = {
   height: 'inherit',
   width: 'inherit',
   bordered: false,
-  srcset: false,
-  sizes: false
+  srcset: undefined,
+  sizes: undefined
 };
 
 Image.propTypes = {
