@@ -1,3 +1,10 @@
+## [2.8.2](https://bitbucket.org/iseats/apollo/compare/v2.8.1...v2.8.2) (2020-10-01)
+
+
+### Bug Fixes
+
+* **image:** changed default values of srcset and sizes to undefined instead of false ([f7be052](https://bitbucket.org/iseats/apollo/commits/f7be052c4a5027725e5bc2d8bdd3395111bed9d8))
+
 ## [2.8.1](https://bitbucket.org/iseats/apollo/compare/v2.8.0...v2.8.1) (2020-09-30)
 
 
