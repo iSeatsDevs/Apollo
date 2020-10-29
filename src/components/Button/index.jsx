@@ -18,6 +18,7 @@ const Button = ({
   const cx = classnames.bind(styles);
 
   const themes = {
+    primary: 'button__primary',
     secondary: 'button__secondary',
     success: 'button__success',
     danger: 'button__danger',
@@ -46,7 +47,7 @@ const Button = ({
 };
 
 Button.defaultProps = {
-  theme: undefined,
+  theme: 'primary',
   block: false,
   disabled: false,
   loading: false,
@@ -64,6 +65,7 @@ Button.propTypes = {
   small: PropTypes.bool,
   children: PropTypes.node,
   theme: PropTypes.oneOf([
+    'primary',
     'secondary',
     'success',
     'danger',

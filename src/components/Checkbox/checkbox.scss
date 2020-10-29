@@ -1,5 +1,5 @@
-@import '../../global';
-@import '../../mixins/actionable';
+@import "../../global";
+@import "../../mixins/actionable";
 
 .checkbox {
   &_wrapper {
@@ -8,6 +8,10 @@
 
   &_input {
     @include actionable;
+    background-color: color('white');
+
+    border: $border-default;
+    border-color: color("light-gray");
 
     &:focus {
       @include focus;
@@ -20,16 +24,16 @@
     align-items: center;
 
     padding: 0px;
-    margin-right: $push;
+    margin-right: $push_sm;
 
     width: 18px;
     height: 18px;
 
-    color: color('white') !important;
+    color: color("white") !important;
 
     &__checked {
-      border-color: color('primary');
-      background-color: color('primary');
+      border-color: color("primary");
+      background-color: color("primary");
     }
   }
 }

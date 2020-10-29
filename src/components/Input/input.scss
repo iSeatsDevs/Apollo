@@ -1,6 +1,6 @@
-@import '../../global';
-@import '../../mixins/actionable';
-@import '../../mixins/typography';
+@import "../../global";
+@import "../../mixins/actionable";
+@import "../../mixins/typography";
 
 .inputwrapper {
   box-sizing: border-box;
@@ -9,39 +9,43 @@
   display: inline-block;
 
   &__block {
-      display: block;
+    display: block;
+    width: 100%;
+
+    .input {
       width: 100%;
-
-      .input {
-        width: 100%;
-      }
+    }
   }
-  
+
   &_input {
-      @include actionable;
+    @include actionable;
+    background-color: color('white');
 
-      padding: 0px $padding;
+    border: $border-default;
+    border-color: color("light-gray");
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    padding: 0px $padding;
 
-      &__no_border {
-        border-color: color('white') !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__no_border {
+      border-color: color("white") !important;
+    }
+
+    &__inverse {
+      color: color("white") !important;
+
+      &::placeholder {
+        color: color("white", -1) !important;
       }
+    }
 
-      &__inverse {
-        color: color('white') !important;
-    
-        &::placeholder {
-          color: color('white', -1) !important;
-        }
-      }
-
-      &:active,
-      &:focus-within {
-        border-color: color('primary');
-      }
+    &:active,
+    &:focus-within {
+      border-color: color("primary");
+    }
   }
 
   &_eye {
@@ -50,7 +54,7 @@
 
     &:active,
     &:focus {
-      color: color('primary');
+      color: color("primary");
     }
   }
 
@@ -73,27 +77,27 @@
   margin: 0px;
   border: none;
 
-  @include action;
+  @include body;
 
-  width: 350px;
+  width: auto;
 
   outline: none;
 
   background-color: transparent;
 
   &::placeholder {
-    color: color('gray', -1);
+    color: color("gray", -1);
   }
 
   &__small {
-    @include action_small;
+    @include body_small;
   }
 
   &__inverse {
-    color: color('white');
+    color: color("white");
 
     &::placeholder {
-      color: color('white', -1);
+      color: color("white", -1);
     }
   }
 }

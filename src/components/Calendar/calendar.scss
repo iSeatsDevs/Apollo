@@ -5,7 +5,8 @@
 .calendar {
   box-sizing: border-box;
 
-  padding: $padding-sm;
+  padding: $padding;
+  padding-bottom: 0;
 
   width: 400px;
 
@@ -28,7 +29,7 @@
 
       text-align: center;
 
-      @include action;
+      @include body;
 
       font-weight: 600;
 

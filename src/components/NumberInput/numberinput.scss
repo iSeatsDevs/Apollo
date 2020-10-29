@@ -3,6 +3,10 @@
 
 .numberinput {
   @include actionable;
+  background-color: color('white');
+
+  border: $border-default;
+  border-color: color('light-gray');
 
   width: auto;
 

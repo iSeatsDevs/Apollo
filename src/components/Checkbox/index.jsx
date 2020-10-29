@@ -44,7 +44,6 @@ const Checkbox = ({
       {label && (
         <Text
           small
-          bold
           theme={(danger && 'danger') || (success && 'success') || null}
         >
           {label}

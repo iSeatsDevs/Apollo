@@ -5,10 +5,10 @@
 
 .select {
   @include actionable;
+  background-color: color('white');
 
-  padding: 0px $padding;
-
-  position: relative;
+  border: $border-default;
+  border-color: color('light-gray');
 
   display: flex;
   align-items: center;
@@ -26,14 +26,14 @@
   }
 
   &__small {
-    @include action_small;
+    @include body_small;
   }
 
   &_input {
+    @include body;
+
     display: inline-block;
     width: auto;
-
-    max-width: 200px;
 
     user-select: none;
 
@@ -45,7 +45,7 @@
     }
 
     &_value {
-      @include action_small;
+      @include body_small;
 
       margin: 0 $push-sm;
       padding: $padding-sm;
@@ -78,7 +78,7 @@
 
     position: absolute;
 
-    margin-top: $push_sm;
+    top: 65px;
 
     min-width: 200px;
 
@@ -87,7 +87,7 @@
     background-color: color('white');
 
     &_empty {
-      @include action;
+      @include body;
 
       text-align: center;
 

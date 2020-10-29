@@ -120,7 +120,7 @@
     display: inline-block;
 
     &__small {
-      @include small;
+      @include body_small;
     }
 
     &__danger {

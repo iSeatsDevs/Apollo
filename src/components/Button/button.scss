@@ -1,76 +1,79 @@
-@import '../../global';
-@import '../../mixins/actionable.scss';
-@import '../../mixins/typography.scss';
+@import "../../global";
+@import "../../mixins/actionable.scss";
+@import "../../mixins/typography.scss";
 
 .button {
   @include actionable;
+  @include body;
   width: auto;
-  height: 50px;
 
   white-space: nowrap;
 
   cursor: pointer;
 
   border: none;
-  color: color('white');
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-color: color('primary');
-
-  &:active {
-    background-color: transparentize(color('primary'), 0.25);
-  }
-
-  &__secondary {
-    color: color('white');
-    border-color: color('secondary');
-    background-color: color('secondary');
+  &__primary {
+    color: color("white");
+    background-color: color("primary");
 
     &:active,
     &:focus {
-      background-color: transparentize(color('secondary'), 0.25);
+      background-color: transparentize(color("primary"), 0.25);
+    }
+  }
+
+  &__secondary {
+    color: color("white");
+    background-color: color("secondary");
+
+    &:active,
+    &:focus {
+      background-color: transparentize(color("secondary"), 0.25);
     }
   }
 
   &__success {
-    color: color('white');
-    background-color: color('success');
+    color: color("white");
+    background-color: color("success");
 
     &:active,
     &:focus {
-      background-color: transparentize(color('success'), 0.25);
+      background-color: transparentize(color("success"), 0.25);
     }
   }
 
   &__danger {
-    color: color('white');
-    background-color: color('danger');
+    color: color("white");
+    background-color: color("danger");
 
     &:active,
     &:focus {
-      background-color: transparentize(color('danger'), 0.25);
+      background-color: transparentize(color("danger"), 0.25);
     }
   }
 
   &__light {
-    color: color('typography');
-    background-color: color('light-gray');
+    color: color("typography");
+    background-color: color("light-gray");
 
     &:active,
     &:focus {
-      background-color: transparentize(color('light-gray'), 0.25);
+      background-color: transparentize(color("light-gray"), 0.25);
     }
   }
 
   &__transparent {
-    background-color: transparentize(color('light-gray'), 0.75);
+    color: color('white');
+    background-color: transparentize(color("light-gray"), 0.75);
 
     &:active,
     &:focus {
-      background-color: transparentize(color('light-gray'), 0.9);
+      background-color: transparentize(color("light-gray"), 0.9);
     }
   }
 

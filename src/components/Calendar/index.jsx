@@ -103,13 +103,7 @@ const Calendar = ({
         )}
         <Text bold>{format(showDate, 'MMMM')}</Text>
 
-        <Button
-          small
-          theme="light"
-          onClick={() => {
-            return changeMonth('add');
-          }}
-        >
+        <Button small theme="light" onClick={() => changeMonth('add')}>
           <ChevronRight size={18} />
         </Button>
       </div>

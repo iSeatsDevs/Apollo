@@ -1,39 +1,33 @@
-@import '../../global';
-@import '../../mixins/typography';
+@import "../../global";
 
 .progress {
-  @include body_small;
-
-  font-size: $font-size-small - 4px;
-  color: color('white');
-
+  box-sizing: border-box;
   width: 100%;
   height: 2px;
 
   border-radius: $border-radius;
 
-  background-color: color('light-gray');
+  background-color: color("light-gray");
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
 
-  box-sizing: border-box;
   overflow: hidden;
 
   &_bar {
     height: 100%;
 
-    background-color: color('primary');
+    background-color: color("primary");
 
     border-radius: $border-radius * 2;
 
     &__success {
-      background-color: color('success');
+      background-color: color("success");
     }
-  
+
     &__danger {
-      background-color: color('danger');
+      background-color: color("danger");
     }
   }
 }
