@@ -68,8 +68,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "date-fns": "^2.16.1",
-    "prop-types": "^15.7.2",
-    "react-lazyload": "^3.0.0"
+    "prop-types": "^15.7.2"
   },
   "config": {
     "commitizen": {
