@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import { Typography } from '../index';
 
-<Meta title="System|Typography" component={Typography} />
+<Meta title="System/Typography" component={Typography} />
 
 # Typography
 
@@ -33,7 +33,7 @@ All typography components have the following props:
 <Props of={Typography.Title} />
 
 <Preview>
-  <Story name="Title | Default">
+  <Story name="Title · Default">
     <Typography.Title>
       We ignite opportunity by setting the world in motion.
     </Typography.Title>
@@ -43,7 +43,7 @@ All typography components have the following props:
 ### Inverse
 
 <Preview>
-  <Story name="Title | Inverse">
+  <Story name="Title · Inverse">
     <div style={{ background: '#000' }}>
       <Typography.Title inverse>
         We ignite opportunity by setting the world in motion.
@@ -58,7 +58,7 @@ If you don't want the title component to push content down you
 can use the `dontPush` prop.
 
 <Preview>
-  <Story name="Title | Dont Push">
+  <Story name="Title · Dont Push">
     <Typography.Title dontPush>
       We ignite opportunity by setting the world in motion.
     </Typography.Title>
@@ -68,7 +68,7 @@ can use the `dontPush` prop.
 ### Levels
 
 <Preview>
-  <Story name="Title | Levels">
+  <Story name="Title · Levels">
     <>
       <Typography.Title level={1}>
         We ignite opportunity by setting the world in motion.
@@ -100,13 +100,13 @@ Text components are designed for small, functionable texts such as links or inli
 <Props of={Typography.Text} />
 
 <Preview>
-  <Story name="Text | Default">
+  <Story name="Text · Default">
     <Typography.Text>Good things happen when people can move.</Typography.Text>
   </Story>
 </Preview>
 
 <Preview>
-  <Story name="Text | Light">
+  <Story name="Text · Light">
     <Typography.Text light push>
       Good things happen when people can move.
     </Typography.Text>
@@ -114,7 +114,7 @@ Text components are designed for small, functionable texts such as links or inli
 </Preview>
 
 <Preview>
-  <Story name="Text | Bold">
+  <Story name="Text · Bold">
     <Typography.Text bold push>
       Good things happen when people can move.
     </Typography.Text>
@@ -122,7 +122,7 @@ Text components are designed for small, functionable texts such as links or inli
 </Preview>
 
 <Preview>
-  <Story name="Text | Underline">
+  <Story name="Text · Underline">
     <Typography.Text underline push>
       Good things happen when people can move.
     </Typography.Text>
@@ -130,7 +130,7 @@ Text components are designed for small, functionable texts such as links or inli
 </Preview>
 
 <Preview>
-  <Story name="Text | Mark">
+  <Story name="Text · Mark">
     <Typography.Text mark push>
       Good things happen when people can move.
     </Typography.Text>
@@ -138,7 +138,7 @@ Text components are designed for small, functionable texts such as links or inli
 </Preview>
 
 <Preview>
-  <Story name="Text | Inverse">
+  <Story name="Text · Inverse">
     <div style={{ background: "#000" }}>
       <Typography.Text inverse push>
         Good things happen when people can move.
@@ -148,7 +148,7 @@ Text components are designed for small, functionable texts such as links or inli
 </Preview>
 
 <Preview>
-  <Story name="Text | Link">
+  <Story name="Text · Link">
     <Typography.Text link>
       Good things happen when people can move.
     </Typography.Text>
@@ -164,7 +164,7 @@ Text components are designed for small, functionable texts such as links or inli
 <Props of={Typography.Paragraph} />
 
 <Preview>
-  <Story name="Paragraph | Default">
+  <Story name="Paragraph · Default">
     <Typography.Paragraph>
       Good things happen when people can move, whether across town or towards
       their dreams. Opportunities appear, open up, become reality. What started as
@@ -180,7 +180,7 @@ Text components are designed for small, functionable texts such as links or inli
 Using the ellipses prop, we can hide overflowing lines by either using a integer set as a maximum letter, or a simple boolean.
 
 <Preview>
-  <Story name="Paragraph | Ellipses">
+  <Story name="Paragraph · Ellipses">
     <Typography.Paragraph ellipses>
       Good things happen when people can move, whether across town or towards
       their dreams. Opportunities appear, open up, become reality. What started as
