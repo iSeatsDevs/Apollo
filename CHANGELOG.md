@@ -1,3 +1,21 @@
+# [2.9.0](https://bitbucket.org/iseats/apollo/compare/v2.8.2...v2.9.0) (2020-10-29)
+
+
+### Bug Fixes
+
+* **actionables:** default border-color for inputs is now light-gray or #ededed ([9ddfd8b](https://bitbucket.org/iseats/apollo/commits/9ddfd8b0bd4047b53c85de456beacf474a63eba7))
+* **divider:** color is now light-gray #ededed ([d2be65b](https://bitbucket.org/iseats/apollo/commits/d2be65be466b4f40695f471f823c67b1d4b6782c))
+* **stories:** fixed structure hierarchy ([f2681eb](https://bitbucket.org/iseats/apollo/commits/f2681eb99d6e011a7ad15fa0c288b8c0d6c82d2a))
+
+
+### Features
+
+* **deprecated <image/>:** it is adviced to use a lazyloading library directly or use next/image ([65e7ee3](https://bitbucket.org/iseats/apollo/commits/65e7ee32f6c00103941e82cde897784d690a42bb))
+* removed react-lazyload ([f1e2df4](https://bitbucket.org/iseats/apollo/commits/f1e2df47592cee55e5a9bc3b16a9ed40b0192cf4))
+* **globals:** boosted primary and secondary color saturations ([03b789f](https://bitbucket.org/iseats/apollo/commits/03b789fa1b24d4346444554c08c1345fedd2e992))
+* **progress:** removed indicator as the progress bar is too small to have a readable indicator ([3e5a542](https://bitbucket.org/iseats/apollo/commits/3e5a54226b5db7c3e399cb3c6d52721a3017893b))
+* upped default `border-radius` from 6 to 8px ([9a378ed](https://bitbucket.org/iseats/apollo/commits/9a378ed6dd1c4e0c8af758f6c53899879d72f16c))
+
 ## [2.8.2](https://bitbucket.org/iseats/apollo/compare/v2.8.1...v2.8.2) (2020-10-01)
 
 
