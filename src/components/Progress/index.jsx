@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 import styles from './progress.scss';
 
-const Progress = ({ value, theme, indicator }) => {
+const Progress = ({ value, theme }) => {
   const cx = classnames.bind(styles);
 
   const themes = {
@@ -18,9 +18,7 @@ const Progress = ({ value, theme, indicator }) => {
         className={cx('progress_bar', [themes[theme]])}
         style={{ width: `${value}%` }}
       >
-        {indicator && (
-          <span className={cx('progress_indicator')}>{`${value}%`}</span>
-        )}
+    
       </div>
     </div>
   );
@@ -28,12 +26,10 @@ const Progress = ({ value, theme, indicator }) => {
 
 Progress.defaultProps = {
   theme: null,
-  indicator: false,
   value: 0
 };
 
 Progress.propTypes = {
-  indicator: PropTypes.bool,
   theme: PropTypes.oneOf(['success', 'danger']),
   value: PropTypes.number
 };

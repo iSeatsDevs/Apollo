@@ -2,7 +2,7 @@
 @import '../../mixins/typography';
 
 .progress {
-  @include action_small;
+  @include body_small;
 
   font-size: $font-size-small - 4px;
   color: color('white');
@@ -27,10 +27,6 @@
     background-color: color('primary');
 
     border-radius: $border-radius * 2;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     &__success {
       background-color: color('success');
