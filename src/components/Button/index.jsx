@@ -29,10 +29,11 @@ const Button = ({
 
   return (
     <button
-      disabled={disabled || loading}
-      onClick={loading ? () => {} : onClick}
-      type="button"
       tabIndex={0}
+      onClick={loading ? () => {} : onClick}
+      onKeyPress={loading ? () => {} : onClick}
+      type="button"
+      disabled={disabled || loading}
       className={cx('button', [themes[theme]], {
         button__small: small,
         button__loading: loading,
