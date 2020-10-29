@@ -1,3 +1,10 @@
+# [2.10.0](https://bitbucket.org/iseats/apollo/compare/v2.9.0...v2.10.0) (2020-10-29)
+
+
+### Features
+
+* **button:** added onKeyPress to button for better keyboard support ([2c33b24](https://bitbucket.org/iseats/apollo/commits/2c33b24a0e015920c84b775b1cf9705357fc6cc1))
+
 # [2.9.0](https://bitbucket.org/iseats/apollo/compare/v2.8.2...v2.9.0) (2020-10-29)
 
 
