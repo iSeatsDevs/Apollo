@@ -6,7 +6,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import autoprefixer from 'autoprefixer';
 import copy from 'rollup-plugin-copy';
 import filesize from 'rollup-plugin-filesize';
-import { terser } from "rollup-plugin-terser";
+import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 
 export default {
