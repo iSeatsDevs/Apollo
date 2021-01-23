@@ -21,6 +21,7 @@ const Text = ({
   underline,
   mark,
   inverse,
+  href,
 }) => {
   const cx = classnames.bind(styles);
 
@@ -35,12 +36,13 @@ const Text = ({
 
   return (
     <Element
-      {...((onClick || link) && {
+      {...(onClick && {
         onClick,
         onKeyPress: onClick,
         tabIndex: 0,
         role: link ? 'link' : 'button',
       })}
+      href={href}
       className={cx('typography', 'typography_text', [themes[theme]], {
         ...getEnabledEffects({
           light,
@@ -67,6 +69,7 @@ Text.defaultProps = {
   push: false,
   small: false,
   theme: null,
+  href: null,
 };
 
 Text.propTypes = {
@@ -77,6 +80,7 @@ Text.propTypes = {
   push: PropTypes.bool,
   small: PropTypes.bool,
   theme: PropTypes.oneOf(['success', 'warning', 'danger']),
+  href: PropTypes.string,
 };
 
 export default Text;
