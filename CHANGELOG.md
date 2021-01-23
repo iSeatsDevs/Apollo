@@ -1,3 +1,11 @@
+## [2.10.1](https://bitbucket.org/iseats/apollo/compare/v2.10.0...v2.10.1) (2021-01-23)
+
+
+### Bug Fixes
+
+* fixed broken build ([3b9e338](https://bitbucket.org/iseats/apollo/commits/3b9e338d142d796ce143b6a20126bd85b8581507))
+* fixed storybook glob ([0d4b411](https://bitbucket.org/iseats/apollo/commits/0d4b411720f48b47c7c3d1b728280d60ddcad314))
+
 # [2.10.0](https://bitbucket.org/iseats/apollo/compare/v2.9.0...v2.10.0) (2020-10-29)
 
 
