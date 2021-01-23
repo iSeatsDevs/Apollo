@@ -6,7 +6,7 @@ import styles from './typography.scss';
 import {
   getEnabledEffects,
   getEffectsPropTypes,
-  getEffectsDefaults
+  getEffectsDefaults,
 } from './typography_helpers';
 
 const Text = ({
@@ -20,7 +20,8 @@ const Text = ({
   bold,
   underline,
   mark,
-  inverse
+  inverse,
+  href,
 }) => {
   const cx = classnames.bind(styles);
 
@@ -28,33 +29,36 @@ const Text = ({
     success: 'typography_text__success',
     warning: 'typography_text__warning',
     danger: 'typography_text__danger',
-    inverse: 'typography_text__inverse'
+    inverse: 'typography_text__inverse',
   };
 
+  const Element = link ? 'a' : 'p';
+
   return (
-    <span
-      {...((onClick || link) && {
+    <Element
+      {...(onClick && {
         onClick,
         onKeyPress: onClick,
         tabIndex: 0,
-        role: link ? 'link' : 'button'
+        role: link ? 'link' : 'button',
       })}
+      href={href}
       className={cx('typography', 'typography_text', [themes[theme]], {
         ...getEnabledEffects({
           light,
           bold,
           underline,
           mark,
-          inverse
+          inverse,
         }),
         typography_text__clickable: !!onClick,
         typography_text__small: small,
         typography_text__link: link,
-        typography_text__push: push
+        typography_text__push: push,
       })}
     >
       {children}
-    </span>
+    </Element>
   );
 };
 
@@ -64,7 +68,8 @@ Text.defaultProps = {
   onClick: undefined,
   push: false,
   small: false,
-  theme: null
+  theme: null,
+  href: null,
 };
 
 Text.propTypes = {
@@ -74,7 +79,8 @@ Text.propTypes = {
   onClick: PropTypes.func,
   push: PropTypes.bool,
   small: PropTypes.bool,
-  theme: PropTypes.oneOf(['success', 'warning', 'danger'])
+  theme: PropTypes.oneOf(['success', 'warning', 'danger']),
+  href: PropTypes.string,
 };
 
 export default Text;
