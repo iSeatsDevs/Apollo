@@ -31,8 +31,10 @@ const Text = ({
     inverse: 'typography_text__inverse',
   };
 
+  const Element = link ? 'a' : 'p';
+
   return (
-    <span
+    <Element
       {...((onClick || link) && {
         onClick,
         onKeyPress: onClick,
@@ -54,7 +56,7 @@ const Text = ({
       })}
     >
       {children}
-    </span>
+    </Element>
   );
 };
 
