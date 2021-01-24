@@ -2,23 +2,17 @@
 @import '../mixins/typography.scss';
 
 @mixin actionable {
-  @include action;
   outline: none;
 
   position: relative;
 
   box-sizing: border-box;
-
-  border: $border-default;
-  border-color: color('gray');
+  
   border-radius: $border-radius;
 
-  height: 52px;
-  width: 100%;
+  height: 42px;
 
   padding: 0px $padding_lg;
-
-  background-color: color('white');
   transition: all 100ms;
 
   &__danger {
@@ -39,8 +33,19 @@
   }
 
   &__small {
-    @include action_small;
+    @include body_small;
 
-    height: 42px;
+    height: 32px;
+    padding: 0px $padding;
+  }
+
+  &__inverse {
+    background-color: transparentize(color('light-gray'), 0.75);
+
+    &:active,
+    &:focus,
+    &:focus-within {
+      background-color: transparentize(color('light-gray'), 0.9);
+    }
   }
 }

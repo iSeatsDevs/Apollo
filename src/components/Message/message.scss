@@ -2,7 +2,7 @@
 @import '../../mixins/typography.scss';
 
 .message {
-  @include small;
+  @include body_small;
 
   display: block !important;
 
@@ -14,15 +14,21 @@
   padding: $padding;
   margin-bottom: $push;
 
-  background-color: color('primary');
-  color: color('white');
   border-radius: $border-radius;
  
+  &__primary {
+    background-color: color('primary');
+    color: color('white');
+  }
 
   &__secondary {
-    background-color: color('white');
-    color: color('black');
-    border: $border-default color('black');
+    background-color: color('secondary');
+    color: color('white');
+  }
+
+  &__light {
+    color: color('typography');
+    background-color: color('light-gray');
   }
 
   &__success {
@@ -41,9 +47,11 @@
   }
 
   &_closeable {
-    margin-bottom: $push-sm;
-
     display: flex;
     justify-content: flex-end;
+
+    div {
+      transform: scale(.75) translateY(-5px);
+    }
   }
 }

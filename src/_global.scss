@@ -1,17 +1,15 @@
-@import url("https://use.typekit.net/fuj5cpq.css");
-
 $colors: (
-  'primary': #2F7AFD,
-  'secondary': #FF4A49,
-  'success': #00AC1E,
-  'warning': #ffb400,
-  'danger': #E91A13,
-  'typography': #484848,
-  'black': #131314,
-  'gray': #E3E4E6,
-  'light-gray': #f9fafc,
-  'dark-gray': #88898A,
-  'white': #FFFFFF,
+  "primary": #0164fe,
+  "secondary": #ff3333,
+  "success": #00ac1e,
+  "warning": #ffb400,
+  "danger": #e91a13,
+  "typography": #222222,
+  "black": #000000,
+  "gray": #b0b0b0,
+  "light-gray": #ededed,
+  "dark-gray": #2b2b2b,
+  "white": #ffffff,
 );
 
 // Small tablets and large smartphones (landscape view)
@@ -26,12 +24,14 @@ $screen-lg-max: 992px;
 // Large tablets and desktops
 $screen-xl-max: 1200px;
 
-$title-family: 'proxima-nova', -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-$action-family: 'proxima-nova', -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-$font-family: 'proxima-nova', -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+// You have to set a font yourself. You can do this by simply adding a new
+// @typeface and importing it anywhere inside your app.
+$title-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+$action-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+$font-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 
-$font-color: color('typography');
-$font-color-inverted: color('white');
+$font-color: color("typography");
+$font-color-inverted: color("white");
 
 $font-size: 16px;
 $font-line-height: 24px;
@@ -45,7 +45,7 @@ $heading-size-3: ceil($font-size * 1.71);
 $heading-size-4: ceil($font-size * 1.42);
 $heading-size-5: $font-size;
 
-$border-radius: 6px;
+$border-radius: 8px;
 $border-default: 1.5px solid;
 
 $padding: 12.5px;
@@ -65,29 +65,26 @@ $opacity-high: 0.75;
 $opacity-md: 0.5;
 $opacity-low: 0.25;
 
-$shadow: rgba(0, 0, 0, 0.14902) 0px 2px 8px;
-$shadow_lg: rgba(26, 26, 29, 0.298039) 0px 15px 46px -10px;
+$shadow: 0 2.9px 5.3px rgba(0, 0, 0, 0.019), 0 13.5px 17.9px rgba(0, 0, 0, 0.028), 0 65px 80px rgba(0, 0, 0, 0.04);
 
-@function color($key: 'primary', $change: 0) {
+$shadow-lg: 0 2px 3.6px rgba(0, 0, 0, 0.02), 0 7.7px 10px rgba(0, 0, 0, 0.029), 0 22px 24.1px rgba(0, 0, 0, 0.038),
+  0 75px 80px rgba(0, 0, 0, 0.05);
+
+@function color($key: "primary", $change: 0) {
   $color: map-get($colors, $key);
 
-  @if $change>2 or $change < -2 {
+  @if $change > 4 or $change < -4 {
     @error "Tint value set too high or too low: #{$change} >2<";
   }
 
-  @if $change>0 {
-    $value: 25% * $change;
-    $color: lighten($color, $value);
-  }
-
-  @if $change < 0 {
-    $value: -25% * $change;
-    $color: darken($color, $value);
+  @if $change > 0 or $change < 0 {
+    $value: $change * 25%;
+    $color: scale-color($color, $lightness: $value);
   }
 
   @return $color;
 }
 
 @mixin focus {
-  border-color: color('primary');
+  border-color: color("primary");
 }

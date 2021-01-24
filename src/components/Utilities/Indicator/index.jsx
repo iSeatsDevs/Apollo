@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { ChevronDown } from 'react-feather';
+import { ChevronDown } from '../Icons';
 import styles from './indicator.scss';
 
 const cx = classnames.bind(styles);
@@ -22,7 +22,7 @@ const Indicator = ({ open, onClick }) => (
 
 Indicator.propTypes = {
   onClick: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
+  open: PropTypes.bool.isRequired
 };
 
 export default Indicator;

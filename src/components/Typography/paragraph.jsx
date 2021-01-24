@@ -2,13 +2,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { ArrowUp } from 'react-feather';
+import { ArrowUp } from '../Utilities/Icons';
 import styles from './typography.scss';
 import Text from './text';
 import {
   getEnabledEffects,
   getEffectsPropTypes,
-  getEffectsDefaults,
+  getEffectsDefaults
 } from './typography_helpers';
 
 const Paragraph = ({
@@ -19,7 +19,7 @@ const Paragraph = ({
   bold,
   underline,
   mark,
-  inverse,
+  inverse
 }) => {
   const cx = classnames.bind(styles);
 
@@ -54,9 +54,9 @@ const Paragraph = ({
           bold,
           underline,
           mark,
-          inverse,
+          inverse
         }),
-        typography__small: small,
+        typography__small: small
       })}
     >
       {ellipses
@@ -84,14 +84,14 @@ const Paragraph = ({
 Paragraph.defaultProps = {
   ...getEffectsDefaults(),
   ellipses: false,
-  small: false,
+  small: false
 };
 
 Paragraph.propTypes = {
   ...getEffectsPropTypes(),
   children: PropTypes.node.isRequired,
   ellipses: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
-  small: PropTypes.bool,
+  small: PropTypes.bool
 };
 
 export default Paragraph;

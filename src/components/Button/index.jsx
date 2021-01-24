@@ -13,30 +13,32 @@ const Button = ({
   loading,
   block,
   icon,
-  iconRight,
+  iconRight
 }) => {
   const cx = classnames.bind(styles);
 
   const themes = {
+    primary: 'button__primary',
     secondary: 'button__secondary',
     success: 'button__success',
     danger: 'button__danger',
     warning: 'button__warning',
     light: 'button__light',
-    transparent: 'button__transparent',
+    transparent: 'button__transparent'
   };
 
   return (
     <button
-      disabled={disabled || loading}
-      onClick={loading ? () => {} : onClick}
-      type="button"
       tabIndex={0}
+      onClick={loading ? () => {} : onClick}
+      onKeyPress={loading ? () => {} : onClick}
+      type="button"
+      disabled={disabled || loading}
       className={cx('button', [themes[theme]], {
         button__small: small,
         button__loading: loading,
         button__block: block,
-        button__reverse: iconRight,
+        button__reverse: iconRight
       })}
     >
       {icon && <span className={cx('button_icon')}>{icon}</span>}
@@ -46,14 +48,14 @@ const Button = ({
 };
 
 Button.defaultProps = {
-  theme: undefined,
+  theme: 'primary',
   block: false,
   disabled: false,
   loading: false,
   small: false,
   icon: undefined,
   iconRight: false,
-  children: null,
+  children: null
 };
 
 Button.propTypes = {
@@ -64,14 +66,15 @@ Button.propTypes = {
   small: PropTypes.bool,
   children: PropTypes.node,
   theme: PropTypes.oneOf([
+    'primary',
     'secondary',
     'success',
     'danger',
     'light',
-    'transparent',
+    'transparent'
   ]),
   icon: PropTypes.node,
-  iconRight: PropTypes.bool,
+  iconRight: PropTypes.bool
 };
 
 export default Button;

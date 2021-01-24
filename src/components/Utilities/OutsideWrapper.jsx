@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const OutsideWrapper = ({ children, onOutside }) => {
-  const useOutsideAlerter = ref => {
+  const useOutsideAlerter = (ref) => {
     function handleClickOutside(event) {
       if (ref.current && !ref.current.contains(event.target)) {
         onOutside();
@@ -32,7 +32,7 @@ const OutsideWrapper = ({ children, onOutside }) => {
 
 OutsideWrapper.propTypes = {
   children: PropTypes.element.isRequired,
-  onOutside: PropTypes.func.isRequired,
+  onOutside: PropTypes.func.isRequired
 };
 
 export default OutsideWrapper;

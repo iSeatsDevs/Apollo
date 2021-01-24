@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { ChevronLeft, ChevronRight } from 'react-feather';
+import { ChevronLeft, ChevronRight } from '../Utilities/Icons';
 import Input from '../Input';
 import styles from './numberinput.scss';
 
@@ -17,13 +17,13 @@ const NumberInput = ({
   currency,
   success,
   danger,
-  message,
+  message
 }) => {
   const cx = classnames.bind(styles);
 
   const [value, setValue] = useState(defaultValue);
 
-  const handleChange = type => {
+  const handleChange = (type) => {
     if (type === 'increment') {
       if (value === max) {
         return;
@@ -43,7 +43,7 @@ const NumberInput = ({
     <div
       className={cx('numberinput', {
         numberinput__success: success,
-        numberinput__danger: danger,
+        numberinput__danger: danger
       })}
     >
       <div
@@ -60,7 +60,7 @@ const NumberInput = ({
         {currency
           ? new Intl.NumberFormat(currency.locale, {
               style: 'currency',
-              currency: currency.format,
+              currency: currency.format
             }).format(value)
           : Number.parseFloat(value).toFixed(precision)}
       </span>
@@ -105,7 +105,7 @@ NumberInput.defaultProps = {
   currency: undefined,
   success: false,
   danger: false,
-  message: null,
+  message: null
 };
 
 NumberInput.propTypes = {
@@ -119,11 +119,11 @@ NumberInput.propTypes = {
   disabled: PropTypes.bool,
   currency: PropTypes.shape({
     locale: PropTypes.string,
-    format: PropTypes.string,
+    format: PropTypes.string
   }),
   success: PropTypes.bool,
   danger: PropTypes.bool,
-  message: PropTypes.string,
+  message: PropTypes.string
 };
 
 export default NumberInput;

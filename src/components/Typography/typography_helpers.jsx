@@ -6,7 +6,7 @@ const getEffectsPropTypes = () => {
     bold: PropTypes.bool,
     mark: PropTypes.bool,
     underline: PropTypes.bool,
-    inverse: PropTypes.bool,
+    inverse: PropTypes.bool
   };
 };
 
@@ -16,7 +16,7 @@ const getEffectsDefaults = () => {
     bold: false,
     mark: false,
     underline: false,
-    inverse: false,
+    inverse: false
   };
 };
 
@@ -26,7 +26,7 @@ const getEnabledEffects = ({ light, bold, underline, mark, inverse }) => {
     typography__bold: bold || false,
     typography__underline: underline || false,
     typography__mark: mark || false,
-    typography__inverse: inverse || false,
+    typography__inverse: inverse || false
   };
 };
 

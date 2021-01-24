@@ -14,39 +14,39 @@ const { Text } = Typography;
 const reducer = (state, action) => {
   switch (action.type) {
     case 'select':
-      return state.map(item => {
+      return state.map((item) => {
         if (item.value === action.payload) {
           return {
             ...item,
-            selected: true,
+            selected: true
           };
         }
 
         return { ...item };
       });
     case 'deselect':
-      return state.map(item => {
+      return state.map((item) => {
         if (item.value === action.payload) {
           return {
             ...item,
-            selected: false,
+            selected: false
           };
         }
 
         return { ...item };
       });
     case 'select-only':
-      return state.map(item => {
+      return state.map((item) => {
         if (item.value === action.payload) {
           return {
             ...item,
-            selected: true,
+            selected: true
           };
         }
 
         return {
           ...item,
-          selected: false,
+          selected: false
         };
       });
     default:
@@ -66,12 +66,14 @@ const Select = ({
   success,
   danger,
   emptyText,
+  noBorder,
+  small
 }) => {
   const [open, setOpen] = useState(defaultOpen);
 
   const [values, dispatchValues] = useReducer(
     reducer,
-    options.map(option => {
+    options.map((option) => {
       if (Array.isArray(defaultValue)) {
         return { ...option, selected: defaultValue.includes(option.value) };
       }
@@ -83,7 +85,7 @@ const Select = ({
   /**
    * Every option that is currently selected
    */
-  const filteredValues = values.filter(option => option.selected === true);
+  const filteredValues = values.filter((option) => option.selected === true);
 
   /**
    * This is what will be used as the actual input. Using the <Input/>
@@ -96,11 +98,13 @@ const Select = ({
         select__open: open,
         select__success: success,
         select__danger: danger,
+        select__small: small,
+        select__no_border: noBorder
       })}
     >
       <div
         className={cx('select_input', {
-          select_input__multiple: multiple,
+          select_input__multiple: multiple
         })}
       >
         {/**
@@ -113,23 +117,27 @@ const Select = ({
          */}
         {(multiple &&
           filteredValues.length >= 1 &&
-          filteredValues.map(value => (
-            <div className={cx('select_input_value')}>
+          filteredValues.map((value, i) => (
+            <div key={`${value}-${i}`} className={cx('select_input_value')}>
               <span className={cx('select_input_value_label')}>
                 {value.label}
               </span>
-              <Closeable
-                onClick={() =>
-                  dispatchValues({ type: 'deselect', payload: value.value })
-                }
-              />
+              <span className={cx('select_input_value_close')}>
+                <Closeable
+                  onClick={() =>
+                    dispatchValues({ type: 'deselect', payload: value.value })
+                  }
+                />
+              </span>
             </div>
           ))) ||
           (filteredValues.length === 1 && filteredValues[0].label) ||
           placeholder}
       </div>
 
-      <Indicator onClick={() => setOpen(!open)} open={open} />
+      <div className={cx('select_input_indicator')}>
+        <Indicator onClick={() => setOpen(!open)} open={open} />
+      </div>
     </div>
   );
 
@@ -140,7 +148,7 @@ const Select = ({
     optionValue,
     optionLabel,
     optionSelected,
-    optionOnClick,
+    optionOnClick
   }) => (
     <div
       key={optionValue}
@@ -149,7 +157,7 @@ const Select = ({
       role="button"
       tabIndex={0}
       className={cx('select_option', {
-        select_option__multiple: multiple,
+        select_option__multiple: multiple
       })}
     >
       <Text link={optionSelected}>{optionLabel}</Text>
@@ -160,7 +168,7 @@ const Select = ({
     optionValue: PropTypes.string.isRequired,
     optionLabel: PropTypes.string.isRequired,
     optionSelected: PropTypes.bool.isRequired,
-    optionOnClick: PropTypes.func.isRequired,
+    optionOnClick: PropTypes.func.isRequired
   };
 
   useEffect(() => {
@@ -179,23 +187,27 @@ const Select = ({
         message={message}
         success={success}
         danger={danger}
-        renderInput={<CustomInput />}
+        renderInput={<CustomInput noBorder={noBorder} small={small} />}
       />
 
       {open && (
         <div className={cx('select_options')}>
-          {values.filter(value => !value.selected).length === 0 ? (
-            <span className={cx('select_options_empty')}>{emptyText}</span>
+          {values.filter((value) => !value.selected).length === 0 ? (
+            <div className={cx('select_options_empty')}>
+              <Text small light>
+                {emptyText}
+              </Text>
+            </div>
           ) : (
             values
-              .filter(value => {
+              .filter((value) => {
                 if (multiple) {
                   return !value.selected;
                 }
 
                 return true;
               })
-              .map(option => (
+              .map((option) => (
                 <Option
                   key={option.label}
                   optionLabel={option.label}
@@ -204,7 +216,7 @@ const Select = ({
                   optionOnClick={() =>
                     dispatchValues({
                       type: multiple ? 'select' : 'select-only',
-                      payload: option.value,
+                      payload: option.value
                     })
                   }
                 />
@@ -228,6 +240,8 @@ Select.defaultProps = {
   success: false,
   danger: false,
   emptyText: 'No options available',
+  noBorder: false,
+  small: false
 };
 
 Select.propTypes = {
@@ -235,11 +249,15 @@ Select.propTypes = {
   options: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.string,
-      label: PropTypes.string,
+      label: PropTypes.string
     })
   ),
   defaultOpen: PropTypes.bool,
-  defaultValue: PropTypes.number,
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.string)
+  ]),
   onChange: PropTypes.func,
   multiple: PropTypes.bool,
   label: PropTypes.string,
@@ -247,6 +265,8 @@ Select.propTypes = {
   success: PropTypes.bool,
   danger: PropTypes.bool,
   emptyText: PropTypes.string,
+  noBorder: PropTypes.bool,
+  small: PropTypes.bool
 };
 
 export default Select;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { Eye, EyeOff } from 'react-feather';
+import { Eye, EyeAlt } from '../Utilities/Icons';
 import Typography from '../Typography';
 import styles from './input.scss';
 import Closeable from '../Utilities/Closeable';
@@ -26,6 +26,7 @@ const Input = ({
   forceValue,
   small,
   noBorder,
+  inverse
 }) => {
   const cx = classnames.bind(styles);
 
@@ -34,18 +35,20 @@ const Input = ({
   const [value, setValue] = useState(defaultValue);
   const [isHidden, setIsHidden] = useState(hidden);
 
-  const handleChange = newValue => {
+  const handleChange = (newValue) => {
     setValue(newValue);
     onChange(newValue);
   };
 
-  const useTheme = options => {
-    const enabledTheme = Object.keys(options).filter(option => options[option]);
+  const useTheme = (options) => {
+    const enabledTheme = Object.keys(options).filter(
+      (option) => options[option]
+    );
 
     return enabledTheme[0];
   };
 
-  const getValidationState = options => {
+  const getValidationState = (options) => {
     const obj = {};
 
     const theme = useTheme(options);
@@ -62,10 +65,14 @@ const Input = ({
   return (
     <div
       className={cx('inputwrapper', {
-        inputwrapper__block: block,
+        inputwrapper__block: block
       })}
     >
-      {label && <Text>{label}</Text>}
+      {label && (
+        <Text push small inverse={inverse}>
+          {label}
+        </Text>
+      )}
 
       {renderInput || (
         <div
@@ -74,6 +81,7 @@ const Input = ({
             inputwrapper_input__disabled: disabled,
             inputwrapper_input__small: small,
             inputwrapper_input__no_border: noBorder,
+            inputwrapper_input__inverse: inverse
           })}
         >
           {icon && <span className={cx('inputwrapper_icon')}>{icon}</span>}
@@ -82,8 +90,9 @@ const Input = ({
             disabled={disabled}
             className={cx('input', {
               input__small: small,
+              input__inverse: inverse
             })}
-            onChange={val => handleChange(val.target.value)}
+            onChange={(val) => handleChange(val.target.value)}
             placeholder={placeholder}
             value={forceValue || value}
             onFocus={onFocus}
@@ -99,7 +108,7 @@ const Input = ({
               onClick={() => setIsHidden(!isHidden)}
               onKeyPress={() => setIsHidden(!isHidden)}
             >
-              {isHidden ? <EyeOff size={16} /> : <Eye size={16} />}
+              {isHidden ? <Eye /> : <EyeAlt />}
             </span>
           )}
           {clearable && <Closeable onClick={() => handleChange('')} />}
@@ -131,6 +140,7 @@ Input.defaultProps = {
   forceValue: null,
   small: false,
   noBorder: false,
+  inverse: false
 };
 
 Input.propTypes = {
@@ -153,6 +163,7 @@ Input.propTypes = {
   forceValue: PropTypes.string,
   small: PropTypes.bool,
   noBorder: PropTypes.bool,
+  inverse: PropTypes.bool
 };
 
 export default Input;

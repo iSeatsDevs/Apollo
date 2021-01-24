@@ -3,6 +3,10 @@
 
 .numberinput {
   @include actionable;
+  background-color: color('white');
+
+  border: $border-default;
+  border-color: color('light-gray');
 
   width: auto;
 
@@ -40,7 +44,7 @@
     outline: none;
 
     &:focus {
-      background-color: color('gray');
+      background-color: color('light-gray');
     }
   }
 }

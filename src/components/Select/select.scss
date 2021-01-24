@@ -1,11 +1,14 @@
 @import '../../global';
 @import '../../mixins/typography.scss';
 @import '../../mixins/actionable';
+@import '../../mixins/floating';
 
 .select {
   @include actionable;
+  background-color: color('white');
 
-  position: relative;
+  border: $border-default;
+  border-color: color('light-gray');
 
   display: flex;
   align-items: center;
@@ -15,11 +18,22 @@
   }
 
   &__empty {
-    color: color('gray', -1);
+    color: color('gray');
+  }
+
+  &__no_border {
+    border-color: color('white') !important;
+  }
+
+  &__small {
+    @include body_small;
   }
 
   &_input {
-    width: 200px;
+    @include body;
+
+    display: inline-block;
+    width: auto;
 
     user-select: none;
 
@@ -31,7 +45,7 @@
     }
 
     &_value {
-      @include action_small;
+      @include body_small;
 
       margin: 0 $push-sm;
       padding: $padding-sm;
@@ -48,16 +62,23 @@
       &_label {
         margin-right: $push-sm;
       }
+
+      &_close {
+        transform: scale(.75);
+      }
+    }
+
+    &_indicator {
+      margin-left: $push;
     }
   }
 
   &_options {
-    border: $border-default color('gray');
-    border-radius: $border-radius;
+    @include floating;
 
     position: absolute;
 
-    margin-top: $push_sm;
+    top: 65px;
 
     min-width: 200px;
 
@@ -66,7 +87,7 @@
     background-color: color('white');
 
     &_empty {
-      @include action;
+      @include body;
 
       text-align: center;
 
@@ -82,11 +103,11 @@
     padding: $padding;
 
     &:focus {
-      background-color: transparentize(color('gray'), 0.25);
+      background-color: color('light-gray');
     }
 
     &:hover {
-      background-color: transparentize(color('gray'), 0.25);
+      background-color: color('light-gray');
 
       cursor: pointer;
     }

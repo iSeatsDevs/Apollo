@@ -10,11 +10,11 @@ const Divider = ({ dashed }) => {
 };
 
 Divider.defaultProps = {
-  dashed: false,
+  dashed: false
 };
 
 Divider.propTypes = {
-  dashed: PropTypes.bool,
+  dashed: PropTypes.bool
 };
 
 export default Divider;

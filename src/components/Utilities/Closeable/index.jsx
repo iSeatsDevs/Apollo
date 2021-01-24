@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import { X } from 'react-feather';
+import { X } from '../Icons';
 import styles from './closeable.scss';
 
 const cx = classnames.bind(styles);
@@ -14,16 +14,16 @@ const Closeable = ({ onClick }) => (
     onClick={onClick}
     onKeyPress={onClick}
   >
-    <X size={16} />
+    <X />
   </div>
 );
 
 Closeable.defaultProps = {
-  onClick: undefined,
+  onClick: undefined
 };
 
 Closeable.propTypes = {
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 };
 
 export default Closeable;
