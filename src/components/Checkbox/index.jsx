@@ -11,7 +11,8 @@ const Checkbox = ({
   label,
   success,
   danger,
-  disabled
+  disabled,
+  inverse
 }) => {
   const cx = classnames.bind(styles);
   const [value, setValue] = useState(defaultValue);
@@ -30,7 +31,8 @@ const Checkbox = ({
           checkbox_input__danger: danger,
           checkbox_input__success: success,
           checkbox_input__checked: value,
-          checkbox_input__disabled: disabled
+          checkbox_input__disabled: disabled,
+          checkbox_input__inverse: inverse
         })}
         role="checkbox"
         tabIndex={0}
@@ -44,6 +46,7 @@ const Checkbox = ({
       {label && (
         <Text
           small
+          inverse={inverse}
           theme={(danger && 'danger') || (success && 'success') || null}
         >
           {label}
@@ -58,7 +61,8 @@ Checkbox.defaultProps = {
   disabled: false,
   label: null,
   success: false,
-  danger: false
+  danger: false,
+  inverse: false
 };
 
 Checkbox.propTypes = {
@@ -67,7 +71,8 @@ Checkbox.propTypes = {
   label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   success: PropTypes.bool,
-  danger: PropTypes.bool
+  danger: PropTypes.bool,
+  inverse: PropTypes.bool
 };
 
 export default Checkbox;
