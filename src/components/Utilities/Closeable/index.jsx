@@ -6,7 +6,7 @@ import styles from './closeable.scss';
 
 const cx = classnames.bind(styles);
 
-const Closeable = ({ onClick }) => (
+const Closeable = ({ onClick, size }) => (
   <div
     className={cx('closeable')}
     tabIndex={0}
@@ -14,16 +14,18 @@ const Closeable = ({ onClick }) => (
     onClick={onClick}
     onKeyPress={onClick}
   >
-    <X />
+    <X size={size} />
   </div>
 );
 
 Closeable.defaultProps = {
-  onClick: undefined
+  onClick: undefined,
+  size: 24
 };
 
 Closeable.propTypes = {
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  size: PropTypes.number
 };
 
 export default Closeable;
