@@ -15,7 +15,8 @@ const DatePicker = ({
   success,
   danger,
   message,
-  icon
+  icon,
+  inverse
 }) => {
   const cx = classnames.bind(styles);
 
@@ -42,6 +43,7 @@ const DatePicker = ({
         forceValue={date && useFormat(date, format)}
         defaultValue={defaultValue && useFormat(date, format)}
         onFocus={() => setOpen(true)}
+        inverse={inverse}
       />
 
       {open && (
@@ -50,6 +52,7 @@ const DatePicker = ({
             onChange={(newDate) => handleChange(newDate)}
             defaultOpenDate={date || undefined}
             defaultValue={date}
+            inverse={inverse}
           />
         </div>
       )}
@@ -65,7 +68,8 @@ DatePicker.defaultProps = {
   danger: false,
   message: null,
   label: null,
-  icon: undefined
+  icon: undefined,
+  inverse: false
 };
 
 DatePicker.propTypes = {
@@ -77,7 +81,8 @@ DatePicker.propTypes = {
   danger: PropTypes.bool,
   message: PropTypes.string,
   label: PropTypes.string,
-  icon: PropTypes.node
+  icon: PropTypes.node,
+  inverse: PropTypes.bool
 };
 
 export default DatePicker;
