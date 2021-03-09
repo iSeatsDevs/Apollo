@@ -5,7 +5,7 @@ module.exports = {
     '../stories/**/*.stories.mdx',
     '../stories/**/*.stories.@(js|jsx|ts|tsx|mdx)'
   ],
-  addons: ['@storybook/addon-docs'],
+  addons: ['@storybook/addon-docs', 'storybook-dark-mode'],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
