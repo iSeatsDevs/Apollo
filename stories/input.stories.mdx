@@ -13,17 +13,17 @@ in other component type components such as `<DatePicker/>` and `<NumberInput/>`.
 <Props of={Input} />
 
 <Preview>
-  <Story name="Default">
-    <Input placeholder="Placeholder" />
-  </Story>
+	<Story name="Default">
+		<Input placeholder="Placeholder" />
+	</Story>
 </Preview>
 
 ## Small
 
 <Preview>
-  <Story name="Small">
-    <Input small placeholder="Placeholder..." />
-  </Story>
+	<Story name="Small">
+		<Input small placeholder="Placeholder..." />
+	</Story>
 </Preview>
 
 ## No Border
@@ -32,11 +32,11 @@ To disable the border on the input you can pass the `noBorder` prop
 to the component. This is mainly used when placed on a colored background.
 
 <Preview>
-  <Story name="No Border">
-    <div style={{ background: '#0174E3', padding: '25px' }}>
-      <Input noBorder placeholder="This input does not have a border" />
-    </div>
-  </Story>
+	<Story name="No Border">
+		<div style={{ background: '#0174E3', padding: '25px' }}>
+			<Input noBorder placeholder="This input does not have a border" />
+		</div>
+	</Story>
 </Preview>
 
 ## Validation
@@ -45,24 +45,24 @@ Validation can be easily set by using the `danger` or `success` prop. This will 
 text color of a message if applied. We can also use the `message` prop to give additional feedback to the user.
 
 <Preview>
-  <Story name="Validation">
-    <>
-      <div>
-        <Input
-          defaultValue="Apollo"
-          success
-          message="Oops! Something went wrong"
-        />
-      </div>
-      <div>
-        <Input
-          defaultValue="Apollo"
-          danger
-          message="Oops! Something went wrong"
-        />
-      </div>
-    </>
-  </Story>
+	<Story name="Validation">
+		<>
+			<div>
+				<Input
+					defaultValue="Apollo"
+					success
+					message="Oops! Something went wrong"
+				/>
+			</div>
+			<div>
+				<Input
+					defaultValue="Apollo"
+					danger
+					message="Oops! Something went wrong"
+				/>
+			</div>
+		</>
+	</Story>
 </Preview>
 
 ## Clearable
@@ -70,9 +70,9 @@ text color of a message if applied. We can also use the `message` prop to give a
 You can use the `clearable` prop to allow the user to easily clear the input field.
 
 <Preview>
-  <Story name="Clearable">
-    <Input placeholder="Placeholder" defaultValue="johndoe@gmail.com" clearable />
-  </Story>
+	<Story name="Clearable">
+		<Input placeholder="Placeholder" defaultValue="johndoe@gmail.com" clearable />
+	</Story>
 </Preview>
 
 ## Visibility
@@ -81,44 +81,44 @@ You can disable the visibility of a field using the `hidden` prop. If you want t
 to be able to toggle between a visible and hidden state you can also enable `visibilityControls` prop.
 
 <Preview>
-  <Story name="Visibility">
-    <>
-      <div>
-        <Input placeholder="Password" defaultValue="password" clearable hidden/>
-      </div>
-      <div>
-        <Input placeholder="Password" defaultValue="password" clearable hidden visibilityControls/>
-      </div>
-    </>
-  </Story>
+	<Story name="Visibility">
+		<>
+			<div>
+				<Input placeholder="Password" defaultValue="password" clearable hidden/>
+			</div>
+			<div>
+				<Input placeholder="Password" defaultValue="password" clearable hidden visibilityControls/>
+			</div>
+		</>
+	</Story>
 </Preview>
 
 ## Label
 
 <Preview>
-  <Story name="Label">
-    <Input label="Email address" defaultValue="johndoe@gmail.com" />
-  </Story>
+	<Story name="Label">
+		<Input label="Email address" defaultValue="johndoe@gmail.com" />
+	</Story>
 </Preview>
 
 ## Icon
 
 <Preview>
-  <Story name="Icon">
-    <Input
-      icon={<Coffee />}
-      label="Email address"
-      defaultValue="johndoe@gmail.com"
-    />
-  </Story>
+	<Story name="Icon">
+		<Input
+			icon={<Coffee />}
+			label="Email address"
+			defaultValue="johndoe@gmail.com"
+		/>
+	</Story>
 </Preview>
 
 ## Disabled
 
 <Preview>
-  <Story name="Disabled">
-    <Input defaultValue="johndoe@gmail.com" disabled />
-  </Story>
+	<Story name="Disabled">
+		<Input defaultValue="johndoe@gmail.com" disabled />
+	</Story>
 </Preview>
 
 ## Block
@@ -126,9 +126,9 @@ to be able to toggle between a visible and hidden state you can also enable `vis
 Using the `block` prop, you can make the input field take up the entire width of the parent container.
 
 <Preview>
-  <Story name="Block">
-    <Input defaultValue="johndoe@gmail.com" block />
-  </Story>
+	<Story name="Block">
+		<Input defaultValue="johndoe@gmail.com" block />
+	</Story>
 </Preview>
 
 ## Inverse
@@ -136,9 +136,7 @@ Using the `block` prop, you can make the input field take up the entire width of
 You can use the `inverse` prop for better visibility on dark backgrounds.
 
 <Preview>
-  <Story name="Inverse">
-    <div style={{ background: '#000000', padding: '25px' }}>
-      <Input inverse placeholder="This input is easy to see in the dark" small clearable label="Label" />
-    </div>
-  </Story>
+	<Story name="Inverse">
+		 <Input inverse placeholder="This input is easy to see in the dark" clearable label="Label" />
+	</Story>
 </Preview>

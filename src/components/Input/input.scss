@@ -1,12 +1,12 @@
-@import "../../global";
-@import "../../mixins/actionable";
-@import "../../mixins/typography";
+@import '../../global';
+@import '../../mixins/actionable';
+@import '../../mixins/typography';
 
 .inputwrapper {
   box-sizing: border-box;
 
-  width: auto;
   display: inline-block;
+  width: auto;
 
   &__block {
     display: block;
@@ -22,7 +22,7 @@
     background-color: color('white');
 
     border: $border-default;
-    border-color: color("light-gray");
+    border-color: color('light-gray');
 
     padding: 0px $padding;
 
@@ -31,20 +31,21 @@
     align-items: center;
 
     &__no_border {
-      border-color: color("white") !important;
+      border-color: transparent !important;
     }
 
     &__inverse {
-      color: color("white") !important;
+      border-color: transparent;
+      color: color('white') !important;
 
       &::placeholder {
-        color: color("white", -1) !important;
+        color: color('white', -1) !important;
       }
     }
 
     &:active,
     &:focus-within {
-      border-color: color("primary");
+      border-color: color('primary');
     }
   }
 
@@ -54,7 +55,7 @@
 
     &:active,
     &:focus {
-      color: color("primary");
+      color: color('primary');
     }
   }
 
@@ -79,14 +80,15 @@
 
   @include body;
 
-  width: auto;
+  width: min-content;
+  min-width: fit-content;
 
   outline: none;
 
   background-color: transparent;
 
   &::placeholder {
-    color: color("gray", -1);
+    color: color('gray', -1);
   }
 
   &__small {
@@ -94,10 +96,10 @@
   }
 
   &__inverse {
-    color: color("white");
+    color: color('white');
 
     &::placeholder {
-      color: color("white", -1);
+      color: color('white', -1);
     }
   }
 }

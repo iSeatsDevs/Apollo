@@ -111,7 +111,11 @@ const Input = ({
               {isHidden ? <Eye /> : <EyeAlt />}
             </span>
           )}
-          {clearable && <Closeable onClick={() => handleChange('')} />}
+          {clearable && (
+            <span className={cx('inputwrapper_clear')}>
+              <Closeable size={16} onClick={() => handleChange('')} />
+            </span>
+          )}
         </div>
       )}
 
