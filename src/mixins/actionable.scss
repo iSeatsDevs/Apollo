@@ -7,7 +7,7 @@
   position: relative;
 
   box-sizing: border-box;
-  
+
   border-radius: $border-radius;
 
   height: 42px;
@@ -40,12 +40,12 @@
   }
 
   &__inverse {
-    background-color: transparentize(color('light-gray'), 0.75);
+    background-color: color('dark-gray');
 
     &:active,
     &:focus,
     &:focus-within {
-      background-color: transparentize(color('light-gray'), 0.9);
+      background-color: color('dark-gray', -1);
     }
   }
 }
