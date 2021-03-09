@@ -77,10 +77,6 @@
       &__selected {
         border-color: color('primary');
         background-color: color('primary');
-
-        span {
-          color: color('white') !important;
-        }
       }
 
       &__disabled {

@@ -133,7 +133,7 @@ const Calendar = ({
                   (only && !isIncludedInOnly(day))
               })}
             >
-              <Text>{format(day, 'd')}</Text>
+              <Text inverse={isSameDay(day, date)}>{format(day, 'd')}</Text>
             </div>
           ))}
         </div>
