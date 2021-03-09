@@ -10,4 +10,8 @@
   &__dashed {
     border-bottom-style: dashed;
   }
+
+  &__inverse {
+    border-color: color('dark-gray');
+  }
 }
