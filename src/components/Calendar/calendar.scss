@@ -8,7 +8,7 @@
   padding: $padding;
   padding-bottom: 0;
 
-  width: 400px;
+  width: 305px;
 
   background-color: color('white');
 
@@ -63,14 +63,16 @@
 
   &_days {
     display: grid;
-    grid-template-columns: repeat(7, 50px);
-    grid-template-rows: repeat(5, 50px);
+    grid-template-columns: repeat(7, max-content);
+    grid-template-rows: repeat(5, max-content);
     grid-column-gap: $push-sm;
     grid-row-gap: $push-sm;
 
     padding: $padding;
 
     &_day {
+      height: 18.5px;
+
       display: flex;
       justify-content: center;
       align-items: center;
