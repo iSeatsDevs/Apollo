@@ -26,7 +26,8 @@ const Input = ({
   forceValue,
   small,
   noBorder,
-  inverse
+  inverse,
+  autocomplete
 }) => {
   const cx = classnames.bind(styles);
 
@@ -97,6 +98,7 @@ const Input = ({
             value={forceValue || value}
             onFocus={onFocus}
             readOnly={readOnly}
+            autoComplete={autocomplete}
             type={isHidden ? 'password' : 'input'}
           />
 
@@ -144,6 +146,7 @@ Input.defaultProps = {
   forceValue: null,
   small: false,
   noBorder: false,
+  autocomplete: null,
   inverse: false
 };
 
@@ -167,6 +170,7 @@ Input.propTypes = {
   forceValue: PropTypes.string,
   small: PropTypes.bool,
   noBorder: PropTypes.bool,
+  autocomplete: PropTypes.string,
   inverse: PropTypes.bool
 };
 
