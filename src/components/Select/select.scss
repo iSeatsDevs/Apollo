@@ -13,6 +13,15 @@
   display: flex;
   align-items: center;
 
+  &_wrapper {
+    position: relative;
+  }
+
+  &__multiple {
+    height: auto;
+    min-height: 42px;
+  }
+
   &__open {
     @include focus;
   }
@@ -29,6 +38,12 @@
     @include body_small;
   }
 
+  &__inverse {
+    border-color: color('dark-gray');
+
+    color: color('white');
+  }
+
   &_input {
     @include body;
 
@@ -41,30 +56,32 @@
       min-width: 200px;
       width: auto;
 
-      display: flex;
+      height: auto;
+      max-height: none;
+
+      padding: $padding_sm 0;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(max-content, 125px));
+      gap: $push_sm;
     }
 
     &_value {
       @include body_small;
 
-      margin: 0 $push-sm;
-      padding: $padding-sm;
+      padding: $padding-sm $padding;
 
       background-color: color('primary');
       color: color('white');
 
       border-radius: $border-radius;
 
-      display: flex;
+      display: inline-flex;
       justify-content: space-between;
       align-items: center;
 
       &_label {
         margin-right: $push-sm;
-      }
-
-      &_close {
-        transform: scale(.75);
       }
     }
 
@@ -78,13 +95,17 @@
 
     position: absolute;
 
-    top: 65px;
+    top: calc(100% + #{$push});
 
     min-width: 200px;
 
     z-index: 1;
 
     background-color: color('white');
+
+    &__inverse {
+      background-color: color('dark-gray');
+    }
 
     &_empty {
       @include body;
@@ -110,6 +131,15 @@
       background-color: color('light-gray');
 
       cursor: pointer;
+    }
+
+    &__inverse {
+      color: color('white');
+
+      &:focus,
+      &:hover {
+        background-color: color('dark-gray', -1);
+      }
     }
   }
 }

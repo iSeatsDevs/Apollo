@@ -67,7 +67,8 @@ const Select = ({
   danger,
   emptyText,
   noBorder,
-  small
+  small,
+  inverse
 }) => {
   const [open, setOpen] = useState(defaultOpen);
 
@@ -99,7 +100,9 @@ const Select = ({
         select__success: success,
         select__danger: danger,
         select__small: small,
-        select__no_border: noBorder
+        select__no_border: noBorder,
+        select__inverse: inverse,
+        select__multiple: multiple
       })}
     >
       <div
@@ -118,18 +121,20 @@ const Select = ({
         {(multiple &&
           filteredValues.length >= 1 &&
           filteredValues.map((value, i) => (
-            <div key={`${value}-${i}`} className={cx('select_input_value')}>
+            <span key={`${value}-${i}`} className={cx('select_input_value')}>
               <span className={cx('select_input_value_label')}>
                 {value.label}
               </span>
+
               <span className={cx('select_input_value_close')}>
                 <Closeable
+                  size={16}
                   onClick={() =>
                     dispatchValues({ type: 'deselect', payload: value.value })
                   }
                 />
               </span>
-            </div>
+            </span>
           ))) ||
           (filteredValues.length === 1 && filteredValues[0].label) ||
           placeholder}
@@ -148,7 +153,8 @@ const Select = ({
     optionValue,
     optionLabel,
     optionSelected,
-    optionOnClick
+    optionOnClick,
+    inverse
   }) => (
     <div
       key={optionValue}
@@ -157,18 +163,26 @@ const Select = ({
       role="button"
       tabIndex={0}
       className={cx('select_option', {
-        select_option__multiple: multiple
+        select_option__multiple: multiple,
+        select_option__inverse: inverse
       })}
     >
-      <Text link={optionSelected}>{optionLabel}</Text>
+      <Text inverse={inverse} link={optionSelected}>
+        {optionLabel}
+      </Text>
     </div>
   );
+
+  Option.defaultProps = {
+    inverse: false
+  };
 
   Option.propTypes = {
     optionValue: PropTypes.string.isRequired,
     optionLabel: PropTypes.string.isRequired,
     optionSelected: PropTypes.bool.isRequired,
-    optionOnClick: PropTypes.func.isRequired
+    optionOnClick: PropTypes.func.isRequired,
+    inverse: PropTypes.bool
   };
 
   useEffect(() => {
@@ -180,18 +194,23 @@ const Select = ({
   }, [values]);
 
   return (
-    <div>
+    <div className={cx('select_wrapper')}>
       <Input
         label={label}
         placeholder={placeholder}
         message={message}
         success={success}
         danger={danger}
+        inverse={inverse}
         renderInput={<CustomInput noBorder={noBorder} small={small} />}
       />
 
       {open && (
-        <div className={cx('select_options')}>
+        <div
+          className={cx('select_options', {
+            select_options__inverse: inverse
+          })}
+        >
           {values.filter((value) => !value.selected).length === 0 ? (
             <div className={cx('select_options_empty')}>
               <Text small light>
@@ -219,6 +238,7 @@ const Select = ({
                       payload: option.value
                     })
                   }
+                  inverse={inverse}
                 />
               ))
           )}
@@ -241,7 +261,8 @@ Select.defaultProps = {
   danger: false,
   emptyText: 'No options available',
   noBorder: false,
-  small: false
+  small: false,
+  inverse: false
 };
 
 Select.propTypes = {
@@ -266,7 +287,8 @@ Select.propTypes = {
   danger: PropTypes.bool,
   emptyText: PropTypes.string,
   noBorder: PropTypes.bool,
-  small: PropTypes.bool
+  small: PropTypes.bool,
+  inverse: PropTypes.bool
 };
 
 export default Select;
