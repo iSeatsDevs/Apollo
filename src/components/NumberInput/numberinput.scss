@@ -3,6 +3,7 @@
 
 .numberinput {
   @include actionable;
+
   background-color: color('white');
 
   border: $border-default;
@@ -21,9 +22,16 @@
     @include focus;
   }
 
+  &__inverse {
+    border-color: color('dark-gray');
+    background-color: color('dark-gray');
+
+    color: color('white');
+  }
+
   &_value {
     margin: 0 $push_sm;
-    
+
     pointer-events: none;
     user-select: none;
   }
@@ -45,6 +53,12 @@
 
     &:focus {
       background-color: color('light-gray');
+    }
+
+    &__inverse {
+      &:focus {
+        background-color: color('dark-gray', -1);
+      }
     }
   }
 }

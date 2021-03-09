@@ -17,7 +17,8 @@ const NumberInput = ({
   currency,
   success,
   danger,
-  message
+  message,
+  inverse
 }) => {
   const cx = classnames.bind(styles);
 
@@ -43,11 +44,14 @@ const NumberInput = ({
     <div
       className={cx('numberinput', {
         numberinput__success: success,
-        numberinput__danger: danger
+        numberinput__danger: danger,
+        numberinput__inverse: inverse
       })}
     >
       <div
-        className={cx('numberinput_control')}
+        className={cx('numberinput_control', {
+          numberinput_control__inverse: inverse
+        })}
         role="button"
         tabIndex={0}
         onClick={() => handleChange('decrement')}
@@ -66,7 +70,9 @@ const NumberInput = ({
       </span>
 
       <div
-        className={cx('numberinput_control')}
+        className={cx('numberinput_control', {
+          numberinput_control__inverse: inverse
+        })}
         role="button"
         tabIndex={0}
         onClick={() => handleChange('increment')}
@@ -105,7 +111,8 @@ NumberInput.defaultProps = {
   currency: undefined,
   success: false,
   danger: false,
-  message: null
+  message: null,
+  inverse: false
 };
 
 NumberInput.propTypes = {
@@ -123,7 +130,8 @@ NumberInput.propTypes = {
   }),
   success: PropTypes.bool,
   danger: PropTypes.bool,
-  message: PropTypes.string
+  message: PropTypes.string,
+  inverse: PropTypes.bool
 };
 
 export default NumberInput;
