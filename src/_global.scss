@@ -1,15 +1,16 @@
 $colors: (
-  "primary": #0164fe,
-  "secondary": #ff3333,
-  "success": #00ac1e,
-  "warning": #ffb400,
-  "danger": #e91a13,
-  "typography": #222222,
-  "black": #000000,
-  "gray": #b0b0b0,
-  "light-gray": #ededed,
-  "dark-gray": #2b2b2b,
-  "white": #ffffff,
+  'primary': #0164fe,
+  'secondary': #ff3333,
+  'success': #00ac1e,
+  'warning': #ffb400,
+  'danger': #e91a13,
+  'typography': #222222,
+  'black': #000000,
+  'gray': #b0b0b0,
+  'light-gray': #ededed,
+  'dark-gray': #2b2b2b,
+  'dark': #141518,
+  'white': #ffffff
 );
 
 // Small tablets and large smartphones (landscape view)
@@ -26,12 +27,15 @@ $screen-xl-max: 1200px;
 
 // You have to set a font yourself. You can do this by simply adding a new
 // @typeface and importing it anywhere inside your app.
-$title-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-$action-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-$font-family: "Apollo", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+$title-family: 'Apollo', -apple-system, BlinkMacSystemFont, Roboto,
+  'Helvetica Neue', sans-serif;
+$action-family: 'Apollo', -apple-system, BlinkMacSystemFont, Roboto,
+  'Helvetica Neue', sans-serif;
+$font-family: 'Apollo', -apple-system, BlinkMacSystemFont, Roboto,
+  'Helvetica Neue', sans-serif;
 
-$font-color: color("typography");
-$font-color-inverted: color("white");
+$font-color: color('typography');
+$font-color-inverted: color('white');
 
 $font-size: 16px;
 $font-line-height: 24px;
@@ -46,15 +50,15 @@ $heading-size-4: ceil($font-size * 1.42);
 $heading-size-5: $font-size;
 
 $border-radius: 8px;
-$border-default: 1.5px solid;
+$border-default: 1px solid;
 
 $padding: 12.5px;
 $padding-lg: $padding * 2;
 $padding-sm: $padding / 2;
 
 /* 
-    Push determines how far elements are pushed away 
-    from eachother using margins.
+		Push determines how far elements are pushed away 
+		from eachother using margins.
 */
 $push: 12.5px;
 $push-lg: $push * 2;
@@ -65,12 +69,13 @@ $opacity-high: 0.75;
 $opacity-md: 0.5;
 $opacity-low: 0.25;
 
-$shadow: 0 2.9px 5.3px rgba(0, 0, 0, 0.019), 0 13.5px 17.9px rgba(0, 0, 0, 0.028), 0 65px 80px rgba(0, 0, 0, 0.04);
+$shadow: 0 2.9px 5.3px rgba(0, 0, 0, 0.019),
+  0 13.5px 17.9px rgba(0, 0, 0, 0.028), 0 65px 80px rgba(0, 0, 0, 0.04);
 
-$shadow-lg: 0 2px 3.6px rgba(0, 0, 0, 0.02), 0 7.7px 10px rgba(0, 0, 0, 0.029), 0 22px 24.1px rgba(0, 0, 0, 0.038),
-  0 75px 80px rgba(0, 0, 0, 0.05);
+$shadow-lg: 0 2px 3.6px rgba(0, 0, 0, 0.02), 0 7.7px 10px rgba(0, 0, 0, 0.029),
+  0 22px 24.1px rgba(0, 0, 0, 0.038), 0 75px 80px rgba(0, 0, 0, 0.05);
 
-@function color($key: "primary", $change: 0) {
+@function color($key: 'primary', $change: 0) {
   $color: map-get($colors, $key);
 
   @if $change > 4 or $change < -4 {
@@ -86,5 +91,5 @@ $shadow-lg: 0 2px 3.6px rgba(0, 0, 0, 0.02), 0 7.7px 10px rgba(0, 0, 0, 0.029), 
 }
 
 @mixin focus {
-  border-color: color("primary");
+  border-color: color('primary');
 }

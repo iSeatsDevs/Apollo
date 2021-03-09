@@ -12,6 +12,12 @@
 
   background-color: color('white');
 
+  &__inverse {
+    background-color: color('dark-gray');
+  }
+
+  border-radius: $border-radius;
+
   &_top {
     display: flex;
     justify-content: space-between;
@@ -23,7 +29,7 @@
       margin: 0px;
       padding: 0px;
 
-      border: $border-default color('gray');
+      border: $border-default color('light-gray');
       border-radius: $border-radius;
       outline: none;
 
@@ -34,6 +40,13 @@
       font-weight: 600;
 
       width: 50px;
+
+      &__inverse {
+        border-color: color('gray', -2);
+        color: color('white');
+
+        background-color: color('dark-gray');
+      }
     }
   }
 
@@ -63,7 +76,7 @@
       align-items: center;
 
       border: $border-default transparent;
-      border-radius: 100%;
+      border-radius: 50%;
       padding: $padding-sm;
 
       outline: none;

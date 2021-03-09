@@ -9,17 +9,17 @@ import { Calendar } from '../src/index';
 ## Default
 
 <Preview>
-  <Story name="Default">
-    <Calendar onChange={action('Calenda changed')} />
-  </Story>
+	<Story name="Default">
+		<Calendar onChange={action('Calenda changed')} />
+	</Story>
 </Preview>
 
 ## Default value
 
 <Preview>
-  <Story name="Default value">
-    <Calendar onChange={action('Calenda changed')} defaultValue={new Date('3005-01-01')} defaultOpenDate={new Date('3005-01-01')} />
-  </Story>
+	<Story name="Default value">
+		<Calendar onChange={action('Calenda changed')} defaultValue={new Date('3005-01-01')} defaultOpenDate={new Date('3005-01-01')} />
+	</Story>
 </Preview>
 
 ## Year
@@ -27,9 +27,9 @@ import { Calendar } from '../src/index';
 If you set the `showYear` prop, the year will be displayed as an input field.
 
 <Preview>
-  <Story name="Year">
-    <Calendar onChange={action('Calenda changed')} showYear />
-  </Story>
+	<Story name="Year">
+		<Calendar onChange={action('Calenda changed')} showYear />
+	</Story>
 </Preview>
 
 ## Default open date
@@ -38,9 +38,9 @@ You can change the default date the calendar will be opened to by setting
 the `defaultOpenDate` prop.
 
 <Preview>
-  <Story name="Default open date">
-    <Calendar onChange={action('Calenda changed')} defaultOpenDate={new Date('3005-01-01')} showYear/>
-  </Story>
+	<Story name="Default open date">
+		<Calendar onChange={action('Calenda changed')} defaultOpenDate={new Date('3005-01-01')} showYear/>
+	</Story>
 </Preview>
 
 ## Min
@@ -48,9 +48,9 @@ the `defaultOpenDate` prop.
 Any date before the date assigned will be disabled.
 
 <Preview>
-  <Story name="Min">
-    <Calendar onChange={action('Calenda changed')} min={new Date} />
-  </Story>
+	<Story name="Min">
+		<Calendar onChange={action('Calenda changed')} min={new Date} />
+	</Story>
 </Preview>
 
 ## Max
@@ -58,9 +58,9 @@ Any date before the date assigned will be disabled.
 Any date after the date assigned will be disabled.
 
 <Preview>
-  <Story name="Max">
-    <Calendar onChange={action('Calenda changed')} max={new Date} />
-  </Story>
+	<Story name="Max">
+		<Calendar onChange={action('Calenda changed')} max={new Date} />
+	</Story>
 </Preview>
 
 ## Only
@@ -69,7 +69,15 @@ The `only` prop is used for selecting a range of dates that are only accessible,
 the dates not assigned will be disabled.
 
 <Preview>
-  <Story name="Only">
-    <Calendar onChange={action('Calenda changed')} only={[new Date('2020-01-20'), new Date('2020-01-21'), new Date('2020-01-22')]}/>
-  </Story>
+	<Story name="Only">
+		<Calendar onChange={action('Calenda changed')} only={[new Date('2020-01-20'), new Date('2020-01-21'), new Date('2020-01-22')]}/>
+	</Story>
+</Preview>
+
+## Inverse
+
+<Preview>
+	<Story name="Inverse">
+		<Calendar showYear onChange={action('Calenda changed')} inverse/>
+	</Story>
 </Preview>
