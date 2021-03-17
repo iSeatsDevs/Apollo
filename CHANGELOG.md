@@ -1,3 +1,9 @@
+# [v1.1.0](https://github.com/iSeatsDevs/Apollo/compare/v1.0.0...v1.1.0) (2021-03-17)
+
+## ✨ New Features
+- [`68bc0fe`](https://github.com/iSeatsDevs/Apollo/commit/68bc0fe)  (ci) reset branches to default values 
+- [`ffcbdc7`](https://github.com/iSeatsDevs/Apollo/commit/ffcbdc7)   reset version
+
 # v1.0.0 (2021-03-17)
 
 ## ✨ New Features
