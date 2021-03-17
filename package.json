@@ -87,7 +87,7 @@
   },
   "release": {
     "branch": "master",
-    "repositoryUrl": "git@bitbucket.org:iseats/apollo.git",
+    "repositoryUrl": "git@github.com:iSeatsDevs/Apollo.git",
     "plugins": [
       "semantic-release-gitmoji",
       "@semantic-release/npm",
