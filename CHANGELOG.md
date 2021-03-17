@@ -1,3 +1,8 @@
+# [v2.11.1](https://github.com/iSeatsDevs/Apollo/compare/v2.11.0...v2.11.1) (2021-03-17)
+
+## 🚑 Critical Hotfixes
+- [`08b6860`](https://github.com/iSeatsDevs/Apollo/commit/08b6860)   back to v2.11.0
+
 # [v1.1.0](https://github.com/iSeatsDevs/Apollo/compare/v1.0.0...v1.1.0) (2021-03-17)
 
 ## ✨ New Features
