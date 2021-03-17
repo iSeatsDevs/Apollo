@@ -1,3 +1,26 @@
+# v1.0.0 (2021-03-17)
+
+## ✨ New Features
+- [`5e5a4c1`](https://github.com/iSeatsDevs/Apollo/commit/5e5a4c1)   text now switches between &lt;p&gt; or &lt;a&gt; elements depending if &#x60;link&#x60; is set 
+- [`9093394`](https://github.com/iSeatsDevs/Apollo/commit/9093394)   added &#x60;href&#x60; prop 
+- [`d9cc935`](https://github.com/iSeatsDevs/Apollo/commit/d9cc935)   added &#x27;inverse&#x27; prop to Divider 
+- [`32e66c8`](https://github.com/iSeatsDevs/Apollo/commit/32e66c8)   added &#x27;inverse&#x27; prop 
+- [`6dcf84b`](https://github.com/iSeatsDevs/Apollo/commit/6dcf84b)   closeable now takes an &#x27;size&#x27; prop 
+- [`5b383e5`](https://github.com/iSeatsDevs/Apollo/commit/5b383e5)   added &#x27;inverse&#x27; prop 
+- [`355a385`](https://github.com/iSeatsDevs/Apollo/commit/355a385)   added &#x27;inverse&#x27; prop 
+- [`34f9c90`](https://github.com/iSeatsDevs/Apollo/commit/34f9c90)   added &#x27;inverse&#x27; prop 
+- [`77353d8`](https://github.com/iSeatsDevs/Apollo/commit/77353d8)   added &#x27;autocomplete&#x27; prop 
+- [`c71e27a`](https://github.com/iSeatsDevs/Apollo/commit/c71e27a)  (global) test build trigger 
+- [`828c921`](https://github.com/iSeatsDevs/Apollo/commit/828c921)  (ci) release now uses cycjimmy/semantic-release-action@v2 
+- [`1ee12e1`](https://github.com/iSeatsDevs/Apollo/commit/1ee12e1)   added repository field 
+- [`8d926e4`](https://github.com/iSeatsDevs/Apollo/commit/8d926e4)  (ci) updated repositoryUrl for semantic-release 
+
+## 🐛 Bug Fixes
+- [`2716c8a`](https://github.com/iSeatsDevs/Apollo/commit/2716c8a)   fixed selected date not being white 
+
+## 🚑 Critical Hotfixes
+- [`74bc9e4`](https://github.com/iSeatsDevs/Apollo/commit/74bc9e4)   fixed missing dependencies and added postcss 8.x
+
 # v2.11.0 (2021-03-10)
 
 ## ✨ New Features
