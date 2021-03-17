@@ -85,7 +85,6 @@
     "repositoryUrl": "git@bitbucket.org:iseats/apollo.git",
     "plugins": [
       "semantic-release-gitmoji",
-      "semantic-release-gitmoji",
       "@semantic-release/npm",
       "@semantic-release/changelog",
       "@semantic-release/git"
