@@ -29,12 +29,18 @@ jobs:
           semantic_version: 16
           branches: |
             [
+              '+([0-9])?(.{+([0-9]),x}).x',
+              'master', 
               'next', 
+              'next-major', 
               {
                 name: 'beta', 
                 prerelease: true
               }, 
-              'master', 
+              {
+                name: 'alpha', 
+                prerelease: true
+              }
             ]
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
