@@ -1,3 +1,8 @@
+# [v2.12.0](https://github.com/iSeatsDevs/Apollo/compare/v2.11.1...v2.12.0) (2021-03-18)
+
+## ✨ New Features
+- [`1e3f9f7`](https://github.com/iSeatsDevs/Apollo/commit/1e3f9f7)  (ci) added build step
+
 # [v2.11.1](https://github.com/iSeatsDevs/Apollo/compare/v2.11.0...v2.11.1) (2021-03-17)
 
 ## 🚑 Critical Hotfixes
